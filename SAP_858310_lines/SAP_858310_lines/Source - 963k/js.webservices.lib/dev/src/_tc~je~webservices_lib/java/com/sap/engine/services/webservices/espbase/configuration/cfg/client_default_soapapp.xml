@@ -1,0 +1,118 @@
+﻿<tns:SoapApplication xmlns:tns="http://xml.sap.com/2006/11/esi/conf/soapapplication" id="URN:SAP-COM:SOAP:RUNTIME:APPLICATION:CLIENT">
+<description>This is the SoapApplication that holds valid properties for NY SAP clients.
+                This includes: Standard transportBinding properties, Security, WS-Addressing, Session</description>
+   <properties>
+     <!--  Transport Binding Properties -->
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="keepAliveStatus"/>
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="compressResponse"/>
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="socketTimeout"/>
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="chunkedRequest"/>
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="LocalCall"/>
+     <!--  WS-Addressing Properties -->
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="enabled"/>
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="WSAProtocol"/>
+ <!-- <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="OutputAction"/>
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="InputAction"/>
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="FaultAction"/>
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="ReferenceParameter"/> -->
+     <!--  Session Properties -->
+     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="SessionMethod"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="enableSession"/>
+     <!--  Security Properties -->
+     <!--  Idempotency Properties -->
+     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="IdempotencyIdLocation"/>
+     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Active.RT"/>
+     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Retries.Count.RT"/>         
+     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Retry.Sleep.RT"/>
+     <!--  Metering Properties -->
+     <property namespace="http://www.sap.com/webas/710/service/metering/" name="Level" />     
+     <property namespace="http://www.sap.com/webas/710/service/metering/" name="Protocol" />      
+   </properties>
+   <dependencies>
+
+		<dependency type="TRUE_TO_RT">
+         <condition>
+           <boolean-value>true</boolean-value>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/710/service/metering/" name="Level" />     
+     				 <property namespace="http://www.sap.com/webas/710/service/metering/" name="Protocol" />
+           </properties>
+         </result>
+      </dependency>   
+      <dependency type="RT_TO_RT">
+         <condition>
+           <properties>
+ 							<property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="LocalCall" value="false"/>
+           </properties>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="keepAliveStatus"/>
+				     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="compressResponse"/>
+				     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="socketTimeout"/>
+				     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="chunkedRequest"/>
+           </properties>
+         </result>
+      </dependency>
+      
+      <dependency type="SINGLE_DT_OP_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="IdempotencyIdLocation" value="Default"/>     
+           </properties>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Active.RT"/>
+				     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Retries.Count.RT"/>                 
+				     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Retry.Sleep.RT"/>
+           </properties>
+         </result>
+      </dependency> 
+      
+      <dependency type="DT_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="enableSession" value='true'/>
+           </properties>
+         </condition>
+         <result>
+           <properties>
+						 <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="SessionMethod"/> 
+					 </properties>
+         </result>
+      </dependency>
+      
+      <!-- Since there is no support of session via Local call, if session is disabled, to local call could be enabled. -->
+      <dependency type="DT_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="enableSession" value='false'/>
+           </properties>
+         </condition>
+         <result>
+           <properties>
+							<property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="LocalCall"/>
+					 </properties>
+         </result>
+      </dependency>
+
+      <dependency type="DT_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="enabled" value='true'/>
+           </properties>
+         </condition>
+         <result>
+           <properties>
+						 <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="WSAProtocol"/> 
+						 <!-- <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="InputAction"/>
+			  	   <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="FaultAction"/> 
+				     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="ReferenceParameter"/>	-->					 
+					 </properties>
+         </result>
+      </dependency>      
+   </dependencies>
+</tns:SoapApplication>

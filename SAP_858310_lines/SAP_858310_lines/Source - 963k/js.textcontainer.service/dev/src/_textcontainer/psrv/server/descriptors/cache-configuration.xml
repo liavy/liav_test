@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cache-configuration SYSTEM "cache-configuration.dtd">
+<cache-configuration>
+  <regions>
+
+    <!-- Text Container -->
+    <region-configuration name="TextContainer_SAPResourceBundle">
+      <description>SAP Resource Bundle Cache</description>
+      <principal>com.sap.engine.services.textcontainer.cache</principal>
+      <weight>100.0</weight>
+      <thresholds>
+        <count start="7500" upper="9500" critical="10000"/>
+        <size start="750000" upper="950000" critical="1000000"/>
+      </thresholds>
+      <scopes region="LOCAL" invalidation="CLUSTER"/>
+      <flags direct-invalidation="FALSE" synchronous="FALSE" logging-mode="FALSE" inheritable="FALSE"/>
+      <plugins>
+        <storage-configuration type="STORAGE_HASH_MAP"/>
+        <eviction-configuration type="EVICTION_LOCAL_LRU"/>
+      </plugins>
+      <additional-properties>
+        <property key="_OWNER" value="Text Container"/>
+      </additional-properties>
+    </region-configuration>
+
+  </regions>
+</cache-configuration>

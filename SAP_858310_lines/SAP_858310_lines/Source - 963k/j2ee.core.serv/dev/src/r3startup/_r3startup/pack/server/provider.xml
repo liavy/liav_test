@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE provider-descriptor SYSTEM "service.provider.dtd">
+
+  <provider-descriptor>
+    <display-name>
+      ABAP Communicator
+    </display-name>
+    <component-name>
+      r3startup
+    </component-name>
+    <application-frame>
+       com.sap.engine.facade.FacadeFrame
+    </application-frame>
+    <major-version>7</major-version>
+    <minor-version>10</minor-version>
+    <micro-version>0</micro-version>
+    <provider-name>
+      engine.sap.com
+    </provider-name>
+    <references>
+    </references>
+    <jars>
+    </jars>
+  </provider-descriptor>

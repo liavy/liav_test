@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC "-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN" "http://java.sun.com/dtd/application_1_3.dtd">
+<application>
+	<display-name>tc/TechSrv/XML_DAS</display-name>
+	<description>XML Data Archiving Service</description>
+	<module>
+		<web>
+			<web-uri>sap.com~tc~archtech~daservice_web.war</web-uri>
+			<context-root>/DataArchivingService</context-root>
+		</web>
+	</module>
+	<module>
+		<ejb>sap.com~tc~archtech~daservice_ejb.jar</ejb>
+	</module>
+	<security-role>
+		<role-name>XMLDASSecurityRole</role-name>
+	</security-role>
+</application>

@@ -1,0 +1,153 @@
+﻿<tns:SoapApplication xmlns:tns="http://xml.sap.com/2006/11/esi/conf/soapapplication" id="URN:SAP-COM:SOAP:RUNTIME:APPLICATION:SERVICE:EXTENDED">
+<description>This is the SoapApplication that holds valid properties for 'extended' SAP NY web services.
+             It includes TransportBinding properties, WS-Addressing, Session, Security, WS-RM</description>
+   <properties>
+        <!--  MessageID Properties -->
+     <!--  <property namespace="http://www.sap.com/webas/640/soap/features/messageId/" name="enableMessageId"/> -->
+     <!--  Transport Binding Properties -->
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altHost"/>
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altPort"/>
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="LocalCall"/>
+     <!--  WS-Addressing Properties -->
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="enabled"/>
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="WSAProtocol"/>
+     <!-- <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="InputAction"/>
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="OutputAction"/>
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="FaultAction"/>
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="ReferenceParameter"/> -->
+     <!--  Session Properties -->
+     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="enableSession"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="SessionMethod"/>
+     <!--  WS-RM Properties -->
+     <property namespace="http://www.sap.com/NW05/soap/features/wsrm/" name="enableWSRM"/>     
+     <property namespace="http://www.sap.com/710/soap/features/reliableMessaging/" name="RMprotocol"/>     
+     <property namespace="http://www.sap.com/710/soap/features/reliableMessaging/" name="AckInterval"/>     
+     <property namespace="http://www.sap.com/710/soap/features/reliableMessaging/" name="ExponentialBackoff"/>     
+     <!--property namespace="http://www.sap.com/710/soap/features/reliableMessaging/" name="TransportPattern"/-->     
+     <!--  Security Properties -->
+     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationLevel"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationMethod"/>
+     
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="Level"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="TLSType"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="IncomingSignature"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="IncomingSignature.Trustanchor.Keystore.View"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="IncomingSignature.Trustanchor.CertificatePattern"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="IncomingSignature.ExpectedSignedElement.MessagePart"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="IncomingEncryption"/>     
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="IncomingEncryption.ExpectedEncryptedElement.MessagePart"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="OutgoingSignature"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="OutgoingSignature.SigningKey.Keystore.View"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="OutgoingEncryption.EncryptingKey.Origin"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="OutgoingSignature.SignedElement.MessagePart"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="OutgoingEncryption"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="OutgoingEncryption.EncryptingKey.Keystore.View"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="OutgoingEncryption.EncryptingKey.Keystore.Alias"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="OutgoingEncryption.EncryptedElement.MessagePart"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="IncomingMessageAge"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="IncomingMessageAge.Age"/>
+     
+   </properties>
+   
+   <dependencies > 
+      <dependency type="RT_TO_RT">
+         <condition>
+           <properties>
+ 							<property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="LocalCall" value="false"/>
+           </properties>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altHost"/>
+				     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altPort"/>
+		   </properties>
+         </result>
+      </dependency>     
+      
+      <!--  <dependency> This rule is not needed for the UI
+        <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/NW05/soap/features/wsrm/" name="enableWSRM" value="true"/>     
+           </properties>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="enabled" value='true'/>
+					 </properties>
+         </result>
+      </dependency> -->
+
+      <dependency type="SINGLE_DT_OP_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/NW05/soap/features/wsrm/" name="enableWSRM" value="true"/>     
+           </properties>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/710/soap/features/reliableMessaging/" name="RMprotocol"/>     
+				     <property namespace="http://www.sap.com/710/soap/features/reliableMessaging/" name="AckInterval"/>     
+				     <property namespace="http://www.sap.com/710/soap/features/reliableMessaging/" name="ExponentialBackoff"/>     
+					 </properties>
+         </result>
+      </dependency>
+
+      <!--dependency type="DT_OP_TO_RT_OP">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/NW05/soap/features/wsrm/" name="enableWSRM" value="true"/>     
+           </properties>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/710/soap/features/reliableMessaging/" name="TransportPattern"/>     
+					 </properties>
+         </result>
+      </dependency-->
+
+      <dependency type="DT_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="enableSession" value='true'/>
+           </properties>
+         </condition>
+         <result>
+           <properties>
+						 <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="SessionMethod"/> 
+					 </properties>
+         </result>
+      </dependency>
+
+      <!-- Since there is no support of session via Local call, if session is disabled, then local call could be enabled. -->
+      <dependency type="DT_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="enableSession" value='false'/>
+           </properties>
+         </condition>
+         <result>
+           <properties>
+							<property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="LocalCall"/>
+					 </properties>
+         </result>
+      </dependency>
+
+      <!-- <dependency type="DT_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="enabled" value='true'/>
+           </properties>
+         </condition>
+         <result>
+           <properties>
+						 <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="WSAProtocol"/> 
+						 <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="InputAction"/>
+			    	 <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="OutputAction"/>
+			  	   <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="FaultAction"/>
+				     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="ReferenceParameter"/>						 
+					 </properties>
+         </result>
+      </dependency>  -->
+
+   </dependencies>
+</tns:SoapApplication>

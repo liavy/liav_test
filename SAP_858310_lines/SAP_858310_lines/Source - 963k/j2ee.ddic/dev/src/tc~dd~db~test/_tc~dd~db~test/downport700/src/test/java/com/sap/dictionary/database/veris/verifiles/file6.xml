@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Dbtable name="TMP_AA" creation-date="">
+      <properties>
+           <author></author>      
+           <description language="">TMP_SD</description>                
+      </properties>
+      <predefined-action></predefined-action>
+     <position-is-relevant>false</position-is-relevant>
+     <deployment-status></deployment-status>      
+           <columns>
+             <column name = "I">
+            <position>10</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>3</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value> </default-value>
+        </column>
+             <column name = "D">
+            <position>5</position>
+            <builtIn-type>double</builtIn-type>
+            <java-sql-type>DOUBLE</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+             <column name = "SDFSFD">
+            <position>1</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>3</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "K">
+            <position>12</position>
+            <builtIn-type>timestamp</builtIn-type>
+            <java-sql-type>TIMESTAMP</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "A">
+            <position>2</position>
+            <builtIn-type>binary</builtIn-type>
+            <java-sql-type>BINARY</java-sql-type>
+
+            
+            <length>3</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "F">
+            <position>7</position>
+            <builtIn-type>integer</builtIn-type>
+            <java-sql-type>INTEGER</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+             <column name = "H">
+            <position>9</position>
+            <builtIn-type>short</builtIn-type>
+            <java-sql-type>SMALLINT</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+             <column name = "J">
+            <position>11</position>
+            <builtIn-type>time</builtIn-type>
+            <java-sql-type>TIME</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "C">
+            <position>4</position>
+            <builtIn-type>decimal</builtIn-type>
+            <java-sql-type>DECIMAL</java-sql-type>
+
+            
+            <length>23</length>
+            <decimals>12</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+             <column name = "B">
+            <position>3</position>
+            <builtIn-type>date</builtIn-type>
+            <java-sql-type>DATE</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "G">
+            <position>8</position>
+            <builtIn-type>long</builtIn-type>
+            <java-sql-type>BIGINT</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+             <column name = "E">
+            <position>6</position>
+            <builtIn-type>float</builtIn-type>
+            <java-sql-type>REAL</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+          </columns>
+          <primary-key>
+            <tabname>TMP_AA</tabname>
+            <columns>
+               <column>I</column>
+            </columns>
+         </primary-key>         
+          <indexes>
+            <index name = "TMP_AA_1">
+              <tabname>TMP_AA</tabname>
+              <is-unique>true</is-unique>
+              <columns>
+                  <column>
+                          <name>E</name>
+                   </column>
+              </columns>
+            </index>
+          </indexes>
+                    </Dbtable>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" ?> 
+<codeClassification>
+   <classificationRule filePattern="com/sap/engine/services/textcontainer/module/test/.*" attributes="test" /> 
+   <classificationRule filePattern="com/sap/engine/services/textcontainer/deployment/test/.*" attributes="test" /> 
+</codeClassification>

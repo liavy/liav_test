@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<template name="template_perf" number_of_nodes="1">
+
+    <filters>
+
+        <filter filter_action="stop"
+                component_name="*"
+                component_provider="sap.com"
+                component_type="application"/>
+
+        <filter filter_action="start"
+                component_name="LoadEmulatorApp"
+                component_provider="J2EE"
+                component_type="application"/>
+        <filter filter_action="start"
+                component_name="SPECjAppServer2004_EJB3_ear"
+                component_provider="sap.com"
+                component_type="application"/>
+        <filter filter_action="start"
+                component_name="MBeanViewer"
+                component_provider="sap.com"
+                component_type="application"/>
+
+        <filter filter_action="stop"
+                component_name="*"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="adminadapter"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="schemaprocessor~srv"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="basicadmin"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="connector"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="cross"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="dbpool"
+                component_provider="sap.com"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="deploy"
+                component_provider="*"
+                component_type="service"/>
+         <filter filter_action="start"
+                component_name="ejb"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="file"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="http"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="jms_provider"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="jmsconnector"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="jmx"
+                component_provider="sap.com"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="jmx_notification"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="keystore"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="library_container"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="locking"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="naming"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="p4"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="security"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="servlet_jsp"
+                component_provider="sap.com"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~bl~deploy_controller"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~je~cachemgmt~srv"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~je~dbcontainer~srv"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~je~webservices~srv"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="telnet"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="timeout"
+                component_provider="sap.com"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="ts"
+                component_provider="sap.com"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="userstore"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="com.sap.security.core.ume.service"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="orpersistence"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~je~cfs"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="ssl"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="iiop"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="javamail"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~sec~wssec~service"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="scheduler"
+                component_provider="sap.com"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="scheduler~runtime"
+                component_provider="sap.com"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~je~mngt_model~srv"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~je~content"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~je~src.zip~content~handler"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~sec~destinations~service"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="tc~sec~securestorage~service"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="webservices"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="async"
+                component_provider="*"
+                component_type="service"/>
+        <filter filter_action="start"
+                component_name="applocking"
+                component_provider="*"
+                component_type="service"/>
+<!--
+The following commands can be used in telnet console to stop processes manually until bug in configtool is solved (CSN 6053843).
+stopservice appclient
+stopservice applocking
+stopservice apptracing
+stopservice atservice
+stopservice classload
+stopservice classload.facade
+stopservice classpath_resolver
+stopservice cluster
+stopservice com.sap.sdm.facade
+stopservice configuration
+stopservice contextcollector
+stopservice dbpool.facade
+stopservice deploy.facade
+stopservice dsr
+stopservice engine.application.facade
+stopservice engine.client.facade
+stopservice engine.dsr.facade
+stopservice engine.license.facade
+stopservice engine.lm.ctc.cul.facade
+stopservice engine.lm.facade
+stopservice engine.migration.facade
+stopservice engine.migservice.facade
+stopservice engine.security.facade
+stopservice engine.service.facade
+stopservice engine.sld.facade
+stopservice engine.webservices.protocol.facade
+stopservice engine.wssec.facade
+stopservice I18NService
+stopservice licensing
+stopservice log_configurator
+stopservice memory
+stopservice MigrationService
+stopservice monitor
+stopservice msp
+stopservice objectanalyzing
+stopservice r3startup
+stopservice rfcengine
+stopservice runtimeinfo
+stopservice security.destination.facade
+stopservice security.facade
+stopservice security.securestorage.facade
+stopservice shell
+stopservice sld
+stopservice tc~bl~deploy~dc_connector
+stopservice tc~cim~service
+stopservice tc~je~appconfiguration~api
+stopservice tc~je~locking~api
+stopservice tc~je~portletcontainer~srv
+stopservice tc~je~security~api
+stopservice tc~je~scheduler~api
+stopservice tc~je~shortdump~srv
+stopservice tc~je~webcontainer~extensions~api
+stopservice tc~je~webcontainer~public~api
+stopservice tc~je~webservices~api
+stopservice tc~lm~ctc~cul~service_sda
+stopservice tc~sec~certrevoc~service
+stopservice tc~sec~destinations~provider
+stopservice tc~sec~saml~service
+stopservice tc~sec~vsi~service
+stopservice textcontainer
+-->
+    </filters>
+
+    <jvm-parameters>
+        <vm-vendor name="sap">
+            <parameter name="initialHeapSize" type="memory">
+                <value>4096</value>
+            </parameter>
+            <parameter name="maxHeapSize" type="memory">
+                <value>4096</value>
+            </parameter>
+            <parameter name="permSize" type="memory">
+                <value>256</value>
+            </parameter>
+            <parameter name="maxPermSize" type="memory">
+                <value>256</value>
+            </parameter>
+            <parameter name="newSize" type="memory" disabled="no">
+                <value>1024</value>
+            </parameter>
+            <parameter name="maxNewSize" type="memory" disabled="no">
+                <value>1024</value>
+            </parameter>
+            <parameter name="globalArea" type="memory">
+                <value>32</value>
+            </parameter>
+
+			   <parameter name="-XX:SharedPermGenSize" type="additional">
+                <value>16M</value>
+            </parameter>
+			   <parameter name="-XX:-EnableSharedClosures" type="additional">
+            </parameter>
+			   <parameter name="-XX:-EnableSharedClasses" type="additional">
+            </parameter>
+			   <parameter name="-verbose:gc" type="additional">
+            </parameter>
+			   <parameter name="-Xloggc:server.gc" type="additional">
+            </parameter>
+			   <parameter name="-XX:SymbolTableSize=100000" type="additional">
+            </parameter>
+			   <parameter name="-XX:SystemDictionarySize=20000" type="additional">
+            </parameter>
+			   <parameter name="-XX:-UseBiasedLocking" type="additional">
+            </parameter>
+			   <parameter name="-XX:+LogGcPrintStartTimeStamp" type="additional">
+            </parameter>
+			   <parameter name="-Dbernstat.collector.host=hs0035" type="additional">
+            </parameter>
+			   <parameter name="-XX:ReservedCodeCacheSize=200m" type="additional">
+            </parameter>
+
+			   <parameter name="-XX:-AllowMethodTrace" type="additional">
+            </parameter>
+			   <parameter name="-XX:-EnableDebuggingOnDemand" type="additional">
+            </parameter>
+			   <parameter name="-XX:-PreciseExtendedStackTrace" type="additional">
+            </parameter>
+			   <parameter name="-XX:-UseExtendedStackTrace" type="additional">
+            </parameter>
+
+			   <parameter name="-DSPECjRUN=SPECjRUN2" type="additional">
+            </parameter>
+			   <parameter name="-DSPECjRUN2=true" type="additional">
+            </parameter>
+
+			   <parameter name="-XX:CICompilerCount=10" type="additional">
+            </parameter>
+
+			   <parameter name="-XX:+ParallelRefProcEnabled" type="additional">
+            </parameter>
+
+<!--
+			   <parameter name="-XX:-UseTLCA" type="additional">
+            </parameter>
+			   <parameter name="-XX:NumberOfTLCASlots=4" type="additional">
+            </parameter>
+			   <parameter name="-XX:TLCASlotSize=2048" type="additional">
+            </parameter>
+-->
+
+<!--
+			   <parameter name="-XX:+UseConcMarkSweepGC" type="additional">
+            </parameter>
+-->
+			   <parameter name="-XX:LargePageSizeInBytes=256m" type="additional">
+            </parameter>
+			   <parameter name="-XX:+UseParallelOldGC" type="additional">
+            </parameter>
+			   <parameter name="-XX:ParallelGCThreads=16" type="additional">
+            </parameter>
+			   <parameter name="-XX:SurvivorRatio=12" type="additional">
+            </parameter>
+
+<!--
+			   <parameter name="-XtraceConcMarkSweepGC" type="additional">
+            </parameter>
+
+			   <parameter name="-XtraceConcMarkSweepGCIntervals" type="additional">
+            </parameter>
+
+			   <parameter name="-XX:+PrintTLCAStatistics" type="additional">
+            </parameter>
+
+			   <parameter name="-XX:+AggressiveHeap" type="additional">
+            </parameter>
+
+			   <parameter name="-XX:-RegisterFinalizers" type="additional">
+            </parameter>
+			   <parameter name="-XX:+Profiling" type="additional">
+            </parameter>
+			   <parameter name="-XX:+ProfilingGcStatistic" type="additional">
+            </parameter>
+			   <parameter name="-XX:+PrintCompilation" type="additional">
+            </parameter>
+			   <parameter name="-XX:+PrintInlining" type="additional">
+            </parameter>
+			   <parameter name="-XX:-OmitStackTraceInFastThrow" type="additional">
+                <description>sometimes stack trace is not deep enough due to JIT optimizations</description>
+            </parameter>
+			   <parameter name="-agentlib:hprof=monitor=y,interval=50" type="additional">
+                <description>contention profiling (HP-UX)</description>
+            </parameter>
+			   <parameter name="-agentlib:yjpagent" type="additional">
+                <value>disablealloc,noj2ee</value>
+                <description>Yourkit (6.0)</description>
+            </parameter>
+			   <parameter name="-Dcom.sun.management.jmxremote" type="additional">
+                <value></value>
+                <description></description>
+            </parameter>
+			   <parameter name="-Dcom.sun.management.jmxremote.port" type="additional">
+                <value>12345</value>
+                <description>JMX</description>
+            </parameter>
+			   <parameter name="-Dcom.sun.management.jmxremote.authenticate" type="additional">
+                <value>FALSE</value>
+                <description>JMX</description>
+            </parameter>
+			   <parameter name="-Dcom.sun.management.jmxremote.ssl" type="additional">
+                <value>FALSE</value>
+                <description></description>
+            </parameter>
+			   <parameter name="-Xeprof:time_on" type="additional">
+                <value>sigusr2,time_slice=sigusr2</value>
+                <description>HPjmeter</description>
+            </parameter>
+            <parameter name="SAPSTART" type="system">
+                <value>1</value>
+            </parameter>
+-->
+
+            <parameter name="SKIP_CLASS_WRAPPERS" type="system">
+                <value>true</value>
+            </parameter>
+
+            <!-- SPECjAppServer configuration -->
+            <parameter name="isPreloadEntities" type="system">
+                <value>true</value>
+            </parameter>
+            <parameter name="bypassJMS" type="system">
+                <value>false</value>
+            </parameter>
+            <parameter name="numCategories" type="system">
+                <value>1</value>
+                <description>Must equal number of large order agents in run.properties.</description>
+            </parameter>
+        </vm-vendor>
+    </jvm-parameters>
+
+    <configuration>
+        <manager name="ThreadManager">
+            <property name="InitialThreadCount" value="15"/>
+            <property name="MaxThreadCount" value="100"/>
+            <property name="MinThreadCount" value="10"/>
+            <property name="MaintainWakeupTimeout" value="20"/>
+            <property name="MaxRQSize" value="100"/>
+        </manager>
+
+        <manager name="ApplicationThreadManager">
+            <property name="InitialThreadCount" value="15"/>
+            <property name="MaxThreadCount" value="250"/>
+            <property name="MinThreadCount" value="10"/>
+            <property name="MaintainWakeupTimeout" value="20"/>
+            <property name="MaxRQSize" value="100"/>
+            <property name="PercentageOfParallelismAllowed" value="100"/>
+        </manager>
+
+	     <manager name="DatabaseManager">
+            <property name="ConnectionRequestTrace" value="false"/>
+        </manager>
+
+	     <manager name="ServiceManager">
+            <property name="ForceShutdown" value="true"/>
+            <property name="ServiceStopTimeout" value="0"/>
+        </manager>
+
+	     <manager name="ClassLoaderManager">
+            <property name="JarResourceCloseTimeout" value="0"/>
+        </manager>
+
+        <shmSlot name="EjbSessions" size="10000"/>
+        <shmSlot name="Ejbs" size="600"/>
+        <shmSlot name="BrSessions" size="6000"/>
+
+        <service name="com.sap.security.core.ume.service" provider="sap.com">
+            <property name="ume.logon.security_policy.password_expire_days" value="9999"/>
+            <property name="ume.logon.security_policy.lock_after_invalid_attempts" value="9999"/>
+        </service>
+
+	     <service name="http" provider="sap.com">
+            <property name="DetailedErrorResponse" value="true"/>
+            <property name="FCAServerThreadCount" value="80"/>
+            <property name="LogResponseTime" value="false"/>
+        </service>
+
+	     <service name="servlet_jsp" provider="sap.com">
+            <property name="CompileOnStartup" value="false"/>
+<!--            <property name="CompileOnStartup" value="true"/> ????????????????????-->
+            <property name="ProductionMode" value="true"/>
+            <property name="JSPDebugSupport" value="false"/>
+            <property name="ServletOutputStreamBufferSize" value="20000"/>
+<!--
+            <property name="EnableChunkedResponse" value="false"/>
+Not usable since up to now disabling chunks means closing the tcp connection after every (HTTP) response
+-->
+        </service>
+
+	     <service name="jms_provider" provider="sap.com">
+            <property name="dc.TaskManager.numberOfThreads" value="30"/>
+        </service>
+
+	     <service name="cross" provider="sap.com">
+            <property name="maxServiceThreads" value="40"/>
+        </service>
+
+	     <service name="p4" provider="sap.com">
+            <property name="parallelRequests" value="20"/>
+            <property name="requestQueueSize" value="1000"/>
+            <property name="useStreamHooks" value="true"/>
+        </service>
+
+	     <service name="iiop" provider="sap.com">
+            <property name="parallelRequests" value="10"/>
+            <property name="requestQueueSize" value="1000"/>
+        </service>
+
+	     <service name="dsr" provider="sap.com">
+            <property name="JARM.Instrumentation" value="off"/>
+            <property name="jarm.instrumentation" value="off"/>
+        </service>
+
+	     <service name="monitor" provider="sap.com">
+            <property name="CCMS_Mapping" value="false"/>
+            <property name="history" value="false"/>
+            <property name="history_persistence" value="false"/>
+            <property name="history_persistance" value="false"/>
+            <property name="jarm_history.started" value="false"/>
+        </service>
+    </configuration>
+
+</template>

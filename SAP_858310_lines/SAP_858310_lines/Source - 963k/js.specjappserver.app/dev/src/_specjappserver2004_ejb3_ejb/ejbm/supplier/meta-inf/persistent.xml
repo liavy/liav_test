@@ -1,0 +1,329 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE persistent-ejb-map SYSTEM 'persistent.dtd'>
+<persistent-ejb-map>
+  <locking type="Local"/>
+  <db-properties>
+    <data-source-name>SupplierDataSource</data-source-name>
+  </db-properties>
+  <entity-beans>
+    <entity-bean>
+      <ejb-name>SupplierEnt</ejb-name>
+      <table-name>S_SUPPLIER</table-name>
+      <field-map key-type="PrimaryKey">
+        <field-name>suppID</field-name>
+        <column>
+          <column-name>SUPP_ID</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppName</field-name>
+        <column>
+          <column-name>SUPP_NAME</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppStreet1</field-name>
+        <column>
+          <column-name>SUPP_STREET1</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppStreet2</field-name>
+        <column>
+          <column-name>SUPP_STREET2</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppCity</field-name>
+        <column>
+          <column-name>SUPP_CITY</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppState</field-name>
+        <column>
+          <column-name>SUPP_STATE</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppCountry</field-name>
+        <column>
+          <column-name>SUPP_COUNTRY</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppZip</field-name>
+        <column>
+          <column-name>SUPP_ZIP</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppPhone</field-name>
+        <column>
+          <column-name>SUPP_PHONE</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppContact</field-name>
+        <column>
+          <column-name>SUPP_CONTACT</column-name>
+        </column>
+      </field-map>
+      <finder-descriptor>
+        <method-name>findAll</method-name>
+        <method-params/>
+        <switch-off-storing/>
+        <load-selected-objects/>
+      </finder-descriptor>
+      <finder-descriptor>
+        <method-name>findByPrimaryKey</method-name>
+	   <method-params>
+	       <method-param>java.lang.Integer</method-param>
+	   </method-params>
+           <switch-off-storing/>
+	   <load-selected-objects/>
+      </finder-descriptor>
+    </entity-bean>
+    <entity-bean>
+      <ejb-name>SupplierCompEnt</ejb-name>
+      <table-name>S_SUPP_COMPONENT</table-name>
+      <field-map key-type="PrimaryKey">
+        <field-name>suppCompID</field-name>
+        <column>
+          <column-name>SC_P_ID</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="PrimaryKey">
+        <field-name>suppCompSuppID</field-name>
+        <column>
+          <column-name>SC_SUPP_ID</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppCompPrice</field-name>
+        <column>
+          <column-name>SC_PRICE</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppCompQty</field-name>
+        <column>
+          <column-name>SC_QTY</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppCompDiscount</field-name>
+        <column>
+          <column-name>SC_DISCOUNT</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>suppCompDelDate</field-name>
+        <column>
+          <column-name>SC_DEL_DATE</column-name>
+        </column>
+      </field-map>
+      <finder-descriptor>
+        <method-name>findAllBySupplier</method-name>
+        <method-params>
+          <method-param>int</method-param>
+        </method-params>
+        <switch-off-storing/>
+        <load-selected-objects/>
+      </finder-descriptor>
+       <finder-descriptor>
+        <method-name>findByPrimaryKey</method-name>
+	   <method-params>
+	       <method-param>org.spec.jappserver.supplier.suppliercompent.ejb.SuppCompEntPK</method-param>
+	   </method-params>
+           <switch-off-storing/>
+	   <load-selected-objects/>
+      </finder-descriptor>
+    </entity-bean>
+    <entity-bean>
+      <ejb-name>SComponentEnt</ejb-name>
+      <table-name>S_COMPONENT</table-name>
+      <select-for-update/>
+      <field-map key-type="PrimaryKey">
+        <field-name>compID</field-name>
+        <column>
+          <column-name>COMP_ID</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>compName</field-name>
+        <column>
+          <column-name>COMP_NAME</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>compDesc</field-name>
+        <column>
+          <column-name>COMP_DESC</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>compUnit</field-name>
+        <column>
+          <column-name>COMP_UNIT</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>compCost</field-name>
+        <column>
+          <column-name>COMP_COST</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>qtyOnOrder</field-name>
+        <column>
+          <column-name>QTY_ON_ORDER</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>qtyDemanded</field-name>
+        <column>
+          <column-name>QTY_DEMANDED</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>leadTime</field-name>
+        <column>
+          <column-name>LEAD_TIME</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>containerSize</field-name>
+        <column>
+          <column-name>CONTAINER_SIZE</column-name>
+        </column>
+      </field-map>
+      <finder-descriptor>
+        <method-name>findAll</method-name>
+        <method-params/>
+        <switch-off-storing/>
+        <load-selected-objects/>
+      </finder-descriptor>
+       <finder-descriptor>
+        <method-name>findByPrimaryKey</method-name>
+	   <method-params>
+	       <method-param>java.lang.String</method-param>
+	   </method-params>
+           <switch-off-storing/>
+	   <load-selected-objects/>
+      </finder-descriptor>
+
+    </entity-bean>
+    <entity-bean>
+      <ejb-name>POEnt</ejb-name>
+      <table-name>S_PURCHASE_ORDER</table-name>
+      <select-for-update/>
+      <field-map key-type="PrimaryKey">
+        <field-name>poNumber</field-name>
+        <column>
+          <column-name>PO_NUMBER</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>poSuppID</field-name>
+        <column>
+          <column-name>PO_SUPP_ID</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>poSiteID</field-name>
+        <column>
+          <column-name>PO_SITE_ID</column-name>
+        </column>
+      </field-map>
+       <finder-descriptor>
+        <method-name>findByPrimaryKey</method-name>
+	   <method-params>
+	       <method-param>java.lang.Integer</method-param>
+	   </method-params>
+           <switch-off-storing/>
+	   <load-selected-objects/>
+      </finder-descriptor>
+
+    </entity-bean>
+    <entity-bean>
+      <ejb-name>POLineEnt</ejb-name>
+      <table-name>S_PURCHASE_ORDERLI</table-name>
+      <select-for-update/>
+      <field-map key-type="PrimaryKey">
+        <field-name>poLineNumber</field-name>
+        <column>
+          <column-name>POL_NUMBER</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="PrimaryKey">
+        <field-name>poLinePoID</field-name>
+        <column>
+          <column-name>POL_PO_ID</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>poLineID</field-name>
+        <column>
+          <column-name>POL_P_ID</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>poLineQty</field-name>
+        <column>
+          <column-name>POL_QTY</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>poLineBalance</field-name>
+        <column>
+          <column-name>POL_BALANCE</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>poLineDelDate</field-name>
+        <column>
+          <column-name>POL_DELDATE</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>poLineMsg</field-name>
+        <column>
+          <column-name>POL_MESSAGE</column-name>
+        </column>
+      </field-map>
+      <finder-descriptor>
+        <method-name>findByPO</method-name>
+        <method-params>
+          <method-param>java.lang.Integer</method-param>
+        </method-params>
+        <switch-off-storing/>
+        <load-selected-objects/>
+      </finder-descriptor>
+       <finder-descriptor>
+        <method-name>findByPrimaryKey</method-name>
+	   <method-params>
+	       <method-param>org.spec.jappserver.supplier.polineent.ejb.POLineEntPK</method-param>
+	   </method-params>
+           <switch-off-storing/>
+	   <load-selected-objects/>
+      </finder-descriptor>
+
+    </entity-bean>
+  </entity-beans>
+  <relationships>
+    <table-relation>
+      <table-relationship-role key-type="PrimaryKey">
+        <ejb-name>POEnt</ejb-name>
+        <cmr-field>poLines</cmr-field>
+      </table-relationship-role>
+      <table-relationship-role key-type="NoKey">
+        <ejb-name>POLineEnt</ejb-name>
+        <fk-column>
+          <column-name>POL_NUMBER</column-name>
+          <pk-field-name>poNumber</pk-field-name>
+        </fk-column>
+      </table-relationship-role>
+    </table-relation>
+  </relationships>
+</persistent-ejb-map>

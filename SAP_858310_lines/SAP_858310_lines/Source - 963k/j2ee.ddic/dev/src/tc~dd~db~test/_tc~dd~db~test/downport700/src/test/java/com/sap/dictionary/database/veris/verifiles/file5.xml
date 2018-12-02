@@ -1,0 +1,292 @@
+﻿<?xml version="1.0"?>
+<veritables>
+<Dbtable name="VERI" creation-date="">
+      <properties>
+            <author> </author>
+            <description language=""></description>
+      </properties>
+      <predefined-action></predefined-action>
+      <position-is-relevant></position-is-relevant>
+      <deployment-status></deployment-status>
+        <columns>
+             <column name = "TRACKSTATE">
+            <position>7</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>10</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "DESCRIPTION">
+            <position>4</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>LONGVARCHAR</java-sql-type>
+
+                           <types-info-additional>   
+
+               
+                   <type-info-additional>
+                         <database>DB6</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+                   <type-info-additional>
+                         <database>ORACLE</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+                   <type-info-additional>
+                         <database>SAPDB</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+                   <type-info-additional>
+                         <database>DB4</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+                   <type-info-additional>
+                         <database>MSSQL</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+                   <type-info-additional>
+                         <database>DB2</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+              </types-info-additional>
+            
+            <length>255</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "TRACKTYPE">
+            <position>5</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>10</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "VERSION">
+            <position>1</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>10</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "ASSEMBLE4DELIVERY">
+            <position>6</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>10</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "CAPTION">
+            <position>3</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>80</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "NAME">
+            <position>2</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>8</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value> </default-value>
+        </column>
+          </columns>
+              <primary-key>
+            <tabname>CMS_CTRACK</tabname>
+            <columns>
+                           <column>VERSION</column>
+                           <column>NAME</column>
+                        </columns>
+         </primary-key>
+                   </Dbtable>
+
+   <Dbtable creation-date="">
+      <origin></origin>
+      <nodata></nodata>	
+      <properties>
+            <author>Tsesis</author>
+            <description language="">
+              <description>(1) add field and alter default from null to space
+              </description>
+            </description>
+      </properties>
+      <expected-actions>
+            <action name = "ALTER"/>
+      </expected-actions>
+	  <columns>
+             <column name = "TRACKSTATE">
+            <position>7</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>10</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "RESPONSIBLE">
+            <position>8</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>50</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "DESCRIPTION">
+            <position>4</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>LONGVARCHAR</java-sql-type>
+
+                           <types-info-additional>   
+
+               
+                   <type-info-additional>
+                         <database>DB6</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+                   <type-info-additional>
+                         <database>ORACLE</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+                   <type-info-additional>
+                         <database>SAPDB</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+                   <type-info-additional>
+                         <database>DB4</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+                   <type-info-additional>
+                         <database>MSSQL</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+                   <type-info-additional>
+                         <database>DB2</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+               
+              </types-info-additional>
+            
+            <length>255</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "TRACKTYPE">
+            <position>5</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>10</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "VERSION">
+            <position>1</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>10</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value> </default-value>
+        </column>
+             <column name = "ASSEMBLE4DELIVERY">
+            <position>6</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>10</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "CAPTION">
+            <position>3</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>80</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value></default-value>
+        </column>
+             <column name = "NAME">
+            <position>2</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>8</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value> </default-value>
+        </column>
+          </columns>
+              <primary-key>
+            <tabname>CMS_CTRACK</tabname>
+            <columns>
+                           <column>VERSION</column>
+                           <column>NAME</column>
+                        </columns>
+         </primary-key>
+                   </Dbtable>
+
+</veritables>
+

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application-j2ee-engine SYSTEM "application-j2ee-engine.dtd">
+<application-j2ee-engine>
+<!--
+  <reference 
+    reference-type="hard">
+    <reference-target 
+    target-type="application">Hibernate</reference-target>
+  </reference>
+-->
+  <modules-additional>
+    <module>
+      <entry-name>web.war</entry-name>
+      <container-type>WebContainer</container-type>
+    </module>
+    <module>
+      <entry-name>supplier.war</entry-name>
+      <container-type>WebContainer</container-type>
+    </module>
+    <module>
+      <entry-name>loader.war</entry-name>
+      <container-type>WebContainer</container-type>
+    </module>
+  </modules-additional>
+  <provider-name>sap.com</provider-name>
+  <fail-over-enable mode="disable"/>
+  <start-up mode="lazy"/>
+</application-j2ee-engine>

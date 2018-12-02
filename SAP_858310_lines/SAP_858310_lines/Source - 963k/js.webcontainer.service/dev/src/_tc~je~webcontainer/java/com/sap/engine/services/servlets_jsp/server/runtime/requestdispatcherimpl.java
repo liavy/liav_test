@@ -1,0 +1,740 @@
+﻿/*
+ * Copyright (c) 2000-2009 by SAP AG, Walldorf.,
+ * http://www.sap.com
+ * All rights reserved.
+ *
+ * This software is the confidential and proprietary information
+ * of SAP AG, Walldorf. You shall not disclose such Confidential
+ * Information and shall use it only in accordance with the terms
+ * of the license agreement you entered into with SAP.
+ */
+package com.sap.engine.services.servlets_jsp.server.runtime;
+
+/*
+ *
+ * @author Galin Galchev
+ * @version 4.0
+ */
+
+import java.io.IOException;
+import java.util.Collection;
+import java.util.ConcurrentModificationException;
+import java.util.Hashtable;
+
+import javax.security.auth.Subject;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+import com.sap.engine.interfaces.resourcecontext.ResourceContext;
+import com.sap.engine.services.accounting.Accounting;
+import com.sap.engine.services.httpserver.interfaces.HttpParameters;
+import com.sap.engine.services.httpserver.interfaces.RequestPathMappings;
+import com.sap.engine.services.httpserver.lib.ParseUtils;
+import com.sap.engine.services.httpserver.lib.ResponseCodes;
+import com.sap.engine.services.httpserver.lib.Responses;
+import com.sap.engine.services.httpserver.lib.util.MessageBytes;
+import com.sap.engine.services.httpserver.server.SessionRequestImpl;
+import com.sap.engine.services.httpserver.server.sessionsize.SessionRequestInfo;
+import com.sap.engine.services.httpserver.server.sessionsize.SessionSizeManager;
+import com.sap.engine.services.servlets_jsp.server.Invokable;
+import com.sap.engine.services.servlets_jsp.server.LogContext;
+import com.sap.engine.services.servlets_jsp.server.ServiceContext;
+import com.sap.engine.services.servlets_jsp.server.application.ApplicationContext;
+import com.sap.engine.services.servlets_jsp.server.exceptions.WebIllegalStateException;
+import com.sap.engine.services.servlets_jsp.server.exceptions.WebServletException;
+import com.sap.engine.services.servlets_jsp.server.lib.Constants;
+import com.sap.engine.services.servlets_jsp.server.lib.FilterUtils;
+import com.sap.engine.services.servlets_jsp.server.lib.StaticResourceUtils;
+import com.sap.engine.services.servlets_jsp.server.qos.RDResourceProvider;
+import com.sap.engine.services.servlets_jsp.server.qos.RequestDispatcherConsumer;
+import com.sap.engine.services.servlets_jsp.server.runtime.client.ApplicationSession;
+import com.sap.engine.services.servlets_jsp.server.runtime.client.HttpServletRequestFacadeWrapper;
+import com.sap.engine.services.servlets_jsp.server.runtime.client.HttpServletResponseFacadeWrapper;
+import com.sap.engine.session.runtime.http.HttpSessionRequest;
+
+/**
+ * Defines an object that receives requests from the client and sends them to any resource
+ * (such as a servlet, HTML file, or JSP file) on the server. The servlet container creates
+ * the RequestDispatcher object, which is used as a wrapper around a server resource
+ * located at a particular path or given by a particular name.
+ */
+
+public class RequestDispatcherImpl extends Invokable implements RequestDispatcher {
+  private String resourceUrl = null;
+  private String resourceServletName = null;
+  /**
+   * A reference to ServletContextFacade that gives to the servlet access to Web container
+   */
+  transient private ApplicationContext context = null;
+  private String servletPath = null;
+  private String path_info = null;
+  private String prop = null;
+
+  private boolean isNamedDispatcher = false;
+  private String aliasUsed = null;
+  private boolean cached = false;
+  private Servlet srv = null;
+  private String servletName = null;
+  private String realPathLocal = null;
+  private RDResourceProvider resourceProvider = null;
+  
+  /**
+   * Initiates the instance with a name of a jsp file and reference to ServletConfig object
+   * of the servlet.
+   *
+   * @param s
+   */
+  public RequestDispatcherImpl(ApplicationContext context, String s, boolean isNamedDispatcher) {
+    this.context = context;
+    this.isNamedDispatcher = isNamedDispatcher; //isServlet is true only in context.getNamedDispatcher
+    if (isNamedDispatcher) {
+      resourceServletName = s;
+    } else {
+      resourceUrl = s;
+    }
+    resourceProvider = ServiceContext.getServiceContext().getRDResourceProvider();
+  }
+
+  /**
+   * Instantiates the request dispatcher to the requested 'resourceUrl' and 'prop' query string
+   *
+   * @param context
+   * @param resourceUrl the part of the pathname to the resource before the query string
+   * @param prop        the query string part of the pathname to the resource
+   */
+  public RequestDispatcherImpl(ApplicationContext context, String resourceUrl, String prop) {
+    this.context = context;
+    this.resourceUrl = resourceUrl;
+    this.prop = prop;
+    resourceProvider = ServiceContext.getServiceContext().getRDResourceProvider();
+  }
+
+  /**
+   * Accomplishes the including of the result generated by the second jsp or servlet,
+   * or content of a static resource into the original response.
+   *
+   * @param servletrequest  a reference to the http request made to this servlet
+   * @param servletresponse a reference to the http response made to this servlet
+   * @throws ServletException
+   * @throws IOException
+   */
+  private void doWork(ServletRequest servletrequest, ServletResponse servletresponse, boolean isForward) throws javax.servlet.ServletException, IOException {
+    boolean accounting = false;
+    //ApplicationContext originalContext = FilterUtils.unWrapResponse(servletresponse).getServletContext();
+    ApplicationContext originalContext = FilterUtils.unWrapRequest(servletrequest).getApplicationContext();
+    ApplicationSession originalSession = null;
+    ResourceContext resourceContext = null;
+    // new SessionRequest
+    HttpSessionRequest sRequest = null;
+    // the original SessionRequest
+    HttpSessionRequest originalSessionRequest = null;
+    Thread currentThread = Thread.currentThread();
+    ClassLoader threadLoader = null;
+    MessageBytes fileBytes = new MessageBytes(resourceUrl == null ? resourceServletName.getBytes() : resourceUrl.getBytes());
+    boolean aliasChanged = false;
+    if (originalContext.getAliasName().equals(context.getAliasName())) {
+      if (context.getAliasName().equals("/")) {
+        FilterUtils.unWrapRequest(servletrequest).getHttpParameters().replaceAliases(fileBytes);
+        aliasChanged = true;
+      }
+      originalContext = null;
+    } else {
+      accounting = ServiceContext.isAccountingEnabled(); //only when dispatching in different application
+      //change application context
+      FilterUtils.unWrapRequest(servletrequest).setContext(context);
+      FilterUtils.unWrapResponse(servletresponse).setContext(context);
+      //this will change all values with actual one to the real resource
+      if (context.getAliasName().equals("/")) {
+        FilterUtils.unWrapRequest(servletrequest).getHttpParameters().replaceAliases(fileBytes);
+      } else {
+        FilterUtils.unWrapRequest(servletrequest).getHttpParameters().replaceAliases(new MessageBytes((ParseUtils.separator + context.getAliasName() + fileBytes.toString()).getBytes()));
+      }
+
+      aliasChanged = true;
+      originalSession = (ApplicationSession) FilterUtils.unWrapRequest(servletrequest).getHttpParameters().getApplicationSession();
+      //save original SessionRequest
+      originalSessionRequest = FilterUtils.unWrapRequest(servletrequest).getSessionRequest();
+      String sessionId = originalSessionRequest.getSessionId();
+      //do not suspend current session (reuse) - create new one - sRequest
+      //this allows more than one thread to use the SessionRequest, otherwise
+      //suspended SessionRequest will fail because it is already suspended
+      sRequest = new SessionRequestImpl();
+      if (sessionId != null) {
+        sRequest.doSessionRequest(context.getSessionServletContext().getSession(), originalSessionRequest.getClientCookie(),sessionId);
+      }
+      FilterUtils.unWrapRequest(servletrequest).setSessionRequest(sRequest);
+      FilterUtils.unWrapRequest(servletrequest).getHttpParameters().setApplicationSession(null);
+      threadLoader = currentThread.getContextClassLoader();
+      currentThread.setContextClassLoader(context.getClassLoader());
+      resourceContext = context.enterResourceContext();
+    }
+    try {  
+      if (resourceUrl != null) {
+        servletPath = resourceUrl;
+      } else {
+        servletPath = resourceServletName;
+      }
+      //String servletName = null;
+      RequestPathMappings newRequestPathMappings = new RequestPathMappings();
+
+      if (resourceServletName == null) {
+        context.getWebMappings().doMapCheck(fileBytes, newRequestPathMappings, true);
+        if (newRequestPathMappings.getServletPath() != null) {
+          servletPath = newRequestPathMappings.getServletPath();
+          path_info = resourceUrl.substring(resourceUrl.indexOf(servletPath) + servletPath.length());
+          if (isForward) {
+            FilterUtils.unWrapRequest(servletrequest).setServletPath(servletPath);
+            FilterUtils.unWrapRequest(servletrequest).setPathInfo(path_info);
+          }
+        }
+        //Dispatch to static resources:
+        if (newRequestPathMappings.getServletName() == null || newRequestPathMappings.getServletName().toString() == null) {
+          //Since 2.4, apply filters (include, forward or error):
+          String[] fitlersFW = getFilters(servletrequest, newRequestPathMappings.getServletName(), resourceUrl, isForward);
+          if (fitlersFW != null && (fitlersFW.length > 0)) {
+            boolean isConsumed = true;
+            RequestDispatcherConsumer rdConsumer = new RequestDispatcherConsumer(RequestDispatcherConsumer.REQUEST_DISPATCHER_CONSUMER);
+            try {               
+              rdConsumer.setId(resourceProvider.getConsumerType(context.getAliasName(), resourceUrl));
+              if (!resourceProvider.consume(rdConsumer)) {   
+                LogContext.getLocation(LogContext.LOCATION_QUALITY_OF_SERVICE_INTEGRATION).traceInfo("503 is returned for [" + context.getAliasName() + resourceUrl + "] resourse", context.getAliasName());
+                isConsumed = false;
+                FilterUtils.unWrapResponse(servletresponse).sendError(ResponseCodes.code_service_unavailable, Responses.mess16.replace("{URL}", context.getAliasName() + resourceUrl));                    
+              } else {
+                FilterChainImpl filterChain = (FilterChainImpl) context.instantiateFilterChain(fitlersFW);
+                filterChain.setStaticResource(resourceUrl, context);
+                
+                try {
+                  if (accounting) {
+                    Accounting.beginMeasure("Dispatch to static resource from [" + originalContext.getAliasName() + "] in [" + context.getAliasName() + "] / doFilter", filterChain.getClass());
+                  }
+                  filterChain.doFilter(servletrequest, servletresponse);
+                } finally {
+                  if (accounting) {
+                    Accounting.endMeasure("Dispatch to static resource from [" + originalContext.getAliasName() + "] in [" + context.getAliasName() + "] / doFilter");
+                  }
+                }
+                filterChain = null;
+              }
+            } finally {
+              if (isConsumed) {                
+                resourceProvider.release(rdConsumer);
+              }
+            }
+          } else {
+            boolean isConsumed = true;
+            RequestDispatcherConsumer rdConsumer = new RequestDispatcherConsumer(RequestDispatcherConsumer.REQUEST_DISPATCHER_CONSUMER);
+            try {
+              rdConsumer.setId(resourceProvider.getConsumerType(context.getAliasName(), resourceUrl));
+              if (!resourceProvider.consume(rdConsumer)) {               
+                LogContext.getLocation(LogContext.LOCATION_QUALITY_OF_SERVICE_INTEGRATION).traceInfo("503 is returned for [" + context.getAliasName() + resourceUrl + "] resourse", context.getAliasName());
+                isConsumed = false;
+                FilterUtils.unWrapResponse(servletresponse).sendError(ResponseCodes.code_service_unavailable, Responses.mess16.replace("{URL}", context.getAliasName() + resourceUrl));                          
+              } else {
+                try {
+                  if (accounting) {
+                    Accounting.beginMeasure("Dispatch to static resource from [" + originalContext.getAliasName() + "] to [" + context.getAliasName() + "]", StaticResourceUtils.class);
+                  }
+                  StaticResourceUtils.dispatchToResource(servletrequest, servletresponse, isForward, resourceUrl, context, aliasChanged); 
+                } finally {
+                  if (accounting) {
+                    Accounting.endMeasure("Dispatch to static resource from [" + originalContext.getAliasName() + "] to [" + context.getAliasName() + "]");
+                  }
+                }
+              }
+            } finally {
+              if (isConsumed) {                
+                resourceProvider.release(rdConsumer);
+              }
+            }
+          }
+          return;
+        }
+        String tempPath = FilterUtils.unWrapRequest(servletrequest).getRealPathLocal(resourceUrl);
+        realPathLocal = tempPath.substring(0, tempPath.lastIndexOf(ParseUtils.separator) + 1);
+        servletrequest.setAttribute("javax.servlet.include.realpath_path", realPathLocal);
+        if (isForward || isNamedDispatcher) {
+          servletrequest.removeAttribute("javax.servlet.include.context_path");
+          servletrequest.removeAttribute("javax.servlet.include.request_uri");
+          servletrequest.removeAttribute("javax.servlet.include.servlet_path");
+          servletrequest.removeAttribute("javax.servlet.include.path_info");
+          servletrequest.removeAttribute("javax.servlet.include.query_string");
+        } else {
+          servletrequest.setAttribute("javax.servlet.include.context_path",
+            FilterUtils.unWrapRequest(servletrequest).getContextPath());
+          if (resourceUrl != null) {
+            servletrequest.setAttribute("javax.servlet.include.request_uri",
+              FilterUtils.unWrapRequest(servletrequest).getContextPath() + resourceUrl);
+          }
+          if (servletPath != null) {
+            servletrequest.setAttribute("javax.servlet.include.servlet_path", servletPath);
+          }
+          if (path_info != null) {
+            servletrequest.setAttribute("javax.servlet.include.path_info", path_info);
+          }
+        }
+        if (path_info != null) {
+          servletrequest.setAttribute("com.inqmy.include.path_info", path_info);
+        }
+        if (resourceUrl != null) {
+          servletrequest.setAttribute("com.sap.engine.include.request_uri", resourceUrl);
+        }
+        if (newRequestPathMappings.getServletName().toString() != null
+          && !newRequestPathMappings.getServletName().toString().equals("jsp")) {
+          servletName = newRequestPathMappings.getServletName().toString();
+          servletName = servletName.substring(servletName.lastIndexOf(ParseUtils.separator) + 1);
+        }
+      } else {
+        servletName = resourceServletName;
+        servletrequest.removeAttribute("javax.servlet.include.realpath_path");
+        servletrequest.removeAttribute("javax.servlet.include.context_path");
+        servletrequest.removeAttribute("javax.servlet.include.request_uri");
+        servletrequest.removeAttribute("javax.servlet.include.servlet_path");
+        servletrequest.removeAttribute("javax.servlet.include.path_info");
+      }
+      if (servletName == null) {
+        servletName = "jsp";
+      }
+
+      //To verify that the request is passed through the Request Dispatcher
+      servletrequest.setAttribute("com.sap.engine.include.request_dispatcher", "true");
+
+      FilterUtils.unWrapRequest(servletrequest).setServletName(servletName);
+
+      Servlet srv = context.getWebComponents().getServlet(servletName);
+      try {
+        //Since 2.4, apply filters (include, forward or error):
+        String[] fitlersFW = getFilters(servletrequest, new MessageBytes(servletName.getBytes()), resourceUrl, isForward);
+        if (fitlersFW != null && (fitlersFW.length > 0)) {
+          boolean isConsumed = true;
+          RequestDispatcherConsumer rdConsumer = new RequestDispatcherConsumer(RequestDispatcherConsumer.REQUEST_DISPATCHER_CONSUMER);
+          try {
+            rdConsumer.setId(resourceProvider.getConsumerType(context.getAliasName(), resourceUrl));
+            if (!resourceProvider.consume(rdConsumer)) {                      
+              LogContext.getLocation(LogContext.LOCATION_QUALITY_OF_SERVICE_INTEGRATION).traceInfo("503 is returned for [" + context.getAliasName() + resourceUrl + "] resourse", context.getAliasName());
+              isConsumed = false;
+              FilterUtils.unWrapResponse(servletresponse).sendError(ResponseCodes.code_service_unavailable, Responses.mess16.replace("{URL}", context.getAliasName() + resourceUrl));                        
+            } else {
+              FilterChainImpl filterChain = (FilterChainImpl) context.instantiateFilterChain(fitlersFW);
+              Subject subject = context.getSubject(servletName);
+              filterChain.setServlet(srv, subject);
+              
+              try {
+                if (accounting) {
+                  Accounting.beginMeasure("Dispatch from [" + originalContext.getAliasName() + "] to [" + context.getAliasName() + "] / doFilter", filterChain.getClass());
+                }
+                
+                filterChain.doFilter(servletrequest, servletresponse);
+              
+              } finally {
+                if (accounting) {
+                  Accounting.endMeasure("Dispatch from [" + originalContext.getAliasName() + "] to [" + context.getAliasName() + "] / doFilter");
+                }
+              }
+              
+              filterChain = null;
+            }
+          } finally {
+            if (isConsumed) {
+              resourceProvider.release(rdConsumer);
+            }
+          }
+        } else {
+          boolean isConsumed = true;
+          RequestDispatcherConsumer rdConsumer = new RequestDispatcherConsumer(RequestDispatcherConsumer.REQUEST_DISPATCHER_CONSUMER);
+          try {        
+            rdConsumer.setId(resourceProvider.getConsumerType(context.getAliasName(), resourceUrl));            
+            if (!resourceProvider.consume(rdConsumer)) {                   
+              LogContext.getLocation(LogContext.LOCATION_QUALITY_OF_SERVICE_INTEGRATION).traceInfo("503 is returned for [" + context.getAliasName() + resourceUrl + "] resourse", context.getAliasName());
+              isConsumed = false;
+              FilterUtils.unWrapResponse(servletresponse).sendError(ResponseCodes.code_service_unavailable, Responses.mess16.replace("{URL}", context.getAliasName() + resourceUrl));                        
+            } else {
+              if (!aliasChanged) {
+                this.srv = srv;
+                context.putReqDispToCache(resourceUrl == null ? resourceServletName : resourceUrl, this);
+                cached = true;
+              }
+              try {
+                if (accounting) {
+                  Accounting.beginMeasure("Dispatch from [" + originalContext.getAliasName() + "] to [" + context.getAliasName() + "]", srv.getClass());
+                }
+                
+                invoke(srv, servletrequest, servletresponse, originalContext != null, false, null);
+              
+              } finally {
+                if (accounting) {
+                  Accounting.endMeasure("Dispatch from [" + originalContext.getAliasName() + "] to [" + context.getAliasName() + "]");
+                }
+              }
+            }
+          } finally {
+            if (isConsumed) {
+              resourceProvider.release(rdConsumer);              
+            }
+          }
+        }
+      } catch (IOException io) {
+        if (LogContext.getLocationServletResponse().beWarning()) {
+          LogContext.getLocation(LogContext.LOCATION_SERVLET_RESPONSE).traceWarning("ASJ.web.000557",
+            "Exception during forward or include:", io, context.getApplicationName(), context.getCsnComponent());
+        }
+        throw io;
+      } catch (ServletException se) {
+        if (LogContext.getLocationServletResponse().beWarning()) {
+          LogContext.getLocation(LogContext.LOCATION_SERVLET_RESPONSE).traceWarning("ASJ.web.000558",
+            "Exception during forward or include:", se, context.getApplicationName(), context.getCsnComponent());
+        }
+        throw se;
+      } catch (Exception e) {
+        if (LogContext.getLocationServletResponse().beWarning()) {
+          LogContext.getLocation(LogContext.LOCATION_SERVLET_RESPONSE).traceWarning("ASJ.web.000559",
+            "Exception during forward or include:", e, context.getApplicationName(), context.getCsnComponent());
+        }
+        throw new WebServletException(WebServletException.ERROR_IN_INCLUDED_SERVLET, new Object[]{resourceUrl}, e);
+      } finally {
+        servletrequest.removeAttribute("javax.servlet.include.realpath_path");
+      }
+    } finally {      
+      if (originalContext != null) {     
+        //context was changed
+        addSessionSize(FilterUtils.unWrapRequest(servletrequest).getHttpParameters());        
+        FilterUtils.unWrapRequest(servletrequest).setContext(originalContext);
+        FilterUtils.unWrapResponse(servletresponse).setContext(originalContext);
+        if (originalContext.getAliasName().equals("/")) {
+          FilterUtils.unWrapRequest(servletrequest).getHttpParameters().replaceAliases(fileBytes);
+        } else {
+          FilterUtils.unWrapRequest(servletrequest).getHttpParameters().replaceAliases(new MessageBytes((ParseUtils.separator + originalContext.getAliasName() + fileBytes.toString()).getBytes()));
+        }
+        //end current SessionRequest
+        //restore original SessionRequest
+        FilterUtils.unWrapRequest(servletrequest).setSessionRequest(originalSessionRequest);
+        FilterUtils.unWrapRequest(servletrequest).getHttpParameters().setApplicationSession(originalSession);
+        sRequest.endRequest(0);
+        context.exitResourceContext(resourceContext);
+        currentThread.setContextClassLoader(threadLoader);
+      }
+    }
+  }
+
+  /**
+   * Define what type of filters to get for this dispatched resource and returns them
+   */
+  private String[] getFilters(ServletRequest servletrequest, MessageBytes servletNameMB, String requestPath, boolean isForward) {
+    String[] fitlersFW = null;
+    HttpServletRequestFacadeWrapper httpRequest = FilterUtils.unWrapRequest(servletrequest);
+    if (httpRequest.isErrorHandler()) { //is forwarded or included error handler
+      fitlersFW = context.getWebMappings().getFilters(requestPath, servletNameMB, Constants.FILTER_DISPATCHER_ERROR);
+    } else if (isForward) { //is forwarded
+      fitlersFW = context.getWebMappings().getFilters(requestPath, servletNameMB, Constants.FILTER_DISPATCHER_FORWARD);
+    } else { //is included
+      fitlersFW = context.getWebMappings().getFilters(requestPath, servletNameMB, Constants.FILTER_DISPATCHER_INCLUDE);
+    }
+    return fitlersFW;
+  }
+
+  /**
+   * Forwards a request from a servlet to another resource (servlet, JSP file, or HTML file)
+   * on the server. This method allows one servlet to do preliminary processing of a request
+   * and another resource to generate the response.
+   *
+   * @param servletrequest  object that represents the request the client makes of the servlet
+   * @param servletresponse object that represents the response the servlet returns to the client
+   * @throws ServletException
+   * @throws IOException
+   */
+  public void forward(ServletRequest servletrequest, ServletResponse servletresponse) throws javax.servlet.ServletException, IOException {
+    if (servletresponse.isCommitted()) {
+      throw new WebIllegalStateException(WebIllegalStateException.Output_is_commited);
+    }
+    //begin set forwarded attributes
+    HttpServletRequestFacadeWrapper httpRequest = FilterUtils.unWrapRequest(servletrequest);
+    if (!httpRequest.isForwardAttsSet() && !isNamedDispatcher) {
+      servletrequest.setAttribute("javax.servlet.forward.request_uri", httpRequest.getRequestURI());
+      servletrequest.setAttribute("javax.servlet.forward.context_path", httpRequest.getContextPath());
+      servletrequest.setAttribute("javax.servlet.forward.servlet_path", httpRequest.getServletPath());
+      servletrequest.setAttribute("javax.servlet.forward.path_info", httpRequest.getPathInfo());
+      servletrequest.setAttribute("javax.servlet.forward.query_string", httpRequest.getQueryString());
+      httpRequest.setForwardAttsSet(true);
+    }
+    //end set forwarded attributes
+    servletresponse.resetBuffer();
+    if (!cached) {
+      initAliasUsed(servletrequest, servletresponse);
+    }
+    FilterUtils.unWrapResponse(servletresponse).setIncluded(false);
+    if (prop != null) {
+      FilterUtils.unWrapRequest(servletrequest).setParam(prop, false);
+    }
+    if (!isNamedDispatcher) {
+      //SRV.8.4. The path elements of the request object exposed to the target servlet must
+      //reflect the path used to obtain the RequestDispatcher. The exception is NamedDispatcher.
+      FilterUtils.unWrapRequest(servletrequest).setRequestURI("/" + aliasUsed + resourceUrl);
+      FilterUtils.unWrapRequest(servletrequest).setServletPath(resourceUrl);
+    }
+    servletrequest.removeAttribute("com.sap.engine.internal.jsp.out");
+    if (LogContext.getLocationRequestInfoServer().beInfo()) {
+      if (resourceUrl != null) {
+        LogContext.getLocationRequestInfoServer().infoT("Forwarding to <" + resourceUrl + ">");
+      } else {
+        LogContext.getLocationRequestInfoServer().infoT("Forwarding to <" + resourceServletName + ">");
+      }
+    }
+    if (cached) {
+      doCached(servletrequest, servletresponse, true);
+    } else {
+      doWork(servletrequest, servletresponse, true);
+    }
+    HttpServletResponseFacadeWrapper origResponse = FilterUtils.unWrapResponse(servletresponse);
+    //servletresponse.flushBuffer();
+    if (servletresponse instanceof HttpServletResponseFacadeWrapper) {
+      if (origResponse.isGZip()) {
+        origResponse.finish();
+      } else {
+        origResponse.close();
+      }
+    } else {
+      try {
+        servletresponse.getWriter().close();
+      } catch (IllegalStateException e) {
+        servletresponse.getOutputStream().close();
+      }
+    }
+    if (prop != null) {
+      FilterUtils.unWrapRequest(servletrequest).removeParam();
+    }
+  }
+
+  /**
+   * Includes the content of a resource (servlet, JSP page, HTML file) in the response. In essence,
+   * this method enables programmatic server-side includes.
+   *
+   * @param servletrequest  a ServletRequest object that contains the client's request
+   * @param servletresponse a ServletResponse object that contains the servlet's response
+   * @throws ServletException
+   * @throws IOException
+   */
+  public void include(ServletRequest servletrequest, ServletResponse servletresponse) throws javax.servlet.ServletException, IOException {
+    //save included attributes
+    String requestUri = (String) servletrequest.getAttribute("javax.servlet.include.request_uri");
+    String contextPath = (String) servletrequest.getAttribute("javax.servlet.include.context_path");
+    String servletPath = (String) servletrequest.getAttribute("javax.servlet.include.servlet_path");
+    String pathInfo = (String) servletrequest.getAttribute("javax.servlet.include.path_info");
+    String queryString = (String) servletrequest.getAttribute("javax.servlet.include.query_string");
+    if (!cached) {
+      initAliasUsed(servletrequest, servletresponse);
+    }
+    FilterUtils.unWrapResponse(servletresponse).setIncluded(true);
+    if (prop != null) {
+      FilterUtils.unWrapRequest(servletrequest).setParam(prop, true);
+      servletrequest.setAttribute("javax.servlet.include.query_string", prop);
+    }
+    if (LogContext.getLocationRequestInfoServer().beInfo()) {
+      if (resourceUrl != null) {
+        LogContext.getLocationRequestInfoServer().infoT("Including <" + resourceUrl + ">");
+      } else {
+        LogContext.getLocationRequestInfoServer().infoT("Including <" + resourceServletName + ">");
+      }
+    }
+
+    try {
+      if (cached) {
+        doCached(servletrequest, servletresponse, false);
+      } else {
+        doWork(servletrequest, servletresponse, false);
+      }
+    } finally {
+      if (prop != null) {
+        FilterUtils.unWrapRequest(servletrequest).removeParam();
+      }
+      //restore included attributes
+      servletrequest.setAttribute("javax.servlet.include.request_uri", requestUri);
+      servletrequest.setAttribute("javax.servlet.include.context_path", contextPath);
+      servletrequest.setAttribute("javax.servlet.include.servlet_path", servletPath);
+      servletrequest.setAttribute("javax.servlet.include.path_info", pathInfo);
+      servletrequest.setAttribute("javax.servlet.include.query_string", queryString);
+      FilterUtils.unWrapResponse(servletresponse).setIncluded(false);
+    }
+  }
+
+  private void initAliasUsed(ServletRequest servletrequest, ServletResponse servletresponse) {
+    String thisContextAliasName = context.getAliasName();
+    if (!FilterUtils.unWrapResponse(servletresponse).getServletContext().getAliasName().equals(thisContextAliasName)) {
+      aliasUsed = thisContextAliasName;
+    } else
+    if (FilterUtils.unWrapRequest(servletrequest).getHttpParameters().getRequestPathMappings().isZoneExactAlias()) {
+      aliasUsed = thisContextAliasName;
+    } else
+    if (FilterUtils.unWrapRequest(servletrequest).getHttpParameters().getRequestPathMappings().getZoneName() != null) {
+      aliasUsed = thisContextAliasName + ServiceContext.getServiceContext().getHttpProvider().getHttpProperties().getZoneSeparator() + FilterUtils.unWrapRequest(servletrequest).getHttpParameters().getRequestPathMappings().getZoneName();
+    } else {
+      aliasUsed = thisContextAliasName;
+    }
+  }
+
+  public void setProp(String prop) {
+    this.prop = prop;
+  }
+
+  public boolean isCached() {
+    return cached;
+  }
+
+  /**
+   * Used cached data to speed up the process
+   * @param servletrequest
+   * @param servletresponse
+   * @param isForward
+   * @throws javax.servlet.ServletException
+   * @throws IOException
+   */
+  private void doCached(ServletRequest servletrequest, ServletResponse servletresponse, boolean isForward) throws javax.servlet.ServletException, IOException {
+
+    ApplicationContext originalContext = FilterUtils.unWrapRequest(servletrequest).getApplicationContext();
+
+    if (resourceServletName == null) {
+
+      if (isForward) {
+        FilterUtils.unWrapRequest(servletrequest).setServletPath(servletPath);
+        FilterUtils.unWrapRequest(servletrequest).setPathInfo(path_info);
+      }
+      servletrequest.setAttribute("javax.servlet.include.realpath_path", realPathLocal);
+      if (isForward || isNamedDispatcher) {
+        servletrequest.removeAttribute("javax.servlet.include.context_path");
+        servletrequest.removeAttribute("javax.servlet.include.request_uri");
+        servletrequest.removeAttribute("javax.servlet.include.servlet_path");
+        servletrequest.removeAttribute("javax.servlet.include.path_info");
+        servletrequest.removeAttribute("javax.servlet.include.query_string");
+      } else {
+        servletrequest.setAttribute("javax.servlet.include.context_path",
+          FilterUtils.unWrapRequest(servletrequest).getContextPath());
+        if (resourceUrl != null) {
+          servletrequest.setAttribute("javax.servlet.include.request_uri",
+            FilterUtils.unWrapRequest(servletrequest).getContextPath() + resourceUrl);
+        }
+        if (servletPath != null) {
+          servletrequest.setAttribute("javax.servlet.include.servlet_path", servletPath);
+        }
+        if (path_info != null) {
+          servletrequest.setAttribute("javax.servlet.include.path_info", path_info);
+        }
+      }
+      if (path_info != null) {
+        servletrequest.setAttribute("com.inqmy.include.path_info", path_info);
+      }
+      if (resourceUrl != null) {
+        servletrequest.setAttribute("com.sap.engine.include.request_uri", resourceUrl);
+      }
+    } else {
+      servletrequest.removeAttribute("javax.servlet.include.realpath_path");
+      servletrequest.removeAttribute("javax.servlet.include.context_path");
+      servletrequest.removeAttribute("javax.servlet.include.request_uri");
+      servletrequest.removeAttribute("javax.servlet.include.servlet_path");
+      servletrequest.removeAttribute("javax.servlet.include.path_info");
+    }
+    if (servletName == null) {
+      servletName = "jsp";
+    }
+
+    //To verify that the request is passed through the Request Dispatcher
+    servletrequest.setAttribute("com.sap.engine.include.request_dispatcher", "true");
+
+    FilterUtils.unWrapRequest(servletrequest).setServletName(servletName);
+
+    boolean isConsumed = true;
+    RequestDispatcherConsumer rdConsumer = new RequestDispatcherConsumer(RequestDispatcherConsumer.REQUEST_DISPATCHER_CONSUMER);
+    try {     
+      rdConsumer.setId(resourceProvider.getConsumerType(context.getAliasName(), resourceUrl));
+      if (!resourceProvider.consume(rdConsumer)) {         
+        LogContext.getLocation(LogContext.LOCATION_QUALITY_OF_SERVICE_INTEGRATION).traceInfo("503 is returned for " + context.getAliasName() + resourceUrl + " resourse", context.getAliasName());
+        isConsumed = false;
+        FilterUtils.unWrapResponse(servletresponse).sendError(ResponseCodes.code_service_unavailable, Responses.mess16.replace("{URL}", context.getAliasName() + resourceUrl));      
+      } else {
+        invoke(srv, servletrequest, servletresponse, originalContext != null, false, null);
+      }
+    } catch (IOException io) {
+      if (LogContext.getLocationServletResponse().beWarning()) {
+        LogContext.getLocation(LogContext.LOCATION_SERVLET_RESPONSE).traceWarning("ASJ.web.000666",
+          "Exception during forward or include:", io, context.getApplicationName(), context.getCsnComponent());
+      }
+      throw io;
+    } catch (ServletException se) {
+      if (LogContext.getLocationServletResponse().beWarning()) {
+        LogContext.getLocation(LogContext.LOCATION_SERVLET_RESPONSE).traceWarning("ASJ.web.000678",
+          "Exception during forward or include:", se, context.getApplicationName(), context.getCsnComponent());
+      }
+      throw se;
+    } catch (Exception e) {
+      if (LogContext.getLocationServletResponse().beWarning()) {
+        LogContext.getLocation(LogContext.LOCATION_SERVLET_RESPONSE).traceWarning("ASJ.web.000633",
+          "Exception during forward or include:", e, context.getApplicationName(), context.getCsnComponent());
+      }
+      throw new WebServletException(WebServletException.ERROR_IN_INCLUDED_SERVLET, new Object[]{resourceUrl}, e);
+    } finally {      
+      if (isConsumed) {        
+        resourceProvider.release(rdConsumer);
+      }
+      servletrequest.removeAttribute("javax.servlet.include.realpath_path");
+    }
+
+  }
+  
+  /**
+   * Collects the needed info from the session and the request to calculate the
+   * session size of the application which is about to be left. Session size 
+   * calculation is done in the <CODE>SessionSizeManager</CODE> only if the 
+   * feature is enabled
+   * 
+   * @param clientId    the id of the request
+   * @param aliasName   the context name
+   * @param sessionObj  session as an object
+   */
+  private void addSessionSize(HttpParameters httpParameters) {
+    if (!httpParameters.getRequest().isSessionSizeEnabled()) {
+      // the feature for session calculation is disabled
+      // skip the rest of the method
+      return;
+    }
+    SessionRequestInfo info = new SessionRequestInfo();
+    info.setRequestId(httpParameters.getRequest().getClientId());
+    info.setAliasName(context.getAliasName()); 
+    Object sessionObj = httpParameters.getApplicationSession();
+    if (sessionObj == null) {   
+      info.setSession(null);
+    } else {
+      ApplicationSession applicationSession;
+      try {
+        applicationSession = (ApplicationSession)sessionObj;
+        info.setSessionId(applicationSession.getId());      
+        info.setSession(applicationSession);     
+        info.setSessionValid(applicationSession.isValid());
+        Hashtable<String, Object> chunks = new Hashtable<String, Object>();
+        Collection<String> chunkNames = applicationSession.getChunkNames();
+        if (chunkNames != null && !chunkNames.isEmpty()) {
+          Object value;
+          try {
+            for (String chunk:chunkNames) {
+              value = applicationSession.getChunkData(chunk);
+              if (value != null) {
+                chunks.put(chunk, value);
+              }
+            }
+          } catch (ConcurrentModificationException e) {
+            // the exception could be thrown at String chunk:chunkNames             
+            // the session attributes are modified concurrently; this is not supported scenarion => 
+            // continue with currently corrected data; 
+          }
+        }    
+        info.setChunks(chunks); 
+      } catch (ClassCastException e) {
+        // the session cannot be casted to the ApplicationSession; this could never happen        
+        info.setSession(null);        
+      }          
+    }    
+    SessionSizeManager.addObjectSize(info);
+  }
+}
+
+

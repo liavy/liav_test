@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+   <persistence-unit name="Mfg">
+<!--
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+-->
+      <jta-data-source>MfgDataSource</jta-data-source>
+      <properties>
+         <property name="com.sap.jpa.sql.mapping" value="precompute"/>
+         <property name="com.sap.jpa.versioning.generator.tablename" value="M_VERSION_GEN"/>
+         <property name="com.sap.jpa.versioning.generator.allocation-size" value="100000"/>
+         <property name="com.sap.engine.services.orpersistence.experimentalmode" value="true"/>
+	<property name="com.sap.jpa.compliance.sap-product-standard" value="false"/>
+<!--
+         <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle9Dialect"/>
+         <property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.SAPWebASTransactionManagerLookup"/>
+-->
+      </properties>
+   </persistence-unit>
+</persistence>

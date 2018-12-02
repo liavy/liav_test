@@ -1,0 +1,271 @@
+﻿<?xml version="1.0"?>
+<Dbtable name="TMP_CONTROL000" creation-date="">
+  <properties>
+    <author> </author>
+    <description language=""></description>
+  </properties>
+  <predefined-action></predefined-action>
+  <position-is-relevant></position-is-relevant>
+  <deployment-status></deployment-status>
+  <columns>
+    <column name = "F1">
+        <position>1</position>
+        <dd-type>string</dd-type>
+        <java-sql-type>VARCHAR</java-sql-type>
+        <length>10</length>
+        <decimals>0</decimals>
+        <is-not-null>true</is-not-null>
+        <default-value></default-value>
+    </column>
+    <column name = "F2">
+      	<position>2</position>
+       	<dd-type>string</dd-type>
+       	<java-sql-type>VARCHAR</java-sql-type>  
+       	<length>11</length>
+       	<decimals>0</decimals>
+       	<is-not-null>true</is-not-null>
+       	<default-value></default-value>
+    </column>
+    <column name = "F3">
+       	<position>3</position>
+       	<dd-type>integer</dd-type>
+       	<java-sql-type>INTEGER</java-sql-type>    
+       	<length>0</length>
+       	<decimals>0</decimals>
+       	<is-not-null>true</is-not-null>
+       	<default-value></default-value>
+    </column>
+    <column name = "F4">
+       	<position>4</position>
+       	<dd-type>short</dd-type>
+      	<java-sql-type>SMALLINT</java-sql-type>
+       	<length>0</length>
+       	<decimals>0</decimals>
+       	<is-not-null>true</is-not-null>
+       	<default-value></default-value>
+    </column>
+    <column name = "F5">
+       	<position>5</position>
+       	<dd-type>long</dd-type>
+       	<java-sql-type>BIGINT</java-sql-type>    
+       	<length>0</length>
+       	<decimals>0</decimals>
+       	<is-not-null>true</is-not-null>
+       	<default-value></default-value>
+    </column>
+    <column name = "F6">
+       	<position>6</position>
+       	<dd-type>double</dd-type>
+      	<java-sql-type>DOUBLE</java-sql-type>
+       	<length>0</length>
+       	<decimals>0</decimals>
+       	<is-not-null>true</is-not-null>
+       	<default-value></default-value>
+    </column>
+    <column name = "F7">
+       	<position>7</position>
+       	<dd-type>double</dd-type>
+       	<java-sql-type>DOUBLE</java-sql-type>
+       	<length>0</length>
+       	<decimals>0</decimals>
+       	<is-not-null>true</is-not-null>
+       	<default-value></default-value>
+    </column>
+    <column name = "F8">
+       	<position>8</position>
+      	<dd-type>decimal</dd-type>
+      	<java-sql-type>DECIMAL</java-sql-type> 
+      	<length>10</length>
+      	<decimals>2</decimals>
+       	<is-not-null>true</is-not-null>
+       	<default-value></default-value>
+    </column>
+    <column name = "F9">
+    	<position>9</position>
+    	<dd-type>binary</dd-type>
+    	<java-sql-type>VARBINARY</java-sql-type>
+    	<length>10</length>
+    	<decimals>0</decimals>
+    	<is-not-null>false</is-not-null>
+    	<default-value></default-value>
+    </column>
+    <column name = "F10">
+        <position>10</position>
+        <dd-type>date</dd-type>
+        <java-sql-type>DATE</java-sql-type> 
+        <length>0</length>
+        <decimals>0</decimals>
+        <is-not-null>true</is-not-null>
+        <default-value></default-value>
+    </column>
+    <column name = "F11">
+        <position>11</position>
+        <dd-type>time</dd-type>
+        <java-sql-type>TIME</java-sql-type>
+        <length>0</length>
+        <decimals>0</decimals>
+        <is-not-null>true</is-not-null>
+        <default-value></default-value>
+    </column>
+    <column name = "F12">
+        <position>12</position>
+        <dd-type>timestamp</dd-type>
+        <java-sql-type>TIMESTAMP</java-sql-type>
+        <length>0</length>
+        <decimals>0</decimals>
+        <is-not-null>true</is-not-null>
+        <default-value></default-value>
+    </column>
+    <column name = "F13">
+        <position>13</position>
+        <dd-type>string</dd-type>
+        <java-sql-type>LONGVARCHAR</java-sql-type>
+        <types-info-additional>   
+                   <type-info-additional>
+                         <database>ORACLE</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+                   <type-info-additional>
+                         <database>DB6</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+                   <type-info-additional>
+                         <database>MSSQL</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+                   <type-info-additional>
+                         <database>DB4</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+                   <type-info-additional>
+                         <database>DB2</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+                   <type-info-additional>
+                         <database>SAPDB</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARCHAR</java-sql-type>
+                   </type-info-additional>
+        </types-info-additional>
+        <length>150</length>
+        <decimals>0</decimals>
+        <is-not-null>false</is-not-null>
+        <default-value></default-value>
+    </column>
+    <column name = "F14">
+        <position>14</position>
+        <dd-type>string</dd-type>
+        <java-sql-type>CLOB</java-sql-type> 
+        <length>10000</length>
+        <decimals>0</decimals>
+        <is-not-null>false</is-not-null>
+        <default-value></default-value>
+    </column>
+    <column name = "F15">
+        <position>15</position>
+        <dd-type>string</dd-type>
+        <java-sql-type>CLOB</java-sql-type>
+        <length>0</length>
+        <decimals>0</decimals>
+        <is-not-null>false</is-not-null>
+        <default-value></default-value>
+    </column>
+    <column name = "F16">
+        <position>16</position>
+        <dd-type>binary</dd-type>
+        <java-sql-type>LONGVARBINARY</java-sql-type>
+        <types-info-additional>   
+                   <type-info-additional>
+                         <database>ORACLE</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARBINARY</java-sql-type>
+                   </type-info-additional>
+                   <type-info-additional>
+                         <database>DB6</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARBINARY</java-sql-type>
+                   </type-info-additional>
+                   <type-info-additional>
+                         <database>MSSQL</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARBINARY</java-sql-type>
+                   </type-info-additional>
+                   <type-info-additional>
+                         <database>DB4</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARBINARY</java-sql-type>
+                   </type-info-additional>
+                   <type-info-additional>
+                         <database>DB2</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARBINARY</java-sql-type>
+                   </type-info-additional>
+                   <type-info-additional>
+                         <database>SAPDB</database>
+                         <db-type></db-type>
+                        <java-sql-type>VARBINARY</java-sql-type>
+                   </type-info-additional>
+        </types-info-additional>
+        <length>300</length>
+        <decimals>0</decimals>
+        <is-not-null>false</is-not-null>
+        <default-value></default-value>
+    </column>
+    <column name = "F17">
+       	<position>17</position>
+       	<dd-type>binary</dd-type>
+        <java-sql-type>BLOB</java-sql-type>
+        <length>0</length>
+        <decimals>0</decimals>
+        <is-not-null>false</is-not-null>
+        <default-value></default-value>
+    </column>
+  </columns>
+  <primary-key>
+    <tabname>TMP_CONTROL000</tabname>
+    <columns>
+      <column>F1</column>
+      <column>F2</column>
+    </columns>
+  </primary-key>
+  <indexes>
+    <index name="TMP_CONTROL000_1">
+      <tabname>TMP_CONTROL000</tabname>
+      <properties>
+        <author></author>
+        <description language=""></description>
+      </properties>
+      <is-unique>false</is-unique>
+      <deployment-status></deployment-status>
+      <technical-info>
+        <size-category></size-category>
+      </technical-info>
+      <columns> 
+        <column name = "F3"></column>
+        <column name = "F4"></column>    
+      </columns>
+    </index>
+    <index name="TMP_CONTROL000_2">
+      <tabname>TMP_CONTROL000</tabname>
+      <properties>
+        <author></author>
+        <description language=""></description>
+      </properties>
+      <is-unique>false</is-unique>
+      <deployment-status></deployment-status>
+      <technical-info>
+        <size-category></size-category>
+      </technical-info>
+      <columns> 
+        <column name = "F5"></column>
+        <column name = "F8"></column> 
+      </columns>
+    </index>
+  </indexes>
+</Dbtable>
+

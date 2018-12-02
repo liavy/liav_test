@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<display-name>tc/TechSrv/XML_DAS</display-name>
+	<description>XML Data Archiving Service</description>
+	<servlet>
+		<servlet-name>DAS</servlet-name>
+		<servlet-class>com.sap.archtech.daservice.DASmain</servlet-class>
+		<run-as>
+			<description>MBean access in servlet init requires admin role</description>
+			<role-name>Administrator</role-name>
+		</run-as>		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DAS</servlet-name>
+		<url-pattern>/DAS</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DAS</servlet-name>
+		<url-pattern>/servlet/*</url-pattern>
+	</servlet-mapping>
+	<resource-ref>
+		<res-ref-name>SAP/BC_XMLA</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Application</res-auth>
+		<res-sharing-scope>Unshareable</res-sharing-scope>
+	</resource-ref>
+	<security-constraint>
+		<display-name>XMLDASAccess</display-name>
+		<web-resource-collection>
+			<web-resource-name>WebResource</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<description>XML DAS Authentication</description>
+			<role-name>XMLDASSecurityRole</role-name>
+			<role-name>XMLDASAdminRole</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<description>technical and administration user for XML DAS</description>
+			<transport-guarantee>NONE</transport-guarantee>
+		</user-data-constraint>		
+	</security-constraint>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>XMLDAS</realm-name>
+	</login-config>
+	<security-role>
+		<description>security role for XMLDAS</description>
+		<role-name>XMLDASSecurityRole</role-name>
+	</security-role>
+	<security-role>
+		<description>security role for XML DAS JSP Admin UI</description>
+		<role-name>XMLDASAdminRole</role-name>
+	</security-role>	
+	<security-role>
+		<description>security role for J2EE Engine Administration</description>
+		<role-name>Administrator</role-name>
+	</security-role>	
+	<ejb-local-ref>
+		<description>
+		</description>
+		<ejb-ref-name>ArchStoreConfigBean</ejb-ref-name>
+		<ejb-ref-type>Entity</ejb-ref-type>
+		<local-home>com.sap.archtech.daservice.ejb.ArchStoreConfigLocalHome</local-home>
+		<local>com.sap.archtech.daservice.ejb.ArchStoreConfigLocal</local>
+		<ejb-link>ArchStoreConfigBean</ejb-link>
+	</ejb-local-ref>
+	<ejb-local-ref>
+		<description>PackStatusDBBean</description>
+		<ejb-ref-name>PackStatusDBBean</ejb-ref-name>
+		<ejb-ref-type>Entity</ejb-ref-type>
+		<local-home>com.sap.archtech.daservice.ejb.PackStatusDBLocalHome</local-home>
+		<local>com.sap.archtech.daservice.ejb.PackStatusDBLocal</local>
+		<ejb-link>PackStatusDBBean</ejb-link>
+	</ejb-local-ref>
+</web-app>

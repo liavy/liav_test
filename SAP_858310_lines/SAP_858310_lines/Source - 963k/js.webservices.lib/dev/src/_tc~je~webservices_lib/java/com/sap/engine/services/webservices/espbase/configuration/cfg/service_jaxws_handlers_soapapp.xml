@@ -1,0 +1,23 @@
+﻿<tns:SoapApplication xmlns:tns="http://xml.sap.com/2006/11/esi/conf/soapapplication" id="URN:SAP-COM:SOAP:RUNTIME:APPLICATION:SERVICE:JAXWS:HANDLERS">
+<description>This is the SoapApplication that holds valid properties for JEE JAX-WS web services with configured handlers.</description>
+   <properties>
+     <!--  Transport Binding Properties -->
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altHost"/>
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altPort"/>
+   </properties>
+   <dependencies>   
+      <dependency type="TRUE_TO_RT">
+         <condition>
+           <boolean-value>
+				     true
+           </boolean-value>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altHost"/>
+				     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altPort"/>
+					 </properties>
+         </result>
+      </dependency>
+   </dependencies>
+</tns:SoapApplication>

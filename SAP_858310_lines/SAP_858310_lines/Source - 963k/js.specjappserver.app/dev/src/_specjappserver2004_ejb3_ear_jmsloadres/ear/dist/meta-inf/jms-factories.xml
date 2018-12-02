@@ -1,0 +1,13 @@
+﻿<jms-factories>
+   <connection-factory>
+      <factory-name>jms/LoaderQueueConnectionFactory</factory-name>
+      <context-factory-type>
+         <link-factory-name>jmsfactory/default/QueueConnectionFactory</link-factory-name>
+         <initial-context-factory>com.sap.engine.services.jndi.InitialContextFactoryImpl</initial-context-factory>
+         <provider-url></provider-url>
+         <security-principal></security-principal>
+         <security-credentials></security-credentials>
+      </context-factory-type>
+   </connection-factory>
+</jms-factories>
+

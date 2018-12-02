@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<selections 
+	xmlns="http://xml.sap.com/2004/04/DBContent" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://xml.sap.com/2004/04/DBContent dbcontent.xsd">
+	<table      
+		name="BC_XMLA_ASETS">
+		<entry>
+			<field 
+				name="ASETNAME" 
+				value="bc_xmla_sbook"/>
+			<field 
+				name="ASETPROP" 
+				value="AHOME"/>
+			<field 
+				name="PROPVALUE" 
+				value="/&lt;SYSID&gt;/bc_xmla_sbook/"/>
+			<field 
+				name="INIT" 
+				value="N"/>
+			<field 
+				name="PROPTEXT" 
+				value="Home Path"/>
+			<field 
+				name="PROPPOS" 
+				value="0"/>
+		</entry>
+		<entry>
+			<field 
+				name="ASETNAME" 
+				value="bc_xmla_sbook"/>
+			<field 
+				name="ASETPROP" 
+				value="WSTART"/>
+			<field 
+				name="PROPVALUE" 
+				value="nocheck"/>
+			<field 
+				name="INIT" 
+				value="N"/>
+			<field 
+				name="PROPTEXT" 
+				value="Write even if broken"/>
+			<field 
+				name="PROPPOS" 
+				value="0"/>
+		</entry>
+	</table>
+</selections>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+    version="1.0">
+    <named-native-query name="getInventory"
+                        result-class="org.spec.jappserver.mfg.Inventory">
+        <query>
+            SELECT IN_P_ID, IN_QTY, IN_ORDERED, IN_LOCATION, IN_ACC_CODE, IN_ACT_DATE, IN_VERSION
+            FROM M_INVENTORY
+            WHERE IN_P_ID = ?
+            for update
+        </query>
+    </named-native-query>
+    <named-native-query name="getWorkOrder"
+                        result-class="org.spec.jappserver.mfg.WorkOrder">
+        <query>
+            SELECT WO_NUMBER, WO_O_ID, WO_OL_ID, WO_STATUS, WO_ASSEMBLY_ID, WO_ORIG_QTY, WO_COMP_QTY, WO_DUE_DATE, WO_START_DATE, WO_VERSION
+            FROM M_WORKORDER
+            WHERE WO_NUMBER = ?
+            for update
+        </query>
+    </named-native-query>
+</entity-mappings>

@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ns1:ConfigurationRoot xmlns:ns1='http://www.sap.com/webas/710/ws/configuration-descriptor'>
+  <DTConfig>
+    <InterfaceDefinition id='String' name='String' type='0'>
+      <Variant Name='String'>
+        <InterfaceData namespace='String' name='String'>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <InquiryURL>String</InquiryURL>
+            </UDDIServer>
+          </UDDIEntity>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <InquiryURL>String</InquiryURL>
+            </UDDIServer>
+          </UDDIEntity>
+          <Description Locale='en-us'>
+            <ShortText>String</ShortText>
+            <LongText>String</LongText>
+          </Description>
+          <Description Locale='en-us'>
+            <ShortText>String</ShortText>
+            <LongText>String</LongText>
+          </Description>
+        </InterfaceData>
+      </Variant>
+      <Variant Name='String'>
+        <InterfaceData namespace='String' name='String'>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+          <Description Locale='en-us'>
+            <ShortText>String</ShortText>
+            <LongText>String</LongText>
+          </Description>
+          <Description Locale='en-us'>
+            <ShortText>String</ShortText>
+            <LongText>String</LongText>
+          </Description>
+        </InterfaceData>
+      </Variant>
+    </InterfaceDefinition>
+    <InterfaceDefinition id='String' name='String' type='0'>
+      <Variant Name='String'>
+        <InterfaceData namespace='String' name='String'>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+          <Description Locale='en-us'>
+            <ShortText>String</ShortText>
+            <LongText>String</LongText>
+          </Description>
+          <Description Locale='en-us'>
+            <ShortText>String</ShortText>
+            <LongText>String</LongText>
+          </Description>
+        </InterfaceData>
+      </Variant>
+      <Variant Name='String'>
+        <InterfaceData namespace='String' name='String'>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+          <Description Locale='en-us'>
+            <ShortText>String</ShortText>
+            <LongText>String</LongText>
+          </Description>
+          <Description Locale='en-us'>
+            <ShortText>String</ShortText>
+            <LongText>String</LongText>
+          </Description>
+        </InterfaceData>
+      </Variant>
+    </InterfaceDefinition>
+  </DTConfig>
+  <RTConfig>
+    <Service id='String' name='String' type='0'>
+      <ServiceData domain-id='String' namespace='String' name='String'>
+        <PropertyList selected='true'>
+          <Property namespace='String' name='String'>String</Property>
+          <Property namespace='String' name='String'>String</Property>
+        </PropertyList>
+        <PropertyList selected='true'>
+          <Property namespace='String' name='String'>String</Property>
+          <Property namespace='String' name='String'>String</Property>
+        </PropertyList>
+        <BindingData name='String' url='String' active='true' binding-name='String' binding-namespace='String' variant-name='String' group-config-id='String' editable='true' interface-id='String'>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+        </BindingData>
+        <BindingData name='String' url='String' active='true' binding-name='String' binding-namespace='String' variant-name='String' group-config-id='String' editable='true' interface-id='String'>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+        </BindingData>
+        <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+          <UDDIServer>
+            <SIDName>String</SIDName>
+          </UDDIServer>
+        </UDDIEntity>
+        <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+          <UDDIServer>
+            <SIDName>String</SIDName>
+          </UDDIServer>
+        </UDDIEntity>
+      </ServiceData>
+    </Service>
+    <Service id='String' name='String' type='0'>
+      <ServiceData domain-id='String' namespace='String' name='String'>
+        <PropertyList selected='true'>
+          <Property namespace='String' name='String'>String</Property>
+          <Property namespace='String' name='String'>String</Property>
+        </PropertyList>
+        <PropertyList selected='true'>
+          <Property namespace='String' name='String'>String</Property>
+          <Property namespace='String' name='String'>String</Property>
+        </PropertyList>
+        <BindingData name='String' url='String' active='true' binding-name='String' binding-namespace='String' variant-name='String' group-config-id='String' editable='true' interface-id='String'>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+        </BindingData>
+        <BindingData name='String' url='String' active='true' binding-name='String' binding-namespace='String' variant-name='String' group-config-id='String' editable='true' interface-id='String'>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <PropertyList selected='true'>
+            <Property namespace='String' name='String'>String</Property>
+            <Property namespace='String' name='String'>String</Property>
+          </PropertyList>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <Operation name='String'>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+            <PropertyList selected='true'>
+              <Property namespace='String' name='String'>String</Property>
+              <Property namespace='String' name='String'>String</Property>
+            </PropertyList>
+          </Operation>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+          <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+            <UDDIServer>
+              <SIDName>String</SIDName>
+            </UDDIServer>
+          </UDDIEntity>
+        </BindingData>
+        <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+          <UDDIServer>
+            <SIDName>String</SIDName>
+          </UDDIServer>
+        </UDDIEntity>
+        <UDDIEntity uddi-key='String' subscribtion-key='String' type='0'>
+          <UDDIServer>
+            <SIDName>String</SIDName>
+          </UDDIServer>
+        </UDDIEntity>
+      </ServiceData>
+    </Service>
+  </RTConfig>
+</ns1:ConfigurationRoot>

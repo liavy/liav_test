@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+	<display-name>SAPM UM UserAdmin Webapp</display-name>
+	<description>SAPM UM UserAdmin Webapp</description>
+    <servlet>
+     <servlet-name>UserAdminServlet</servlet-name>
+     <servlet-class>com.sap.security.core.admin.UserAdminServlet</servlet-class>
+    </servlet>
+
+     <servlet>
+     <servlet-name>RoleAdmin</servlet-name>
+     <servlet-class>com.sap.security.core.admin.role.RoleAdminServlet</servlet-class>
+    </servlet>
+
+     <servlet>
+     <servlet-name>GroupAdmin</servlet-name>
+     <servlet-class>com.sap.security.core.admin.group.GroupAdminServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+     <servlet-name>SelfReg</servlet-name>
+     <servlet-class>com.sap.security.core.admin.SelfRegServlet</servlet-class>
+    </servlet>
+
+     <servlet>
+     <servlet-name>BatchServlet</servlet-name>
+     <servlet-class>com.sap.security.core.admin.batch.BatchServlet</servlet-class>
+    </servlet>
+
+     <servlet>
+     <servlet-name>CompanyListServlet</servlet-name>
+     <servlet-class>com.sap.security.core.admin.CompanyListServlet</servlet-class>
+    </servlet>
+
+     <servlet>
+     <servlet-name>FileUploadServlet</servlet-name>
+     <servlet-class>com.sap.security.core.admin.batch.FileUploadServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+     <servlet-name>PingUM</servlet-name>
+     <servlet-class>com.sap.security.core.test.PingUM</servlet-class>
+    </servlet>
+
+    <servlet>
+      <servlet-name>RefreshRoleFiles</servlet-name>
+      <servlet-class>com.sap.security.core.admin.role.UpdateXMLFiles</servlet-class>
+    </servlet>
+
+<!-- new in 645 -->
+    	<servlet>
+		<servlet-name>JmxProvider</servlet-name>
+		<servlet-class>com.sap.security.core.jmx.impl.JmxProvider</servlet-class>
+		<run-as>
+			<role-name>admin</role-name>
+		</run-as>
+	</servlet>
+<!-- new in 645 -->
+
+    <servlet-mapping>
+     <servlet-name>UserAdminServlet</servlet-name>
+     <url-pattern>/userAdminServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+     <servlet-name>RoleAdmin</servlet-name>
+     <url-pattern>/roleAdmin</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+     <servlet-name>GroupAdmin</servlet-name>
+     <url-pattern>/groupAdmin</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+     <servlet-name>SelfReg</servlet-name>
+     <url-pattern>/selfReg</url-pattern>
+    </servlet-mapping>
+
+  	<servlet-mapping>
+     <servlet-name>BatchServlet</servlet-name>
+     <url-pattern>/batch</url-pattern>
+  	</servlet-mapping>
+
+  	<servlet-mapping>
+     <servlet-name>CompanyListServlet</servlet-name>
+     <url-pattern>/companyListServlet</url-pattern>
+  	</servlet-mapping>
+
+  	<servlet-mapping>
+     <servlet-name>FileUploadServlet</servlet-name>
+     <url-pattern>/fileUploadServlet</url-pattern>
+  	</servlet-mapping>
+
+    <servlet-mapping>
+      <servlet-name>PingUM</servlet-name>
+      <url-pattern>/PingUM</url-pattern>
+    </servlet-mapping>
+
+  	<servlet-mapping>
+      <servlet-name>RefreshRoleFiles</servlet-name>
+      <url-pattern>/refreshRoleFiles</url-pattern>
+  	</servlet-mapping>
+
+<security-constraint>
+    <web-resource-collection>
+      <web-resource-name>allowed jsps</web-resource-name>
+      <url-pattern>index.jsp</url-pattern>
+      <url-pattern>cacheMonitor.jsp</url-pattern>
+      <url-pattern>performanceMonitor.jsp</url-pattern>
+      <url-pattern>service.jsp</url-pattern>
+    </web-resource-collection>
+</security-constraint>
+<security-constraint>
+    <web-resource-collection>
+      <web-resource-name>All JSP direct access</web-resource-name>
+      <url-pattern>*.jsp</url-pattern>
+      <url-pattern>*.txt</url-pattern>
+      <url-pattern>*.xml</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <description>
+       No Access
+      </description>
+     </auth-constraint>
+  </security-constraint>
+
+    <welcome-file-list>
+      <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+	
+	<error-page>		  
+	  <exception-type>java.lang.Exception</exception-type>
+	  <location>/error.jsp</location>
+	</error-page>
+	    
+    <taglib>
+      <taglib-uri>UM</taglib-uri>
+      <taglib-location>/WEB-INF/tlds/Encode.tld</taglib-location>
+    </taglib>
+
+<!-- new in 645 -->
+	<security-role>
+		<role-name>admin</role-name>
+	</security-role>
+<!-- new in 645 -->
+
+</web-app>

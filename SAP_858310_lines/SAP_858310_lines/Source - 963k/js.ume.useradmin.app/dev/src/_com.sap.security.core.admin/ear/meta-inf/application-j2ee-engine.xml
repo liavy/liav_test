@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application-j2ee-engine SYSTEM "application-j2ee-engine.dtd">
+<application-j2ee-engine>
+
+	<reference
+		reference-type="weak">
+		<reference-target
+			provider-name="sap.com"
+			target-type="library">
+			com.sap.security.api.sda
+		</reference-target>
+	</reference>
+
+	<reference
+		reference-type="weak">
+		<reference-target
+			provider-name="sap.com"
+			target-type="library">
+			com.sap.security.core.sda
+		</reference-target>
+	</reference>
+
+	<reference
+		reference-type="weak">
+		<reference-target
+			provider-name="sap.com"
+			target-type="library">
+			sapxmltoolkit
+		</reference-target>
+	</reference>
+
+	<reference
+		reference-type="weak">
+		<reference-target
+			provider-name="sap.com"
+			target-type="library">
+			com.sap.ip.basecomps
+		</reference-target>
+	</reference>
+
+	<reference
+		reference-type="weak">
+		<reference-target
+			provider-name="sap.com"
+			target-type="library">
+			tc/jmx
+		</reference-target>
+	</reference>
+
+	<reference
+		reference-type="weak">
+		<reference-target
+			provider-name="sap.com"
+			target-type="service">
+			jmx
+		</reference-target>
+	</reference>
+
+	<reference
+		reference-type="weak">
+		<reference-target
+			provider-name="sap.com"
+			target-type="service">
+			applocking
+		</reference-target>
+	</reference>
+
+	<reference
+		reference-type="weak">
+		<reference-target
+			provider-name="sap.com"
+			target-type="library">
+			tc/i18n/saptimezone
+		</reference-target>
+	</reference>
+
+	<provider-name>sap.com</provider-name>
+	
+	<fail-over-enable
+		mode="disable"/>
+	<start-up
+		mode="always"/>
+</application-j2ee-engine>

@@ -1,0 +1,16 @@
+﻿<reason>This DC is deprecated, use tc/je/webservices/lib</reason>
+<since>2007-12-01 7.10.01</since>
+<alternatives>
+   <alternative>
+      <dependency>
+         <dc-ref>
+            <name>tc/je/webservices/lib</name>
+            <vendor>sap.com</vendor>
+         </dc-ref>
+         <at-build-time/>
+         <at-deploy-time/>
+         <at-runtime/>
+      </dependency>
+      <description>This DC tc/je/webservices/lib completely replaces the old DC webservices_lib</description>
+   </alternative>
+</alternatives>

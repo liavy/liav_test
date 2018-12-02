@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-j2ee-engine SYSTEM 'web-j2ee-engine.dtd'>
+
+<web-j2ee-engine>
+	<security-role-map>
+		<role-name>admin</role-name>
+		<server-role-name>administrators</server-role-name>
+	</security-role-map>
+</web-j2ee-engine>

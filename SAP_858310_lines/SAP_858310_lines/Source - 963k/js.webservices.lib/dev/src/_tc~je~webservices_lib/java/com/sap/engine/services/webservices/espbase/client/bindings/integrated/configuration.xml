@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ns1:ConfigurationRoot xmlns:ns1='http://www.sap.com/webas/710/ws/configuration-descriptor'>
+  <DTConfig>
+    <InterfaceDefinition id='{urn:NoWSDLCase}SOAPInterface' interface-mapping-id='17ce4e7:103f0dce080:-8000' name='SOAPInterface' type='0'>
+      <Variant Name='SOAPInterface'>
+        <InterfaceData namespace='urn:NoWSDLCase' name='SOAPInterface'>
+          <PropertyList>
+            <Property namespace='http://www.sap.com/webas/630/soap/features/session/' name='required'>no</Property>
+          </PropertyList>
+        </InterfaceData>
+      </Variant>
+    </InterfaceDefinition>
+  </DTConfig>
+  <RTConfig>
+    <Service name='DefaultService' service-mapping-id='17ce4e7:103f0dce080:-7fff'>
+      <ServiceData contextRoot='' name='DefaultService'>
+        <BindingData name='SOAPBinding' active='true' binding-name='SOAPBinding' binding-namespace='urn:NoWSDLCase' variant-name='SOAPInterface' interface-mapping-id='17ce4e7:103f0dce080:-8000' editable='true' interface-id='{urn:NoWSDLCase}SOAPInterface'>
+          <PropertyList>
+          </PropertyList>
+        </BindingData>
+      </ServiceData>
+    </Service>
+  </RTConfig>
+</ns1:ConfigurationRoot>

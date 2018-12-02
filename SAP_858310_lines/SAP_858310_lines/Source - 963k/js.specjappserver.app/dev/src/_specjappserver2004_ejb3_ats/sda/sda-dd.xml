@@ -1,0 +1,10 @@
+﻿<SDA><SoftwareType>FS</SoftwareType>
+<fs-deployment-descriptor version="2.0">
+<display-name></display-name>
+<fileset id="ATS_Tests_archive">
+<display-name>Complete</display-name>
+<description>ATS Tests</description>
+<default-deployment-dir>${com.sap.engine.installdir}/ATS/tests/SPECjAppServer2004_EJB3</default-deployment-dir>
+</fileset>
+</fs-deployment-descriptor>
+</SDA>

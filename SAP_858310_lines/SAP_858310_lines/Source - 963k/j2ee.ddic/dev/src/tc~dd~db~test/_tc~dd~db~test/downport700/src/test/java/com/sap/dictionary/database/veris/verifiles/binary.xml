@@ -1,0 +1,193 @@
+﻿<?xml version="1.0"?>
+<veritables>
+<Dbtable name="VERI">
+	<properties>
+		<description description = "origin BINARY 8 nullable default=00...0"/>
+	</properties>
+	<columns>
+		<column name = "F1">
+			<position>1</position>
+			<java-sql-type>BINARY</java-sql-type>
+			<length>8</length>
+			<decimals>0</decimals>
+			<is-not-null>false</is-not-null>
+			<default-value>0000000000000000</default-value>
+			<data-lines>
+				<data-line>null</data-line>
+				<data-line>F2F2F2F2</data-line> 
+				<data-line>null</data-line>  
+			</data-lines>
+		</column>
+	</columns>     
+</Dbtable>
+<Dbtable>
+	<origin>true</origin> 
+	<properties>
+		<description description = "new origin BINARY 10 not-null default=00...0"/>
+	</properties>
+	<expected-actions>
+		<action name = "ALTER"/>
+		<action name = "CONVERT" dbs-name = "Db2"/>
+		<action name = "CONVERT" dbs-name = "Db4"/>
+		<action name = "CONVERT" dbs-name = "Db6"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<position>1</position>
+			<java-sql-type>BINARY</java-sql-type>
+			<length>10</length>
+			<decimals>0</decimals>
+			<is-not-null>true</is-not-null>
+			<default-value>00000000000000000000</default-value>
+			<data-lines>
+				<data-line>F1F1F1</data-line>
+				<data-line>F2F2F2F2</data-line> 
+				<data-line>F3F3F3F3</data-line>  
+			</data-lines>
+		</column>
+	</columns>     
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "BINARY 125 not-null default=00...0"/>
+	</properties>
+	<expected-actions>
+		<action name = "ALTER"/>
+		<action name = "CONVERT" dbs-name = "Db2"/>
+		<action name = "CONVERT" dbs-name = "Db4"/>
+		<action name = "CONVERT" dbs-name = "Db6"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<length>125</length>
+			<default-value>0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</default-value>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "BINARY 255 nullable no-default"/>
+	</properties>
+	<expected-actions>
+		<action name = "ALTER"/>
+		<action name = "CONVERT" dbs-name = "Db2"/>
+		<action name = "CONVERT" dbs-name = "Db4"/>
+		<action name = "CONVERT" dbs-name = "Db6"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<java-sql-type>BINARY</java-sql-type>
+			<length>255</length>
+			<is-not-null>false</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<origin>true</origin>
+	<properties>
+		<description description = "*NEW ORIGIN* LONGVARBINARY 256 nullable no-default"/>
+	</properties>
+	<expected-actions>
+		<action name = "CONVERT"/>
+		<action name = "ALTER" dbs-name = "Ora"/>
+		<action name = "ALTER" dbs-name = "Db6" dbs-version = "[SQL09010,)"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<java-sql-type>LONGVARBINARY</java-sql-type>
+			<length>256</length>
+			<is-not-null>false</is-not-null>
+			<default-value></default-value>
+			<data-lines>
+				<data-line>F4F4F4F4</data-line>
+				<data-line>F5F5F5F5</data-line> 
+			</data-lines>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "LONGVARBINARY 2000 nullable no-default"/>
+	</properties>
+	<expected-actions>
+		<action name = "ALTER"/>
+		<action name = "CONVERT" dbs-name = "Db4"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<java-sql-type>LONGVARBINARY</java-sql-type>
+			<length>2000</length>
+			<is-not-null>false</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<origin>true</origin>
+	<properties>
+		<description description = "*NEW ORIGIN* BLOB nullable no default"/>
+	</properties>
+	<expected-actions>
+		<action name = "CONVERT"/>
+		<action name = "ALTER" dbs-name = "Mss"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<java-sql-type>BLOB</java-sql-type>
+			<length>0</length>
+			<is-not-null>false</is-not-null>
+			<default-value></default-value>
+			<data-lines>
+				<data-line>F6F6F6</data-line> 
+			</data-lines>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "LONGVARBINARY 2000 nullable no-default"/>
+	</properties>
+	<expected-actions>
+		<action name = "REFUSE"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<java-sql-type>LONGVARBINARY</java-sql-type>
+			<length>2000</length>
+			<is-not-null>false</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "LONGVARBINARY 2000 nullable no-default"/>
+	</properties>
+	<expected-actions>
+		<action name = "CONVERT"/>
+		<action name = "ALTER" dbs-name = "Sap"/>
+	</expected-actions>
+	<config>
+		<acceptDataLoss>true</acceptDataLoss>                      
+  </config>
+	<columns>
+		<column name = "F1">
+			<java-sql-type>LONGVARBINARY</java-sql-type>
+			<length>2000</length>
+			<is-not-null>false</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns> 
+</Dbtable>
+
+
+
+
+
+
+
+
+   
+</veritables>
+

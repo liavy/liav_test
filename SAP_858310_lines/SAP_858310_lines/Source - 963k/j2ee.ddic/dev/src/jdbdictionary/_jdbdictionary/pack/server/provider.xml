@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" ?>
+<provider-descriptor>
+    <display-name>jdbdictionary</display-name>
+    <component-name>jdbdictionary</component-name>
+    <major-version>7</major-version>
+    <minor-version>10</minor-version>
+    <micro-version>0</micro-version>
+    <provider-name>sap.com</provider-name>
+    <references>
+        <reference type="library" strength="weak" provider-name="sap.com">core_lib</reference>
+        <reference type="library" strength="weak" provider-name="sap.com">opensqlextensions</reference>
+        <reference type="library" strength="weak" provider-name="sap.com">opensql</reference>
+        <reference type="library" strength="weak" provider-name="sap.com">sapxmltoolkit</reference>
+    </references>
+    <jars>        
+    </jars>
+</provider-descriptor>

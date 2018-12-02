@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Dbview creation-date="">
+      <name>TMP_TM111</name>
+      <properties>
+          <author></author>      
+            <description language="">TMP_TM111</description>            
+      </properties>
+      <deployment-status></deployment-status>
+      <is-Updatable>false</is-Updatable>
+      <is-Grouped>false</is-Grouped>
+      <create-statement>CREATE VIEW &quot;TMP_TM111&quot; 
+	(&quot;B&quot;,&quot;E&quot;) 
+AS SELECT 
+	&quot;a&quot;.&quot;B&quot;,&quot;b&quot;.&quot;E&quot;
+FROM 
+	&quot;TMP_SD&quot; &quot;a&quot;,
+	&quot;TMP_AA&quot; &quot;b&quot;
+</create-statement>
+      
+            <base-table-names>
+             <base-table-name>
+          TMP_SD
+       </base-table-name>
+             <base-table-name>
+          TMP_AA
+       </base-table-name>
+            </base-table-names>
+
+           <columns>
+             <column name = "B">
+            <backendName></backendName>
+            <position>1</position>
+            <builtIn-type>date</builtIn-type>
+            <java-sql-type>DATE</java-sql-type>
+            <length>0</length>
+            <decimals>0</decimals>
+            <typeName></typeName>
+      </column>
+             <column name = "E">
+            <backendName></backendName>
+            <position>2</position>
+            <builtIn-type>float</builtIn-type>
+            <java-sql-type>REAL</java-sql-type>
+            <length>0</length>
+            <decimals>0</decimals>
+            <typeName></typeName>
+      </column>
+          </columns>
+</Dbview>

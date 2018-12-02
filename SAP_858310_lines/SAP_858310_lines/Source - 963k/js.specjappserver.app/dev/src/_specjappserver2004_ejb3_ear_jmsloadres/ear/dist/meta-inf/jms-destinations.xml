@@ -1,0 +1,10 @@
+﻿<jms-destinations>
+   <destination>
+      <connection-factory>jms/LoaderQueueConnectionFactory</connection-factory>
+      <destination-name>jms/LoaderQueue</destination-name>
+   </destination>
+   <destination>
+      <connection-factory>jms/LoaderQueueConnectionFactory</connection-factory>
+      <destination-name>jms/LoaderStatusQueue</destination-name>
+   </destination>
+</jms-destinations>

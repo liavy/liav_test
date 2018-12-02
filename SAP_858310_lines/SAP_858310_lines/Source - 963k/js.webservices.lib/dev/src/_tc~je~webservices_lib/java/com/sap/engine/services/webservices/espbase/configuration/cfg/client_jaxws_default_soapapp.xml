@@ -1,0 +1,61 @@
+﻿<tns:SoapApplication xmlns:tns="http://xml.sap.com/2006/11/esi/conf/soapapplication" id="URN:SAP-COM:SOAP:RUNTIME:APPLICATION:CLIENT:JAXWS">
+<description>This is the SoapApplication that holds valid properties for JEE JAX-WS web service clients.</description>
+   <properties>
+     <!--  Security Properties -->
+     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationLevel"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationMethod"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="Level"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="TLSType"/>     
+     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationMethod.Basic.Username"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationMethod.Basic.Password"/>
+     <!--  Idempotency Properties -->
+     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="IdempotencyIdLocation"/>
+     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Active.RT"/>
+     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Retries.Count.RT"/>    
+     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Retry.Sleep.RT"/>
+   </properties>
+   
+   <dependencies> 
+      <dependency type="TRUE_TO_RT">
+         <condition>
+           <boolean-value>true</boolean-value>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationMethod"/>
+             <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="TLSType"/>     
+					 </properties>
+         </result>
+      </dependency>      
+      
+      <dependency type="SINGLE_DT_OP_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="IdempotencyIdLocation" value="Default"/>     
+           </properties>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Active.RT"/>
+				     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Retries.Count.RT"/>                 
+				     <property namespace="http://www.sap.com/710/soap/features/idempotency/" name="Idempotency.Retry.Sleep.RT"/>
+           </properties>
+         </result>
+      </dependency>   
+
+      <dependency type="RT_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationMethod" value="sapsp:HTTPBasic"/>
+					 </properties>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationMethod.Basic.Username"/>
+				     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationMethod.Basic.Password"/>
+					 </properties>
+         </result>
+      </dependency>      
+
+   </dependencies>
+</tns:SoapApplication>

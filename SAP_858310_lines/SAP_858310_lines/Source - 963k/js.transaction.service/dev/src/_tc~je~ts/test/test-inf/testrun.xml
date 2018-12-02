@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><test>
+	<run type="junit">
+		<include>com.sap.tests.**</include>
+		<exclude>com.sap.tests.utils.**</exclude>
+	</run>
+</test>

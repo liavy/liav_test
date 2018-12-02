@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ns1:mappings xmlns:ns1='http://www.sap.com/webas/710/ws/ws-mapping-descriptor'>
+  <interface>
+    <property name='BindingType'>Soap</property>
+    <property name='SEIName'>proxy.deploy.test6.SOAPInterface</property>
+    <property name='BindingQName'>{urn:NoWSDLCase}SOAPBinding</property>
+    <property name='PortTypeQName'>{urn:NoWSDLCase}SOAPInterface</property>
+    <property name='InterfaceMappingID'>17ce4e7:103f0dce080:-8000</property>
+    <implementation-link>
+      <property name='StubName'>proxy.deploy.test6.SOAPBinding_Stub</property>
+    </implementation-link>
+  </interface>
+  <service>
+    <property name='SIName'>proxy.deploy.test6.DefaultService</property>
+    <property name='ServiceMappingId'>17ce4e7:103f0dce080:-7fff</property>
+    <property name='ServiceQName'>DefaultService</property>
+    <implementation-link>
+      <property name='SI_Impl_Name'>proxy.deploy.test6.DefaultServiceImpl</property>
+    </implementation-link>
+  </service>
+</ns1:mappings>

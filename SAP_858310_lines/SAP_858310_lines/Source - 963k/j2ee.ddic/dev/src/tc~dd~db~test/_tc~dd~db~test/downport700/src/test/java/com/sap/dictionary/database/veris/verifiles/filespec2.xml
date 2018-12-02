@@ -1,0 +1,233 @@
+﻿<?xml version="1.0"?>
+<veritables>
+<Dbtable name="VERI" creation-date="">
+      <properties>
+           <author></author>      
+           <description language="">VERI</description>                
+      </properties>
+      <predefined-action></predefined-action>
+     <position-is-relevant>false</position-is-relevant>
+     <deployment-status></deployment-status>      
+           <columns>
+             <column name = "NEW_COLUMN">
+            <position>1</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>2</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value> </default-value>
+        </column>
+             <column name = "NEW_COLUMN2">
+            <position>2</position>
+            <builtIn-type>short</builtIn-type>
+            <java-sql-type>SMALLINT</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+             <column name = "NEW_COLUMN4">
+            <position>4</position>
+            <builtIn-type>integer</builtIn-type>
+            <java-sql-type>INTEGER</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+             <column name = "NEW_COLUMN7">
+            <position>7</position>
+            <builtIn-type>decimal</builtIn-type>
+            <java-sql-type>DECIMAL</java-sql-type>
+
+            
+            <length>10</length>
+            <decimals>3</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+             <column name = "NEW_COLUMN3">
+            <position>3</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>10</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value> </default-value>
+        </column>
+             <column name = "NEW_COLUMN5">
+            <position>5</position>
+            <builtIn-type>double</builtIn-type>
+            <java-sql-type>DOUBLE</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+             <column name = "NEW_COLUMN8">
+            <position>8</position>
+            <builtIn-type>short</builtIn-type>
+            <java-sql-type>SMALLINT</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value>0</default-value>
+        </column>
+             <column name = "NEW_COLUMN6">
+            <position>6</position>
+            <builtIn-type>string</builtIn-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+
+            
+            <length>5</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value> </default-value>
+        </column>
+          </columns>
+        <primary-key>
+            <tabname>VERI</tabname>
+ 	      <db-specifics>
+		   		<mss>
+             <is-nonclustered>true</is-nonclustered>
+		   		</mss>
+        </db-specifics>
+        <columns>
+                           <column>NEW_COLUMN</column>
+                           <column>NEW_COLUMN2</column>
+                           <column>NEW_COLUMN3</column>
+         </columns>
+            
+                        
+         </primary-key>
+         <indexes>
+         <index name="VERI_1">
+                  <tabname>VERI</tabname>
+                  <properties>
+                       <author></author>                  
+                      <description language=""></description>                        
+                  </properties>
+                  <is-unique>true</is-unique>
+                  <deployment-status></deployment-status>     
+                  
+             <db-specifics>
+		         		<mss>
+                        <is-clustered>true</is-clustered>
+              	</mss>
+              	<db6>
+                              <index-properties>
+                                    <is-clustered>false</is-clustered>
+                                    <include-columns>
+                                          <columns>
+                                                <column name="NEW_COLUMN4">
+                                                </column>
+                                                <column name="NEW_COLUMN5">
+                                                </column>
+                                          </columns>
+                                    </include-columns>
+                              </index-properties>
+                </db6>       
+             </db-specifics>
+                  
+
+                  <columns>
+                  
+                  <column>
+                          <name>NEW_COLUMN8</name>
+                          <is-descending>false</is-descending>
+                   </column>
+                    
+                   </columns>
+                                
+                                 
+           </index>
+           <index name="VERI_2">
+              <tabname>VERI</tabname>
+              <properties>
+                       <author></author>                  
+                      <description language=""></description>                        
+              </properties>
+              <is-unique>false</is-unique>
+              <deployment-status></deployment-status>     
+                  
+              <columns>
+                  
+                  <column>
+                          <name>NEW_COLUMN5</name>
+                          <is-descending>false</is-descending>
+                   </column>
+                    
+                  <column>
+                          <name>NEW_COLUMN7</name>
+                          <is-descending>false</is-descending>
+                   </column>
+                    
+                </columns>
+                <dbspecifics>
+                  <ora>
+                     <type>bitmap</type>
+                  </ora>
+                </dbspecifics>
+                                
+                                 
+           </index>
+         </indexes>
+         <db-specifics>
+               <db2>
+                  <partitioning>
+                      <keycols>
+                          <name>NEW_COLUMN</name>
+                          <name>NEW_COLUMN2</name>
+                          <name>NEW_COLUMN4</name>
+                      </keycols>
+                      <parts>
+                           <part>
+                                <keyvalues>
+                                      <keyvalue>'AA'</keyvalue>
+                                      <keyvalue>6</keyvalue>
+                                      <keyvalue>2</keyvalue>
+                                </keyvalues>
+                           </part>
+                           <part>
+                               <keyvalues>
+                                      <keyvalue>MAXVALUE</keyvalue>             
+                                      </keyvalues>
+                           </part>
+                      </parts>
+                  </partitioning>
+              </db2> 
+           </db-specifics>
+                  
+    
+</Dbtable>
+
+<Dbtable name="VERI" creation-date="">
+	<properties>
+           <author></author>      
+           <description language="">predefined action = convert</description>                
+  </properties>
+  <predefined-action>CONVERT</predefined-action>                    
+</Dbtable>
+
+<Dbtable name="VERI" creation-date="">
+	<properties>
+           <author></author>      
+           <description language="">predefined action = drop/create</description>                
+  </properties>
+  <predefined-action>DROP_CREATE</predefined-action>                    
+</Dbtable>
+
+</veritables>

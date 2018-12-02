@@ -1,0 +1,10 @@
+﻿<BUSINESSSERVICE NAME="textcontainer">
+  <DESCRIPTION LOCALE="en" VALUE="TextContainer Service"/>
+  <ACTION NAME="administration">
+    <DESCRIPTION LOCALE="en" VALUE="Allows TextContainer administration."/>
+    <PERMISSION CLASS="com.sap.engine.services.textcontainer.security.TextContainerPermission" NAME="administration" VALUE="change"/>
+  </ACTION>
+  <ROLE NAME="Administrator">
+    <ASSIGNEDACTION NAME="administration"/>
+  </ROLE>   
+</BUSINESSSERVICE>

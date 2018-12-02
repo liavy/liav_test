@@ -1,0 +1,17 @@
+﻿<containers>
+	<containerInfo name="webservices_container">
+		<isJ2EEContainer>false</isJ2EEContainer>
+		<moduleName>webservices</moduleName>
+		<priority>77</priority>
+		<fileExtensions>
+			<name>.jar</name>
+			<name>.par</name>
+			<name>.war</name>
+			<name>.wsar</name>
+		</fileExtensions>
+		<supportsLazyStart>false</supportsLazyStart>
+		<supportingParallelism>true</supportingParallelism>
+		<hasGenerator>true</hasGenerator>
+        <hasModuleDetector>true</hasModuleDetector>
+	</containerInfo>
+</containers>

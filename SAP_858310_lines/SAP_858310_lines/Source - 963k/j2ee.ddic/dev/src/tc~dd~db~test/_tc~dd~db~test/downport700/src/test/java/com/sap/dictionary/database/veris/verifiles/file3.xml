@@ -1,0 +1,143 @@
+﻿<?xml version="1.0"?>
+<veritables>
+<Dbtable>
+	<name>VERI</name>
+	<date>"2003-04-30"</date>
+	<properties>
+            <creation-date>null</creation-date>
+            <author>SAP</author>
+            <description language="EN">Table for J2EE Engine</description>
+      </properties>
+      <position-is-relevant>false</position-is-relevant>
+      <predefined-action></predefined-action>
+      <technical-info>
+            <size-category>0</size-category>
+            <is-buffered>false</is-buffered>
+            <gen-key-count>0</gen-key-count>
+      </technical-info>
+      <columns>
+            <column name="CID">
+                  <position>1</position>
+                  <java-sql-type>BIGINT</java-sql-type>
+                  <db-type>null</db-type>
+                  <length>0</length>
+                  <decimals>0</decimals>
+                  <is-not-null>true</is-not-null>
+            </column>
+            <column name="NAMEHASH">
+                  <position>2</position>
+                  <java-sql-type>INTEGER</java-sql-type>
+                  <db-type>null</db-type>
+                  <length>0</length>
+                  <decimals>0</decimals>
+                  <is-not-null>true</is-not-null>
+            </column>
+            <column name="ISFILE">
+                  <position>3</position>
+                  <java-sql-type>SMALLINT</java-sql-type>
+                  <db-type>null</db-type>
+                  <length>0</length>
+                  <decimals>0</decimals>
+                  <is-not-null>true</is-not-null>
+            </column>
+            <column name="NAME">
+                  <position>4</position>
+                  <java-sql-type>VARCHAR</java-sql-type>
+                  <db-type>null</db-type>
+                  <length>256</length>
+                  <decimals>0</decimals>
+                  <is-not-null>true</is-not-null>
+            </column>
+            <column name="DTYPE">
+                  <position>5</position>
+                  <java-sql-type>SMALLINT</java-sql-type>
+                  <db-type>null</db-type>
+                  <length>0</length>
+                  <decimals>0</decimals>
+                  <is-not-null>false</is-not-null>
+            </column>
+            <column name="VBIGINT">
+                  <position>6</position>
+                  <java-sql-type>BIGINT</java-sql-type>
+                  <db-type>null</db-type>
+                  <length>0</length>
+                  <decimals>0</decimals>
+                  <is-not-null>false</is-not-null>
+            </column>
+            <column name="VDOUBLE">
+                  <position>7</position>
+                  <java-sql-type>DOUBLE</java-sql-type>
+                  <db-type>null</db-type>
+                  <length>0</length>
+                  <decimals>0</decimals>
+                  <is-not-null>false</is-not-null>
+            </column>
+            <column name="VSTR">
+                  <position>8</position>
+                  <java-sql-type>VARCHAR</java-sql-type>
+                  <db-type>null</db-type>
+                  <length>1300</length>
+                  <decimals>0</decimals>
+                  <is-not-null>false</is-not-null>
+            </column>
+            <column name="VBYTES">
+                  <position>9</position>
+                  <java-sql-type>LONGVARBINARY</java-sql-type>
+                  <types-info-additional>
+                        <type-info-additional>
+                  <database>DB2</database>
+                  <java-sql-type>VARBINARY</java-sql-type>
+                  <db-type>null</db-type>
+                        </type-info-additional>
+                        <type-info-additional> 
+                 <database>DB4</database>
+                  <java-sql-type>VARBINARY</java-sql-type>
+                  <db-type>null</db-type>
+                        </type-info-additional>
+                        <type-info-additional>
+                  <database>DB6</database>
+                  <java-sql-type>VARBINARY</java-sql-type>
+                  <db-type>null</db-type>
+                        </type-info-additional>
+                        <type-info-additional> 
+                 <database>MSSQL</database>
+                  <java-sql-type>VARBINARY</java-sql-type>
+                  <db-type>null</db-type>
+                        </type-info-additional>
+                        <type-info-additional>
+                  <database>ORACLE</database>
+                  <java-sql-type>VARBINARY</java-sql-type>
+                  <db-type>null</db-type>
+                        </type-info-additional>
+                        <type-info-additional>
+                  <database>SAPDB</database>
+                  <java-sql-type>VARBINARY</java-sql-type>
+                  <db-type>null</db-type>
+                        </type-info-additional>
+                  </types-info-additional>
+                  <db-type>null</db-type>
+                  <length>2000</length> 
+                 <decimals>0</decimals>
+                  <is-not-null>false</is-not-null>
+            </column>
+            <column name="FBLOB">
+                  <position>10</position>
+                  <java-sql-type>BLOB</java-sql-type>
+                  <db-type>null</db-type>
+                  <length>0</length>
+                  <decimals>0</decimals>
+                  <is-not-null>false</is-not-null>
+            </column>
+      </columns>
+      <primary-key>
+            <tabname>J2EE_CONFIGENTRY</tabname>
+            <columns>
+                  <column>CID</column>
+                  <column>NAMEHASH</column>
+                  <column>ISFILE</column>
+            </columns>
+      </primary-key>
+</Dbtable>
+
+
+</veritables>

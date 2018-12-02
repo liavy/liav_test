@@ -1,0 +1,1270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<typeMappingRegistry>
+  <defaultTypeMapping>
+    <xmlMapping typeName="Vector" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="Vector"/>
+    </xmlMapping>
+    <xmlMapping typeName="date" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="description" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Description" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Description"/>
+    </xmlMapping>
+    <xmlMapping typeName="overviewDoc" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.OverviewDoc" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.OverviewDoc"/>
+    </xmlMapping>
+    <xmlMapping typeName="businessDetail" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetail"/>
+    </xmlMapping>
+    <xmlMapping typeName="delete_binding" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBinding" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBinding"/>
+    </xmlMapping>
+    <xmlMapping typeName="publisherAssertions" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertions" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertions"/>
+    </xmlMapping>
+    <xmlMapping typeName="tModelInfo" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfo"/>
+    </xmlMapping>
+    <xmlMapping typeName="time" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.TimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.TimeSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="delete_publisherAssertions" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeletePublisherAssertions" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeletePublisherAssertions"/>
+    </xmlMapping>
+    <xmlMapping typeName="normalizedString" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="errInfo" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ErrInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ErrInfo"/>
+    </xmlMapping>
+    <xmlMapping typeName="keysOwned" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeysOwned" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeysOwned"/>
+    </xmlMapping>
+    <xmlMapping typeName="float" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.FloatSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.FloatSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="name" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Name" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Name"/>
+    </xmlMapping>
+    <xmlMapping typeName="bindingTemplates" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplates" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplates"/>
+    </xmlMapping>
+    <xmlMapping typeName="set_publisherAssertions" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SetPublisherAssertions" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SetPublisherAssertions"/>
+    </xmlMapping>
+    <xmlMapping typeName="positiveInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="dateTime" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedInt" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="serviceDetail" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceDetail"/>
+    </xmlMapping>
+    <xmlMapping typeName="NMTOKEN" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="string" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="serviceInfo" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfo"/>
+    </xmlMapping>
+    <xmlMapping typeName="contacts" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contacts" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contacts"/>
+    </xmlMapping>
+    <xmlMapping typeName="boolean" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.BooleanSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.BooleanSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="decimal" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DecimalSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DecimalSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="NOTATION" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="IDREF" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="tModel" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModel" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModel"/>
+    </xmlMapping>
+    <xmlMapping typeName="truncated" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Truncated" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Truncated"/>
+    </xmlMapping>
+    <xmlMapping typeName="bindingTemplate" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplate" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplate"/>
+    </xmlMapping>
+    <xmlMapping typeName="double" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DoubleSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DoubleSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="token" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="NOTATION" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="sharedRelationships" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SharedRelationships" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SharedRelationships"/>
+    </xmlMapping>
+    <xmlMapping typeName="get_businessDetailExt" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetailExt" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetailExt"/>
+    </xmlMapping>
+    <xmlMapping typeName="get_publisherAssertions" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetPublisherAssertions" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetPublisherAssertions"/>
+    </xmlMapping>
+    <xmlMapping typeName="bindingKey" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingKey" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingKey"/>
+    </xmlMapping>
+    <xmlMapping typeName="tModelBag" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelBag" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelBag"/>
+    </xmlMapping>
+    <xmlMapping typeName="base64Binary" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.Base64BinarySD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.Base64BinarySD"/>
+    </xmlMapping>
+    <xmlMapping typeName="positiveInteger" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="tModelInfos" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfos" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfos"/>
+    </xmlMapping>
+    <xmlMapping typeName="serviceKey" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceKey" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceKey"/>
+    </xmlMapping>
+    <xmlMapping typeName="save_tModel" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveTModel" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveTModel"/>
+    </xmlMapping>
+    <xmlMapping typeName="businessService" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessService" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessService"/>
+    </xmlMapping>
+    <xmlMapping typeName="nonPositiveInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="HashSet" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="HashSet"/>
+    </xmlMapping>
+    <xmlMapping typeName="ArrayList" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="ArrayList"/>
+    </xmlMapping>
+    <xmlMapping typeName="ENTITIES" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="keyType" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyType" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyType"/>
+    </xmlMapping>
+    <xmlMapping typeName="nonPositiveInteger" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="businessEntity" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntity" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntity"/>
+    </xmlMapping>
+    <xmlMapping typeName="keyedReference" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference"/>
+    </xmlMapping>
+    <xmlMapping typeName="decimal" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DecimalSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DecimalSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="authToken" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AuthToken" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AuthToken"/>
+    </xmlMapping>
+    <xmlMapping typeName="anyType" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="relatedBusinessInfos" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfos" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfos"/>
+    </xmlMapping>
+    <xmlMapping typeName="validate_values" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ValidateValues" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ValidateValues"/>
+    </xmlMapping>
+    <xmlMapping typeName="businessEntityExt" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntityExt" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntityExt"/>
+    </xmlMapping>
+    <xmlMapping typeName="short" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="get_registeredInfo" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetRegisteredInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetRegisteredInfo"/>
+    </xmlMapping>
+    <xmlMapping typeName="identifierBag" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.IdentifierBag" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.IdentifierBag"/>
+    </xmlMapping>
+    <xmlMapping typeName="int" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="get_authToken" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAuthToken" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAuthToken"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedShort" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="/xs:schema/xs:attribute[2]/xs:simpleType" typeNamespace="http://www.w3.org/XML/1998/namespace">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.xml.Space" deserializer="com.sap.engine.services.webservices.jaxr.impl.xml.Space"/>
+    </xmlMapping>
+    <xmlMapping typeName="ENTITY" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="ID" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="Name" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="bindingDetail" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingDetail"/>
+    </xmlMapping>
+    <xmlMapping typeName="result" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Result" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Result"/>
+    </xmlMapping>
+    <xmlMapping typeName="URLType" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.URLType" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.URLType"/>
+    </xmlMapping>
+    <xmlMapping typeName="direction" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Direction" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Direction"/>
+    </xmlMapping>
+    <xmlMapping typeName="Stack" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="Stack"/>
+    </xmlMapping>
+    <xmlMapping typeName="long" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="find_tModel" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindTModel" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindTModel"/>
+    </xmlMapping>
+    <xmlMapping typeName="find_relatedBusinesses" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindRelatedBusinesses" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindRelatedBusinesses"/>
+    </xmlMapping>
+    <xmlMapping typeName="tModelKey" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelKey" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelKey"/>
+    </xmlMapping>
+    <xmlMapping typeName="publisherAssertion" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertion" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertion"/>
+    </xmlMapping>
+    <xmlMapping typeName="assertionStatusReport" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusReport" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusReport"/>
+    </xmlMapping>
+    <xmlMapping typeName="businessInfos" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfos" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfos"/>
+    </xmlMapping>
+    <xmlMapping typeName="phone" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Phone" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Phone"/>
+    </xmlMapping>
+    <xmlMapping typeName="Name" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="negativeInteger" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="find_service" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindService" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindService"/>
+    </xmlMapping>
+    <xmlMapping typeName="nonNegativeInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="token" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="relatedBusinessInfo" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfo"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedInt" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="registeredInfo" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RegisteredInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RegisteredInfo"/>
+    </xmlMapping>
+    <xmlMapping typeName="byte" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="findQualifiers" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindQualifiers" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindQualifiers"/>
+    </xmlMapping>
+    <xmlMapping typeName="ENTITY" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedByte" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="find_binding" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBinding" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBinding"/>
+    </xmlMapping>
+    <xmlMapping typeName="byte" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="get_bindingDetail" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBindingDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBindingDetail"/>
+    </xmlMapping>
+    <xmlMapping typeName="save_service" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveService" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveService"/>
+    </xmlMapping>
+    <xmlMapping typeName="ID" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="nonNegativeInteger" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="NMTOKEN" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="businessList" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessList" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessList"/>
+    </xmlMapping>
+    <xmlMapping typeName="categoryBag" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.CategoryBag" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.CategoryBag"/>
+    </xmlMapping>
+    <xmlMapping typeName="double" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DoubleSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DoubleSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="IDREFS" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedByte" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedShort" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="anyURI" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="NMTOKENS" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="language" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="delete_business" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBusiness" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBusiness"/>
+    </xmlMapping>
+    <xmlMapping typeName="delete_tModel" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteTModel" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteTModel"/>
+    </xmlMapping>
+    <xmlMapping typeName="get_tModelDetail" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetTModelDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetTModelDetail"/>
+    </xmlMapping>
+    <xmlMapping typeName="discoveryURL" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURL" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURL"/>
+    </xmlMapping>
+    <xmlMapping typeName="serviceList" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceList" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceList"/>
+    </xmlMapping>
+    <xmlMapping typeName="boolean" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.BooleanSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.BooleanSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="tModelInstanceDetails" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceDetails" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceDetails"/>
+    </xmlMapping>
+    <xmlMapping typeName="businessServices" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessServices" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessServices"/>
+    </xmlMapping>
+    <xmlMapping typeName="save_business" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBusiness" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBusiness"/>
+    </xmlMapping>
+    <xmlMapping typeName="IDREF" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="serviceInfos" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfos" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfos"/>
+    </xmlMapping>
+    <xmlMapping typeName="hexBinary" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.HexBinarySD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.HexBinarySD"/>
+    </xmlMapping>
+    <xmlMapping typeName="save_binding" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBinding" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBinding"/>
+    </xmlMapping>
+    <xmlMapping typeName="addressLine" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddressLine" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddressLine"/>
+    </xmlMapping>
+    <xmlMapping typeName="time" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.TimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.TimeSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="dispositionReport" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DispositionReport" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DispositionReport"/>
+    </xmlMapping>
+    <xmlMapping typeName="contact" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contact" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contact"/>
+    </xmlMapping>
+    <xmlMapping typeName="discoveryURLs" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURLs" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURLs"/>
+    </xmlMapping>
+    <xmlMapping typeName="dateTime" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="tModelInstanceInfo" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceInfo"/>
+    </xmlMapping>
+    <xmlMapping typeName="normalizedString" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="integer" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="integer" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="get_serviceDetail" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetServiceDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetServiceDetail"/>
+    </xmlMapping>
+    <xmlMapping typeName="relatedBusinessesList" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessesList" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessesList"/>
+    </xmlMapping>
+    <xmlMapping typeName="hexBinary" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.HexBinarySD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.HexBinarySD"/>
+    </xmlMapping>
+    <xmlMapping typeName="negativeInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="address" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Address" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Address"/>
+    </xmlMapping>
+    <xmlMapping typeName="businessInfo" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfo"/>
+    </xmlMapping>
+    <xmlMapping typeName="find_business" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBusiness" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBusiness"/>
+    </xmlMapping>
+    <xmlMapping typeName="get_assertionStatusReport" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAssertionStatusReport" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAssertionStatusReport"/>
+    </xmlMapping>
+    <xmlMapping typeName="businessDetailExt" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetailExt" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetailExt"/>
+    </xmlMapping>
+    <xmlMapping typeName="anyType" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfo[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfos" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfos"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetail" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetail"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetTModelDetail" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetTModelDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetTModelDetail"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBindingDetail" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBindingDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBindingDetail"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBinding" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBinding" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBinding"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeysOwned" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeysOwned" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeysOwned"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetRegisteredInfo" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetRegisteredInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetRegisteredInfo"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplate[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplates" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplates"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBusiness" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBusiness" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBusiness"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusItem" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusItem" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusItem"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SetPublisherAssertions" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SetPublisherAssertions" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SetPublisherAssertions"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Result" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Result" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Result"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscardAuthToken" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscardAuthToken" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscardAuthToken"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfo" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfo"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceDetail" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceDetail"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetailExt" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetailExt" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetailExt"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RegisteredInfo" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RegisteredInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RegisteredInfo"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfo[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfos" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfos"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAuthToken" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAuthToken" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAuthToken"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBusiness" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBusiness" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBusiness"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SharedRelationships" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SharedRelationships" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SharedRelationships"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntity" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntity" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntity"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusReport" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusReport" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusReport"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeletePublisherAssertions" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeletePublisherAssertions" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeletePublisherAssertions"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetServiceDetail" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetServiceDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetServiceDetail"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceInfo[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceDetails" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceDetails"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveTModel" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveTModel" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveTModel"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Address" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Address" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Address"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertions" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertions" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertions"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteService" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteService" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteService"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAssertionStatusReport" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAssertionStatusReport" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAssertionStatusReport"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBusiness" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBusiness" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBusiness"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfo" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfo"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessService" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessService" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessService"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindRelatedBusinesses" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindRelatedBusinesses" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindRelatedBusinesses"/>
+      <custom javaType="java.lang.String[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindQualifiers" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindQualifiers"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceList" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceList" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceList"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetPublisherAssertions" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetPublisherAssertions" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetPublisherAssertions"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBinding" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBinding" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBinding"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfo[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfos" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfos"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceInfo" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceInfo"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModel" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModel" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModel"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ValidateValues" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ValidateValues" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ValidateValues"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfo" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfo"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelDetail" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelDetail"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contact[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contacts" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contacts"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.OverviewDoc" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.OverviewDoc" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.OverviewDoc"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contact" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contact" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contact"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddPublisherAssertions" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddPublisherAssertions" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddPublisherAssertions"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetailExt" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetailExt" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetailExt"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindTModel" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindTModel" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindTModel"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DispositionReport" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DispositionReport" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DispositionReport"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplate" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplate" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplate"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessList" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessList" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessList"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindService" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindService" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindService"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURL[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURLs" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURLs"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfo" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfo" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfo"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.InstanceDetails" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.InstanceDetails" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.InstanceDetails"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessesList" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessesList" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessesList"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertion" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertion" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertion"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.HostingRedirector" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.HostingRedirector" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.HostingRedirector"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntityExt" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntityExt" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntityExt"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfo[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfos" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfos"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteTModel" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteTModel" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteTModel"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingDetail" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingDetail"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveService" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveService" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveService"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelList" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelList" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelList"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.CategoryBag" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.CategoryBag"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBinding" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBinding" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBinding"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetail" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetail"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AuthToken" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AuthToken" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AuthToken"/>
+      <custom javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessService[]" serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessServices" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessServices"/>
+    </xmlMapping>
+    <xmlMapping typeName="NCName" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="List" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="List"/>
+    </xmlMapping>
+    <xmlMapping typeName="discard_authToken" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscardAuthToken" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscardAuthToken"/>
+    </xmlMapping>
+    <xmlMapping typeName="NMTOKENS" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="date" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="hostingRedirector" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.HostingRedirector" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.HostingRedirector"/>
+    </xmlMapping>
+    <xmlMapping typeName="delete_service" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteService" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteService"/>
+    </xmlMapping>
+    <xmlMapping typeName="QName" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="get_businessDetail" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetail"/>
+    </xmlMapping>
+    <xmlMapping typeName="tModelList" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelList" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelList"/>
+    </xmlMapping>
+    <xmlMapping typeName="LinkedList" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="LinkedList"/>
+    </xmlMapping>
+    <xmlMapping typeName="string" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="IDREFS" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="anyURI" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="language" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="base64Binary" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.Base64BinarySD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.Base64BinarySD"/>
+    </xmlMapping>
+    <xmlMapping typeName="NCName" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="ENTITIES" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedLong" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="int" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="tModelDetail" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelDetail" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelDetail"/>
+    </xmlMapping>
+    <xmlMapping typeName="email" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Email" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Email"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedLong" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="long" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="assertionStatusItem" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusItem" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusItem"/>
+    </xmlMapping>
+    <xmlMapping typeName="accessPoint" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AccessPoint" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AccessPoint"/>
+    </xmlMapping>
+    <xmlMapping typeName="short" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="float" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.FloatSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.FloatSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="QName" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD"/>
+    </xmlMapping>
+    <xmlMapping typeName="add_publisherAssertions" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddPublisherAssertions" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddPublisherAssertions"/>
+    </xmlMapping>
+    <xmlMapping typeName="businessKey" typeNamespace="urn:uddi-org:api_v2">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessKey" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessKey"/>
+    </xmlMapping>
+    <xmlMapping typeName="instanceDetails" typeNamespace="urn:uddi-org:api_v2" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.InstanceDetails" deserializer="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.InstanceDetails"/>
+    </xmlMapping>
+    <elementMapping>
+      <elementDeclaration Name="tModelInfos" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="tModelInfos" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="email" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="email" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="businessDetail" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessDetail" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="categoryBag" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="categoryBag" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="discoveryURLs" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="discoveryURLs" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="addressLine" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="addressLine" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="find_business" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="find_business" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="authToken" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="authToken" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="tModelDetail" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="tModelDetail" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="assertionStatusItem" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="assertionStatusItem" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="businessEntityExt" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessEntityExt" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="businessDetailExt" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessDetailExt" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="completionStatus" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="string" Uri="http://www.w3.org/2001/XMLSchema"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="uploadRegister" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="string" Uri="http://www.w3.org/2001/XMLSchema"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="name" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="name" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="businessInfos" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessInfos" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="save_service" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="save_service" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="registeredInfo" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="registeredInfo" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="save_tModel" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="save_tModel" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="findQualifiers" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="findQualifiers" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="delete_publisherAssertions" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="delete_publisherAssertions" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="get_tModelDetail" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="get_tModelDetail" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="get_publisherAssertions" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="get_publisherAssertions" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="contact" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="contact" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="toKey" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessKey" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="get_bindingDetail" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="get_bindingDetail" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="keyedReference" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="keyedReference" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="discard_authToken" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="discard_authToken" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="keysOwned" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="keysOwned" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="get_businessDetail" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="get_businessDetail" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="find_tModel" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="find_tModel" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="find_relatedBusinesses" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="find_relatedBusinesses" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="get_businessDetailExt" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="get_businessDetailExt" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="instanceParms" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="string" Uri="http://www.w3.org/2001/XMLSchema"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="set_publisherAssertions" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="set_publisherAssertions" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="overviewURL" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="string" Uri="http://www.w3.org/2001/XMLSchema"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="identifierBag" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="identifierBag" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="errInfo" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="errInfo" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="get_registeredInfo" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="get_registeredInfo" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="tModelInstanceDetails" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="tModelInstanceDetails" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="add_publisherAssertions" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="add_publisherAssertions" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="businessService" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessService" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="validate_values" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="validate_values" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="save_binding" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="save_binding" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="delete_service" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="delete_service" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="serviceDetail" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="serviceDetail" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="bindingDetail" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="bindingDetail" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="publisherAssertions" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="publisherAssertions" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="contacts" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="contacts" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="serviceInfo" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="serviceInfo" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="personName" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="string" Uri="http://www.w3.org/2001/XMLSchema"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="delete_binding" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="delete_binding" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="sharedRelationships" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="sharedRelationships" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="businessEntity" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessEntity" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="overviewDoc" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="overviewDoc" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="tModelInfo" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="tModelInfo" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="find_service" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="find_service" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="phone" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="phone" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="businessInfo" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessInfo" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="delete_business" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="delete_business" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="tModel" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="tModel" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="fromKey" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessKey" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="tModelList" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="tModelList" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="tModelInstanceInfo" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="tModelInstanceInfo" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="serviceKey" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="serviceKey" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="assertionStatusReport" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="assertionStatusReport" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="findQualifier" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="string" Uri="http://www.w3.org/2001/XMLSchema"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="get_authToken" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="get_authToken" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="instanceDetails" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="instanceDetails" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="result" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="result" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="save_business" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="save_business" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="relatedBusinessesList" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="relatedBusinessesList" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="delete_tModel" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="delete_tModel" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="get_assertionStatusReport" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="get_assertionStatusReport" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="serviceList" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="serviceList" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="accessPoint" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="accessPoint" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="dispositionReport" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="dispositionReport" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="serviceInfos" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="serviceInfos" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="relatedBusinessInfos" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="relatedBusinessInfos" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="hostingRedirector" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="hostingRedirector" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="authInfo" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="string" Uri="http://www.w3.org/2001/XMLSchema"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="tModelKey" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="tModelKey" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="businessList" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessList" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="relatedBusinessInfo" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="relatedBusinessInfo" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="bindingTemplate" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="bindingTemplate" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="businessServices" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessServices" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="tModelBag" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="tModelBag" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="bindingKey" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="bindingKey" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="find_binding" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="find_binding" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="description" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="description" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="address" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="address" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="discoveryURL" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="discoveryURL" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="businessKey" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="businessKey" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="publisherAssertion" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="publisherAssertion" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="get_serviceDetail" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="get_serviceDetail" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <elementMapping>
+      <elementDeclaration Name="bindingTemplates" Uri="urn:uddi-org:api_v2"/>
+      <elementType Name="bindingTemplates" Uri="urn:uddi-org:api_v2"/>
+    </elementMapping>
+    <schemaToJavaMapping typeName="date" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="description" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Description"/>
+    <schemaToJavaMapping typeName="anySimpleType" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Object"/>
+    <schemaToJavaMapping typeName="overviewDoc" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.OverviewDoc"/>
+    <schemaToJavaMapping typeName="businessDetail" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetail"/>
+    <schemaToJavaMapping typeName="delete_binding" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBinding"/>
+    <schemaToJavaMapping typeName="publisherAssertions" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertions"/>
+    <schemaToJavaMapping typeName="tModelInfo" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfo"/>
+    <schemaToJavaMapping typeName="delete_publisherAssertions" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeletePublisherAssertions"/>
+    <schemaToJavaMapping typeName="time" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="normalizedString" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="errInfo" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ErrInfo"/>
+    <schemaToJavaMapping typeName="keysOwned" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeysOwned"/>
+    <schemaToJavaMapping typeName="float" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="float"/>
+    <schemaToJavaMapping typeName="name" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Name"/>
+    <schemaToJavaMapping typeName="bindingTemplates" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplate[]"/>
+    <schemaToJavaMapping typeName="set_publisherAssertions" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SetPublisherAssertions"/>
+    <schemaToJavaMapping typeName="positiveInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="dateTime" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="unsignedInt" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Integer"/>
+    <schemaToJavaMapping typeName="serviceDetail" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceDetail"/>
+    <schemaToJavaMapping typeName="NMTOKEN" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="string" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="serviceInfo" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfo"/>
+    <schemaToJavaMapping typeName="gMonthDay" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="contacts" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contact[]"/>
+    <schemaToJavaMapping typeName="boolean" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="boolean"/>
+    <schemaToJavaMapping typeName="decimal" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigDecimal"/>
+    <schemaToJavaMapping typeName="NOTATION" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="IDREF" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="tModel" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModel"/>
+    <schemaToJavaMapping typeName="truncated" typeNamespace="urn:uddi-org:api_v2" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="bindingTemplate" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplate"/>
+    <schemaToJavaMapping typeName="double" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="double"/>
+    <schemaToJavaMapping typeName="token" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="NOTATION" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="sharedRelationships" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SharedRelationships"/>
+    <schemaToJavaMapping typeName="get_businessDetailExt" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetailExt"/>
+    <schemaToJavaMapping typeName="get_publisherAssertions" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetPublisherAssertions"/>
+    <schemaToJavaMapping typeName="tModelBag" typeNamespace="urn:uddi-org:api_v2" javaType="java.lang.String[]"/>
+    <schemaToJavaMapping typeName="bindingKey" typeNamespace="urn:uddi-org:api_v2" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="base64Binary" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="byte[]"/>
+    <schemaToJavaMapping typeName="positiveInteger" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="tModelInfos" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfo[]"/>
+    <schemaToJavaMapping typeName="serviceKey" typeNamespace="urn:uddi-org:api_v2" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="save_tModel" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveTModel"/>
+    <schemaToJavaMapping typeName="gYearMonth" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="businessService" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessService"/>
+    <schemaToJavaMapping typeName="nonPositiveInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="ENTITIES" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="keyType" typeNamespace="urn:uddi-org:api_v2" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="nonPositiveInteger" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="businessEntity" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntity"/>
+    <schemaToJavaMapping typeName="keyedReference" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference"/>
+    <schemaToJavaMapping typeName="decimal" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigDecimal"/>
+    <schemaToJavaMapping typeName="authToken" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AuthToken"/>
+    <schemaToJavaMapping typeName="gYear" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="validate_values" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ValidateValues"/>
+    <schemaToJavaMapping typeName="relatedBusinessInfos" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfo[]"/>
+    <schemaToJavaMapping typeName="businessEntityExt" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntityExt"/>
+    <schemaToJavaMapping typeName="short" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Short"/>
+    <schemaToJavaMapping typeName="get_registeredInfo" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetRegisteredInfo"/>
+    <schemaToJavaMapping typeName="identifierBag" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference[]"/>
+    <schemaToJavaMapping typeName="int" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Integer"/>
+    <schemaToJavaMapping typeName="get_authToken" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAuthToken"/>
+    <schemaToJavaMapping typeName="unsignedShort" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Short"/>
+    <schemaToJavaMapping typeName="/xs:schema/xs:attribute[2]/xs:simpleType" typeNamespace="http://www.w3.org/XML/1998/namespace" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="ENTITY" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="ID" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="Name" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="bindingDetail" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingDetail"/>
+    <schemaToJavaMapping typeName="result" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Result"/>
+    <schemaToJavaMapping typeName="URLType" typeNamespace="urn:uddi-org:api_v2" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="direction" typeNamespace="urn:uddi-org:api_v2" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="long" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="long"/>
+    <schemaToJavaMapping typeName="gMonth" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="gMonth" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="find_tModel" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindTModel"/>
+    <schemaToJavaMapping typeName="find_relatedBusinesses" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindRelatedBusinesses"/>
+    <schemaToJavaMapping typeName="tModelKey" typeNamespace="urn:uddi-org:api_v2" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="businessInfos" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfo[]"/>
+    <schemaToJavaMapping typeName="publisherAssertion" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertion"/>
+    <schemaToJavaMapping typeName="assertionStatusReport" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusReport"/>
+    <schemaToJavaMapping typeName="phone" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Phone"/>
+    <schemaToJavaMapping typeName="Name" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="negativeInteger" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="find_service" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindService"/>
+    <schemaToJavaMapping typeName="nonNegativeInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="token" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="relatedBusinessInfo" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfo"/>
+    <schemaToJavaMapping typeName="unsignedInt" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="int"/>
+    <schemaToJavaMapping typeName="gYear" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="registeredInfo" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RegisteredInfo"/>
+    <schemaToJavaMapping typeName="findQualifiers" typeNamespace="urn:uddi-org:api_v2" javaType="java.lang.String[]"/>
+    <schemaToJavaMapping typeName="byte" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="byte"/>
+    <schemaToJavaMapping typeName="ENTITY" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="unsignedByte" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Byte"/>
+    <schemaToJavaMapping typeName="anySimpleType" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.Object"/>
+    <schemaToJavaMapping typeName="find_binding" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBinding"/>
+    <schemaToJavaMapping typeName="duration" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="byte" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Byte"/>
+    <schemaToJavaMapping typeName="get_bindingDetail" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBindingDetail"/>
+    <schemaToJavaMapping typeName="save_service" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveService"/>
+    <schemaToJavaMapping typeName="ID" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="nonNegativeInteger" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="NMTOKEN" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="categoryBag" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference[]"/>
+    <schemaToJavaMapping typeName="businessList" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessList"/>
+    <schemaToJavaMapping typeName="double" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Double"/>
+    <schemaToJavaMapping typeName="IDREFS" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="unsignedByte" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="byte"/>
+    <schemaToJavaMapping typeName="unsignedShort" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="short"/>
+    <schemaToJavaMapping typeName="anyURI" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="duration" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="NMTOKENS" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="language" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="delete_business" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBusiness"/>
+    <schemaToJavaMapping typeName="delete_tModel" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteTModel"/>
+    <schemaToJavaMapping typeName="get_tModelDetail" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetTModelDetail"/>
+    <schemaToJavaMapping typeName="discoveryURL" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURL"/>
+    <schemaToJavaMapping typeName="serviceList" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceList"/>
+    <schemaToJavaMapping typeName="boolean" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Boolean"/>
+    <schemaToJavaMapping typeName="tModelInstanceDetails" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceInfo[]"/>
+    <schemaToJavaMapping typeName="businessServices" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessService[]"/>
+    <schemaToJavaMapping typeName="save_business" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBusiness"/>
+    <schemaToJavaMapping typeName="IDREF" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="hexBinary" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="byte[]"/>
+    <schemaToJavaMapping typeName="serviceInfos" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfo[]"/>
+    <schemaToJavaMapping typeName="save_binding" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBinding"/>
+    <schemaToJavaMapping typeName="addressLine" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddressLine"/>
+    <schemaToJavaMapping typeName="time" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="dispositionReport" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DispositionReport"/>
+    <schemaToJavaMapping typeName="gMonthDay" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="contact" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contact"/>
+    <schemaToJavaMapping typeName="discoveryURLs" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURL[]"/>
+    <schemaToJavaMapping typeName="dateTime" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="tModelInstanceInfo" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceInfo"/>
+    <schemaToJavaMapping typeName="normalizedString" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="integer" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="integer" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="get_serviceDetail" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetServiceDetail"/>
+    <schemaToJavaMapping typeName="relatedBusinessesList" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessesList"/>
+    <schemaToJavaMapping typeName="hexBinary" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="byte[]"/>
+    <schemaToJavaMapping typeName="negativeInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="gDay" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="address" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Address"/>
+    <schemaToJavaMapping typeName="businessInfo" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfo"/>
+    <schemaToJavaMapping typeName="find_business" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBusiness"/>
+    <schemaToJavaMapping typeName="get_assertionStatusReport" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAssertionStatusReport"/>
+    <schemaToJavaMapping typeName="businessDetailExt" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetailExt"/>
+    <schemaToJavaMapping typeName="NCName" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="discard_authToken" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscardAuthToken"/>
+    <schemaToJavaMapping typeName="NMTOKENS" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="date" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="hostingRedirector" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.HostingRedirector"/>
+    <schemaToJavaMapping typeName="delete_service" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteService"/>
+    <schemaToJavaMapping typeName="QName" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="get_businessDetail" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetail"/>
+    <schemaToJavaMapping typeName="tModelList" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelList"/>
+    <schemaToJavaMapping typeName="string" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="IDREFS" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="anyURI" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="language" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="base64Binary" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="byte[]"/>
+    <schemaToJavaMapping typeName="NCName" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="ENTITIES" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="unsignedLong" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="long"/>
+    <schemaToJavaMapping typeName="int" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="int"/>
+    <schemaToJavaMapping typeName="tModelDetail" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelDetail"/>
+    <schemaToJavaMapping typeName="email" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Email"/>
+    <schemaToJavaMapping typeName="unsignedLong" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Long"/>
+    <schemaToJavaMapping typeName="gYearMonth" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="assertionStatusItem" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusItem"/>
+    <schemaToJavaMapping typeName="long" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Long"/>
+    <schemaToJavaMapping typeName="accessPoint" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AccessPoint"/>
+    <schemaToJavaMapping typeName="short" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="short"/>
+    <schemaToJavaMapping typeName="float" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Float"/>
+    <schemaToJavaMapping typeName="QName" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="add_publisherAssertions" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddPublisherAssertions"/>
+    <schemaToJavaMapping typeName="gDay" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="businessKey" typeNamespace="urn:uddi-org:api_v2" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="instanceDetails" typeNamespace="urn:uddi-org:api_v2" javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.InstanceDetails"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfo[]" typeName="relatedBusinessInfos" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetail" typeName="businessDetail" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBindingDetail" typeName="get_bindingDetail" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetTModelDetail" typeName="get_tModelDetail" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ErrInfo" typeName="errInfo" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBinding" typeName="save_binding" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="byte[]" typeName="base64Binary" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeysOwned" typeName="keysOwned" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="java.lang.Integer" typeName="int" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="java.lang.Double" typeName="double" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetRegisteredInfo" typeName="get_registeredInfo" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplate[]" typeName="bindingTemplates" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveBusiness" typeName="save_business" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusItem" typeName="assertionStatusItem" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="boolean" typeName="boolean" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Description" typeName="description" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference" typeName="keyedReference" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SetPublisherAssertions" typeName="set_publisherAssertions" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Result" typeName="result" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscardAuthToken" typeName="discard_authToken" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="int" typeName="int" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessInfo" typeName="relatedBusinessInfo" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="java.util.Calendar" typeName="dateTime" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceDetail" typeName="serviceDetail" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetailExt" typeName="get_businessDetailExt" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RegisteredInfo" typeName="registeredInfo" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAuthToken" typeName="get_authToken" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfo[]" typeName="tModelInfos" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBusiness" typeName="delete_business" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SharedRelationships" typeName="sharedRelationships" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="java.lang.Boolean" typeName="boolean" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntity" typeName="businessEntity" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="java.lang.Short" typeName="short" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Phone" typeName="phone" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeletePublisherAssertions" typeName="delete_publisherAssertions" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AssertionStatusReport" typeName="assertionStatusReport" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="java.lang.Byte" typeName="byte" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="byte" typeName="byte" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetServiceDetail" typeName="get_serviceDetail" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceInfo[]" typeName="tModelInstanceDetails" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="short" typeName="short" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveTModel" typeName="save_tModel" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Address" typeName="address" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertions" typeName="publisherAssertions" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteService" typeName="delete_service" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetAssertionStatusReport" typeName="get_assertionStatusReport" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURL" typeName="discoveryURL" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBusiness" typeName="find_business" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfo" typeName="serviceInfo" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessService" typeName="businessService" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindRelatedBusinesses" typeName="find_relatedBusinesses" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="double" typeName="double" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="java.lang.String[]" typeName="tModelBag" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceList" typeName="serviceList" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetPublisherAssertions" typeName="get_publisherAssertions" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteBinding" typeName="delete_binding" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfo[]" typeName="businessInfos" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInstanceInfo" typeName="tModelInstanceInfo" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModel" typeName="tModel" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ValidateValues" typeName="validate_values" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessInfo" typeName="businessInfo" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelDetail" typeName="tModelDetail" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="java.lang.Float" typeName="float" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contact[]" typeName="contacts" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.OverviewDoc" typeName="overviewDoc" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Contact" typeName="contact" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessDetailExt" typeName="businessDetailExt" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindTModel" typeName="find_tModel" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddPublisherAssertions" typeName="add_publisherAssertions" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DispositionReport" typeName="dispositionReport" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingTemplate" typeName="bindingTemplate" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="float" typeName="float" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessList" typeName="businessList" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindService" typeName="find_service" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Email" typeName="email" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AccessPoint" typeName="accessPoint" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DiscoveryURL[]" typeName="discoveryURLs" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelInfo" typeName="tModelInfo" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.InstanceDetails" typeName="instanceDetails" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.RelatedBusinessesList" typeName="relatedBusinessesList" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.HostingRedirector" typeName="hostingRedirector" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.PublisherAssertion" typeName="publisherAssertion" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessEntityExt" typeName="businessEntityExt" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="java.lang.String" typeName="string" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.DeleteTModel" typeName="delete_tModel" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.ServiceInfo[]" typeName="serviceInfos" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BindingDetail" typeName="bindingDetail" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.SaveService" typeName="save_service" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AddressLine" typeName="addressLine" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="java.lang.Long" typeName="long" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.TModelList" typeName="tModelList" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.KeyedReference[]" typeName="categoryBag" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="long" typeName="long" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.FindBinding" typeName="find_binding" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.GetBusinessDetail" typeName="get_businessDetail" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.AuthToken" typeName="authToken" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.BusinessService[]" typeName="businessServices" typeNamespace="urn:uddi-org:api_v2"/>
+    <javaToSchemaMapping javaType="com.sap.engine.services.webservices.jaxr.impl.uddi_v2.types.Name" typeName="name" typeNamespace="urn:uddi-org:api_v2"/>
+  </defaultTypeMapping>
+</typeMappingRegistry>

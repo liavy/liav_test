@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application-j2ee-engine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="application-j2ee-engine.xsd">
+  <reference reference-type="weak"><reference-target provider-name="sap.com" target-type="interface">textcontainer_api</reference-target></reference>
+  <provider-name>sap.com</provider-name>
+  <fail-over-enable mode="disable" xsi:type="fail-over-enableType_disable"/>
+</application-j2ee-engine>

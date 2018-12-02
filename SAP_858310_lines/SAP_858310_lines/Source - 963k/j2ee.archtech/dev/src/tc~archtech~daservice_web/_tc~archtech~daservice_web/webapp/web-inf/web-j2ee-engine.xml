@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-j2ee-engine SYSTEM "web-j2ee-engine.dtd">
+  
+<web-j2ee-engine>
+<!-- Assign WSTestSetupAdministrators role to administrator users -->
+ <resource-ref>
+  	<res-ref-name>SAP/BC_XMLA</res-ref-name>
+	<res-link>SAP/BC_XMLA</res-link>
+	<non-transactional/>
+ </resource-ref>
+<security-role-map>
+	<role-name>XMLDASSecurityRole</role-name>
+	<server-role-name>XMLDASSecurityRole</server-role-name>
+</security-role-map>
+<security-role-map>
+	<role-name>XMLDASAdminRole</role-name>
+	<server-role-name>SAP_ARCH_SUPERADMIN</server-role-name>
+</security-role-map>
+<security-role-map>
+	<role-name>Administrator</role-name>
+	<server-role-name>Administrator</server-role-name>
+</security-role-map>
+<login-module-configuration/> 
+</web-j2ee-engine>

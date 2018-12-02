@@ -1,0 +1,399 @@
+﻿<?xml version="1.0"?>
+<veritables>
+<Dbtable name="VERI" creation-date="">
+      <properties>
+            <author> </author>
+            <description language=""></description>
+      </properties>
+      <predefined-action></predefined-action>
+      <position-is-relevant></position-is-relevant>
+      <deployment-status></deployment-status>
+        <columns>
+          <column name = "F1">
+            <position>1</position>
+            <dd-type>string</dd-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+            <length>2</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F2">
+            <position>2</position>
+            <dd-type>string</dd-type>
+            <java-sql-type>VARCHAR</java-sql-type> 
+            <length>12</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F3">
+            <position>3</position>
+            <dd-type>string</dd-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+            <length>15</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F4">
+            <position>4</position>
+            <dd-type>string</dd-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+            <length>16</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F5">
+            <position>5</position>
+            <dd-type>integer</dd-type>
+            <java-sql-type>INTEGER</java-sql-type> 
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F6">
+            <position>6</position>
+            <dd-type>double</dd-type>
+            <java-sql-type>DOUBLE</java-sql-type>
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F7">
+            <position>7</position>
+            <dd-type>decimal</dd-type>
+            <java-sql-type>DECIMAL</java-sql-type>
+            <length>15</length>
+            <decimals>2</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+       </columns>
+       <primary-key>
+          <tabname>VERI</tabname>
+          <columns>
+            <column>F1</column>
+            <column>F2</column>
+          </columns>
+       </primary-key>
+       <indexes>
+         <index name="VERI_1">
+           <tabname>VERI</tabname>
+           <properties>
+             <author></author>
+             <description language=""></description>
+           </properties>
+           <is-unique>false</is-unique>
+           <deployment-status></deployment-status>
+           <technical-info>
+             <size-category></size-category>
+           </technical-info>
+           <columns>     
+             <column>
+               <name>F5</name>
+               <is-descending>false</is-descending>
+             </column>   
+             <column>
+               <name>F4</name>
+               <is-descending>false</is-descending>
+             </column>   
+             <column>
+               <name>F3</name>
+               <is-descending>false</is-descending>
+             </column> 
+           </columns>
+         </index>
+         <index name="VERI_2">
+           <tabname>VERI</tabname>
+           <properties>
+             <author></author>
+             <description language=""></description>
+           </properties>
+           <is-unique>false</is-unique>
+           <deployment-status></deployment-status>
+           <technical-info>
+             <size-category></size-category>
+           </technical-info>
+           <columns>
+             <column>
+               <name>F3</name>
+               <is-descending>false</is-descending>
+           </column>  
+           <column>
+             <name>F4</name>
+             <is-descending>false</is-descending>
+           </column>   
+           <column>
+             <name>F5</name>
+             <is-descending>false</is-descending>
+           </column>  
+           <column>
+             <name>F6</name>
+             <is-descending>false</is-descending>
+           </column>    
+           <column>
+             <name>F7</name>
+             <is-descending>false</is-descending>
+           </column> 
+         </columns>
+       </index>
+     </indexes>
+   </Dbtable>
+   <Dbtable creation-date="">
+      <origin></origin>
+      <nodata></nodata>	
+      <properties>
+            <author>Tsesis</author>
+            <description language="">
+              <description>(1) add date field
+              </description>
+            </description>
+      </properties>
+      <expected-actions>
+            <action name = "REFUSE"/>
+      </expected-actions>
+        <columns>
+          <column name = "DATE_DATE">
+            <position>3</position>
+            <builtIn-type>date</builtIn-type>
+            <java-sql-type>DATE</java-sql-type>
+
+            
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value> 
+          </column> 
+       </columns>
+   </Dbtable>
+   <Dbtable creation-date="">
+      <origin></origin>
+      <nodata></nodata>	
+      <properties>
+            <author>Tsesis</author>
+            <description language="">
+              <description>(1) del F2,mod F3(length=2),mod F5(defval=24),
+    add F3_NEW,mod prkey(F1,F2,F3),mod I1(is-unique=true),
+    del I2,add I2_NEW
+              </description>
+            </description>
+      </properties>
+      <expected-actions>
+            <action name = "REFUSE"/>
+      </expected-actions>
+        <columns>
+          <column name = "F2" delete = "true"/>
+          <column name = "F3"> 
+            <length>2</length> 
+          </column>
+          <column name = "F5"> 
+            <default-value>24</default-value> 
+          </column> 
+          <column name = "F3_NEW">
+            <position>3</position>
+            <dd-type>string</dd-type>
+            <java-sql-type>VARCHAR</java-sql-type> 
+            <length>12</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>   
+       </columns>
+       <primary-key>
+         <columns>
+           <column>F1</column>
+           <column>F3</column>
+         </columns>
+       </primary-key>
+       <indexes>
+         <index name="VERI_1">
+           <is-unique>true</is-unique>
+         </index>
+         <index name="VERI_2" delete = "true"/>    
+         <index name="VERI_2_NEW">
+           <is-unique>false</is-unique>
+           <columns>
+             <column name = "F3"></column>
+             <column name = "F4"></column>  
+           </columns>
+         </index>
+     </indexes>
+   </Dbtable>
+   <Dbtable creation-date="">
+      <properties>
+            <author>Tsesis</author>
+            <description language="">
+              <description>(2) del F2 with exclusive rights
+              </description>
+            </description>
+      </properties>
+	  <config>
+		<acceptDropColumn>true</acceptDropColumn>
+      </config>
+      <expected-actions>
+            <action name = "ALTER"/>
+            <action name = "CONVERT" dbs-name = "Sap"/>
+            <action name = "CONVERT" dbs-name = "Db2"/>
+            <action name = "ALTER" object = "columns"/>
+            <action name = "CONVERT" object = "columns" dbs-name = "Sap"/>
+            <action name = "CONVERT" object = "columns" dbs-name = "Db2"/>
+            <action name = "DROP_CREATE" object = "primaryKey"/>
+            <action name = "NOTHING" object = "indexes"/>
+      </expected-actions> 
+        <columns>
+          <column name = "F2" delete = "true"/>
+       </columns>
+       <primary-key>
+         <columns>
+           <column>F1</column>
+           <column>F3</column>
+         </columns>
+       </primary-key>
+   </Dbtable>
+      <Dbtable creation-date="">
+      <properties>
+            <author>Tsesis</author>
+            <description language="">
+              <description>(2) del F2
+              </description>
+            </description>
+      </properties>
+      <expected-actions>
+            <action name = "REFUSE"/>
+      </expected-actions> 
+        <columns>
+          <column name = "F2" delete = "true"/>
+       </columns>
+       <primary-key>
+         <columns>
+           <column>F1</column>
+           <column>F3</column>
+         </columns>
+       </primary-key>
+   </Dbtable>
+   <Dbtable creation-date="">
+      <properties>
+            <author>Tsesis</author>
+            <description language="">
+              <description>(2) del F2,mod F3(length=2),mod F5(defval=24),
+              		add F3_NEW,mod prkey(F1,F2,F3)
+              </description>
+            </description>
+      </properties>
+      <expected-actions>
+            <action name = "REFUSE"/>
+      </expected-actions>
+      
+        <columns>
+          <column name = "F2" delete = "true"/>
+          <column name = "F3"> 
+            <length>2</length> 
+          </column>
+          <column name = "F5"> 
+            <default-value>24</default-value> 
+          </column> 
+          <column name = "F3_NEW">
+            <position>3</position>
+            <dd-type>string</dd-type>
+            <java-sql-type>VARCHAR</java-sql-type> 
+            <length>12</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>   
+       </columns>
+       <primary-key>
+         <columns>
+           <column>F1</column>
+           <column>F3</column>
+         </columns>
+       </primary-key>
+   </Dbtable>
+   <Dbtable creation-date="">
+      <properties>
+            <author>Tsesis</author>
+            <description language="">
+              <description>(3) mod prkey(F1,F2,F3),mod I1(is-unique=true),
+              		del I2,add I2_NEW
+              </description>
+            </description>
+      </properties>
+      <expected-actions>
+            <action name = "ALTER"/>
+            <action name = "NOTHING" object = "columns"/>
+            <action name = "DROP_CREATE" object = "primaryKey"/>
+            <action name = "DROP_CREATE" object = "indexes"/>
+      </expected-actions> 
+       <primary-key>
+         <columns>
+           <column>F1</column>
+           <column>F2</column>
+           <column>F3</column>
+         </columns>
+       </primary-key>
+       <indexes>
+         <index name="VERI_1">
+           <is-unique>true</is-unique>
+         </index>
+         <index name="VERI_2" delete = "true"/>    
+         <index name="VERI_2_NEW">
+           <is-unique>false</is-unique>
+           <columns>
+             <column name = "F3"></column>
+             <column name = "F4"></column>  
+           </columns>
+         </index>
+     </indexes>
+   </Dbtable>
+   <Dbtable creation-date="">
+      <origin>true</origin>
+      <columns>
+             <column>
+               <name>F3</name>
+               <length>33</length>
+           </column>  
+         </columns>
+   </Dbtable>
+   <Dbtable creation-date="">
+      <properties>
+            <author>Tsesis</author>
+            <description language="">
+              <description>(4) mod F3 length 33 -> 44
+              </description>
+            </description>
+      </properties>
+      <expected-actions>
+            <action name = "ALTER"/>
+      </expected-actions>
+      <columns>
+             <column>
+               <name>F3</name>
+               <length>44</length>
+           </column>  
+       </columns>
+   </Dbtable>
+   <Dbtable creation-date="">
+      <nodata>yes</nodata>
+      <properties>
+            <author>Tsesis</author>
+            <description language="">
+              <description>(5) mod F3 length 33 -> 44
+              </description>
+            </description>
+      </properties>
+      <expected-actions>
+            <action name = "ALTER"/>
+      </expected-actions>
+      <columns>
+             <column>
+               <name>F3</name>
+               <length>44</length>
+           </column>  
+       </columns>
+   </Dbtable>
+</veritables>
+

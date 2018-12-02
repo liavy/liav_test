@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE monitor-configuration SYSTEM "monitor-configuration.dtd">
+<monitor-configuration>
+	<monitor-semantics>
+		<simple-configuration-group name="SystemUtilizationGroup">
+			<description ID="SystemUtilizationGroup">Description</description>
+		</simple-configuration-group>
+		
+		<text-configuration-group name="PredictionDateGroup">
+			<description ID="DescriptionID">Prediction Date shows potential performance degradation in time if current load of the system remains unchanged.</description>
+			<data-collection react-on-failure="IGNORE">
+				<polled-by-monitor period="3" unit="MINUTE"/>
+			</data-collection>
+		</text-configuration-group>
+		
+		<integer-configuration-group name="SystemLoadGroup" unit="percent">
+			<description ID="DescriptionID">SystemLoad monitor aggregates server runtime statistic to provide current load index.</description>
+				<data-collection react-on-failure="IGNORE">
+					<polled-by-monitor period="3" unit="MINUTE"/>
+				</data-collection>
+			<thresholds green-to-yellow="80" red-to-yellow="90" yellow-to-green="80" yellow-to-red="90"/>
+		</integer-configuration-group>	
+
+		</monitor-semantics>
+
+	<monitor-tree>
+	<performance>
+		<object configuration-group="SystemUtilizationGroup" name="SystemUtilization">
+			<integer-monitor configuration-group="SystemLoadGroup" name="SystemLoad">
+				<monitored-resource name="com.sap.default:j2eeType=SAP_MonitoredResources,name=MonitorMBean" type="MBEAN"/>
+				<integer-attribute-mapping>
+					<integer-attribute>
+						<observed-resource-attribute name="SystemLoad"/>
+					</integer-attribute>
+				</integer-attribute-mapping>
+			</integer-monitor>
+			<text-monitor configuration-group="PredictionDateGroup" name="PredictionDate">
+					<monitored-resource name="com.sap.default:j2eeType=SAP_MonitoredResources,name=MonitorMBean" type="MBEAN"/>
+					<text-attribute-mapping>
+						<text-attribute>
+							<observed-resource-attribute name="PredictionDate"/>
+						</text-attribute>
+					</text-attribute-mapping>
+				</text-monitor>
+		</object>
+	</performance>
+	</monitor-tree>
+</monitor-configuration>

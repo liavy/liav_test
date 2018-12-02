@@ -1,0 +1,51 @@
+﻿<tns:SoapApplication xmlns:tns="http://xml.sap.com/2006/11/esi/conf/soapapplication" id="URN:SAP-COM:SOAP:RUNTIME:APPLICATION:SERVICE:JAXWS:DEFAULT">
+<description>This is the SoapApplication that holds valid properties for JEE JAX-WS web services.</description>
+   <properties>
+     <!--  Transport Binding Properties -->
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altHost"/>
+     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altPort"/>
+     <!--  WS-Addressing Properties -->
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="enabled"/>
+     <property namespace="http://www.sap.com/710/soap/features/WSAddressing/" name="WSAProtocol"/>
+     <!--  Session Properties -->
+     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="enableSession"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="SessionMethod"/>
+     <!--  Security Properties -->
+     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationLevel"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationMethod"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="Level"/>
+     <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="TLSType"/>     
+   </properties>
+   
+   <dependencies> 
+
+      <dependency type="TRUE_TO_RT">
+         <condition>
+           <boolean-value>
+				     true
+           </boolean-value>
+         </condition>
+         <result>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altHost"/>
+				     <property namespace="http://www.sap.com/webas/710/soap/features/transportbinding/" name="altPort"/>
+				     <property namespace="http://www.sap.com/webas/630/soap/features/authentication/" name="AuthenticationMethod"/>
+             <property namespace="http://www.sap.com/webas/630/soap/features/transportguarantee/" name="TLSType"/>     
+					 </properties>
+         </result>
+      </dependency>
+     
+      <dependency type="DT_TO_RT">
+         <condition>
+           <properties>
+				     <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="enableSession" value='true'/>
+           </properties>
+         </condition>
+         <result>
+           <properties>
+						 <property namespace="http://www.sap.com/webas/630/soap/features/session/" name="SessionMethod"/> 
+					 </properties>
+         </result>
+      </dependency>
+   </dependencies>
+</tns:SoapApplication>

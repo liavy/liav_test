@@ -1,0 +1,189 @@
+﻿<?xml version="1.0"?>
+<veritables>
+<Dbtable name="VERI" creation-date="">
+      <properties>
+            <author> </author>
+            <description language=""></description>
+      </properties>
+      <predefined-action></predefined-action>
+      <position-is-relevant></position-is-relevant>
+      <deployment-status></deployment-status>
+        <columns>
+          <column name = "F1">
+            <position>1</position>
+            <dd-type>string</dd-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+            <length>2</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F2">
+            <position>2</position>
+            <dd-type>string</dd-type>
+            <java-sql-type>VARCHAR</java-sql-type> 
+            <length>12</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F3">
+            <position>3</position>
+            <dd-type>string</dd-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+            <length>15</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F4">
+            <position>4</position>
+            <dd-type>string</dd-type>
+            <java-sql-type>VARCHAR</java-sql-type>
+            <length>16</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F5">
+            <position>5</position>
+            <dd-type>integer</dd-type>
+            <java-sql-type>INTEGER</java-sql-type> 
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F6">
+            <position>6</position>
+            <dd-type>double</dd-type>
+            <java-sql-type>DOUBLE</java-sql-type>
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+          <column name = "F7">
+            <position>7</position>
+            <dd-type>decimal</dd-type>
+            <java-sql-type>DECIMAL</java-sql-type>
+            <length>15</length>
+            <decimals>2</decimals>
+            <is-not-null>true</is-not-null>
+            <default-value></default-value>
+          </column>
+       </columns>
+       <primary-key>
+          <tabname>VERI</tabname>
+          <columns>
+            <column>F1</column>
+            <column>F2</column>
+          </columns>
+       </primary-key>
+       <indexes>
+         <index name="VERI_1">
+           <tabname>VERI</tabname>
+           <properties>
+             <author></author>
+             <description language=""></description>
+           </properties>
+           <is-unique>false</is-unique>
+           <deployment-status></deployment-status>
+           <technical-info>
+             <size-category></size-category>
+           </technical-info>
+           <columns>     
+             <column>
+               <name>F5</name>
+               <is-descending>false</is-descending>
+             </column>   
+             <column>
+               <name>F4</name>
+               <is-descending>false</is-descending>
+             </column>   
+             <column>
+               <name>F3</name>
+               <is-descending>false</is-descending>
+             </column> 
+           </columns>
+         </index>
+         <index name="VERI_2">
+           <tabname>VERI</tabname>
+           <properties>
+             <author></author>
+             <description language=""></description>
+           </properties>
+           <is-unique>false</is-unique>
+           <deployment-status></deployment-status>
+           <technical-info>
+             <size-category></size-category>
+           </technical-info>
+           <columns>
+             <column>
+               <name>F3</name>
+               <is-descending>false</is-descending>
+           </column>  
+           <column>
+             <name>F4</name>
+             <is-descending>false</is-descending>
+           </column>   
+           <column>
+             <name>F5</name>
+             <is-descending>false</is-descending>
+           </column>  
+           <column>
+             <name>F6</name>
+             <is-descending>false</is-descending>
+           </column>    
+           <column>
+             <name>F7</name>
+             <is-descending>false</is-descending>
+           </column> 
+         </columns>
+       </index>
+     </indexes>
+   </Dbtable>
+   <Dbtable creation-date="">
+      <origin></origin>
+      <nodata>X</nodata>	
+      <properties>
+            <author>Tsesis</author>
+            <description language="">
+              <description>(1) type change from VARCHAR to SMALLINT
+              </description>
+            </description>
+      </properties>
+      <expected-actions>
+            <summary>
+              <common>CONVERT</common>
+              <Ora>CONVERT</Ora>
+              <Sap>CONVERT</Sap>
+              <Mss>CONVERT</Mss>
+              <Db2>CONVERT</Db2>
+              <Db4>CONVERT</Db4>
+              <Db6>CONVERT</Db6>
+            </summary>
+            <columns>
+              <common>CONVERT</common>
+              <Ora>CONVERT</Ora>
+              <Sap>CONVERT</Sap>
+              <Mss>CONVERT</Mss>
+              <Db2>CONVERT</Db2>
+              <Db4>CONVERT</Db4>
+              <Db6>CONVERT</Db6>
+            </columns>
+            <primary-key>CONVERT</primary-key>
+            <indexes>CONVERT</indexes>
+      </expected-actions>
+        <columns>
+          <column name = "F3">
+            <java-sql-type>SMALLINT</java-sql-type>
+            <length>0</length>
+            <decimals>0</decimals>
+            <is-not-null>false</is-not-null>
+            <default-value>0</default-value> 
+          </column> 
+       </columns>
+   </Dbtable>
+</veritables>
+

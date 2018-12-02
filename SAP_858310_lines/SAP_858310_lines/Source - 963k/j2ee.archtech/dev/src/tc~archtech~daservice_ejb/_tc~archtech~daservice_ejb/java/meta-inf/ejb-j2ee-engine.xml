@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-j2ee-engine SYSTEM "ejb-j2ee-engine.dtd">
+<ejb-j2ee-engine>
+	<enterprise-beans>
+		<enterprise-bean>
+			<ejb-name>PackMDBean</ejb-name>
+			<resource-ref>
+				<res-ref-name>SAP/BC_XMLA</res-ref-name>
+				<res-link>SAP/BC_XMLA</res-link>
+				<non-transactional/>
+			</resource-ref>
+			<message-props>
+				<destination-name>DAserviceQueue</destination-name>
+				<connection-factory-name>DAserviceQueueFactory</connection-factory-name>
+			</message-props>
+		</enterprise-bean>
+		<enterprise-bean>
+			<ejb-name>UnpackMDBean</ejb-name>
+			<resource-ref>
+				<res-ref-name>SAP/BC_XMLA</res-ref-name>
+				<res-link>SAP/BC_XMLA</res-link>
+				<non-transactional/>
+			</resource-ref>
+			<message-props>
+				<destination-name>DAserviceQueue</destination-name>
+				<connection-factory-name>DAserviceQueueFactory</connection-factory-name>
+			</message-props>
+		</enterprise-bean>
+		<enterprise-bean>
+			<ejb-name>VerifyMDBean</ejb-name>
+			<resource-ref>
+				<res-ref-name>SAP/BC_XMLA</res-ref-name>
+				<res-link>SAP/BC_XMLA</res-link>
+				<non-transactional/>
+			</resource-ref>
+			<message-props>
+				<destination-name>DAserviceQueue</destination-name>
+				<connection-factory-name>DAserviceQueueFactory</connection-factory-name>
+			</message-props>
+		</enterprise-bean>		
+		<enterprise-bean>
+			<ejb-name>ArchStoreConfigBean</ejb-name>
+			<entity-props/>
+		</enterprise-bean>
+		<enterprise-bean>
+			<ejb-name>PackStatusDBBean</ejb-name>
+			<entity-props/>
+		</enterprise-bean>
+	</enterprise-beans>
+</ejb-j2ee-engine>

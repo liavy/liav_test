@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE monitor-configuration SYSTEM "monitor-configuration.dtd">
+<monitor-configuration>
+<monitor-semantics>
+	<simple-configuration-group name="WEB.WebContainerService">
+		<description ID="WEB.ContServ" ></description>
+	</simple-configuration-group>	
+	<integer-configuration-group name="WEB.CurrentHttpSessions">
+		<description ID="WEB.ContServ.CurrHttpSess">The number of the currently valid http sessions</description>
+		<data-collection react-on-failure="IGNORE" >
+			<polled-by-monitor period="5" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="50" yellow-to-red="500" red-to-yellow="500" yellow-to-green="50"/>
+	</integer-configuration-group>
+	<integer-configuration-group name="WEB.CurrentSecuritySessions">
+		<description ID="WEB.ContServ.CurrSecSess">The number of the currently valid security sessions created for http clients</description>
+		<data-collection react-on-failure="IGNORE" >
+			<polled-by-monitor period="5" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="50" yellow-to-red="500" red-to-yellow="500" yellow-to-green="50"/>
+	</integer-configuration-group>
+	<long-configuration-group name="WEB.AllRequestsCount">
+		<description ID="WEB.PrvSrv.AllReqCnt">Number of all requests since server startup</description>
+		<data-collection>
+			<polled-by-monitor period="5" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="1000000" yellow-to-red="1000001" red-to-yellow="1000001" yellow-to-green="1000000"/>
+	</long-configuration-group>	
+	<long-configuration-group name="WEB.Error500Count">
+		<description ID="WEB.Err500Cnt">Number of ISE 500 responses</description>
+		<data-collection>
+			<polled-by-monitor period="60" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="1000" yellow-to-red="1001" red-to-yellow="1001" yellow-to-green="1000"/>
+	</long-configuration-group>	
+	<duration-configuration-group name="WEB.AverageProcessingTime" unit="ms">
+		<description ID="WEB.AverageProcessingTime">Average value of the request processing time for given time interval</description>
+		<data-collection>
+			<polled-by-monitor period="5" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="1000000" yellow-to-red="1000001" red-to-yellow="1000001" yellow-to-green="1000000"/>
+	</duration-configuration-group>	
+</monitor-semantics>
+	<table-configuration-group name="WEB.Error500CategorizationEntries">
+    <description ID="WEB.Error500CategorizationEntries">Categorization ID, number of occurrences, list of error report file names</description>
+    <data-collection >
+        <polled-by-monitor period="60" unit="MINUTE"/>
+     </data-collection>
+    <columns>
+       <column>Categorization ID</column>
+       <column>Number of occurrences</column>
+       <column>List of error report file names</column>
+    </columns>
+	</table-configuration-group>
+
+<monitor-tree>
+	<services>
+		<object name="Web Container" configuration-group="WEB.WebContainerService">
+			<integer-monitor name="CurrentHttpSessions" configuration-group="WEB.CurrentHttpSessions">
+				<monitored-resource name="servlet_jsp" type="SERVICE"/>
+				<integer-attribute-mapping>
+					<integer-attribute>
+						<observed-resource-attribute name="CurrentHttpSessions"/>
+					</integer-attribute>
+				</integer-attribute-mapping>
+			</integer-monitor>
+			<integer-monitor name="CurrentSecuritySessions" configuration-group="WEB.CurrentSecuritySessions">
+				<monitored-resource name="servlet_jsp" type="SERVICE"/>
+				<integer-attribute-mapping>
+					<integer-attribute>
+						<observed-resource-attribute name="CurrentSecuritySessions"/>
+					</integer-attribute>
+				</integer-attribute-mapping>
+			</integer-monitor>
+			<long-monitor name="AllRequestsCount" configuration-group="WEB.AllRequestsCount">
+				<monitored-resource name="servlet_jsp" type="SERVICE"/>
+				<long-attribute-mapping>
+					<long-attribute>
+						<observed-resource-attribute name="AllRequestsCount"/>
+					</long-attribute>
+				</long-attribute-mapping>
+			</long-monitor>	
+			<long-monitor name="Error500Count" configuration-group="WEB.Error500Count">
+				<monitored-resource name="servlet_jsp" type="SERVICE"/>
+				<long-attribute-mapping>
+					<long-attribute>
+						<observed-resource-attribute name="Error500Count"/>
+					</long-attribute>
+				</long-attribute-mapping>
+			</long-monitor>				
+			<duration-monitor name="AverageProcessingTime" configuration-group="WEB.AverageProcessingTime">
+				<monitored-resource name="servlet_jsp" type="SERVICE"/>
+				<duration-attribute-mapping>
+                    <total-number-attribute>
+                        <observed-resource-attribute name="AllResponsesCount"/>
+                    </total-number-attribute>
+                    <total-time-attribute>
+                        <observed-resource-attribute name="TotalResponseTime"/>
+                    </total-time-attribute>
+				</duration-attribute-mapping>
+			</duration-monitor>	
+			<table-monitor name="Error500CategorizationEntries" configuration-group="WEB.Error500CategorizationEntries">
+				<monitored-resource name="servlet_jsp" type="SERVICE"/>
+				<table-attribute-mapping>
+					<table-entries-attribute>
+						<observed-resource-attribute name="Error500CategorizationEntries"/>
+					</table-entries-attribute>
+				</table-attribute-mapping>
+			</table-monitor>
+		</object>				
+	</services>
+</monitor-tree>  
+</monitor-configuration>

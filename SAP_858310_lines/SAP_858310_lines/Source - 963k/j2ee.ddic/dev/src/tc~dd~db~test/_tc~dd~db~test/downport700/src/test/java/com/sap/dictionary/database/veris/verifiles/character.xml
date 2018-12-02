@@ -1,0 +1,134 @@
+﻿<?xml version="1.0"?>
+<veritables>
+<Dbtable name="VERI">
+	<properties>
+		<description description = "origin VARCHAR 10 not-null default=123"/>
+	</properties>
+	<columns>
+		<column name = "F1">
+			<position>1</position>
+			<java-sql-type>VARCHAR</java-sql-type>
+			<length>10</length>
+			<decimals>0</decimals>
+			<is-not-null>true</is-not-null>
+			<default-value>123</default-value>
+		</column>
+	</columns>      
+</Dbtable>
+<Dbtable name="VERI">
+	<properties>
+		<description description = "VARCHAR 10 not-null no-default"/>
+	</properties>
+	<columns>
+		<column name = "F1">
+			<is-not-null>true</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns>      
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "VARCHAR 3 not-null default=123"/>
+	</properties>
+	<expected-actions>
+		<action name = "REFUSE"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<length>3</length>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "VARCHAR 3 not-null default=123 + accept data loss"/>
+	</properties>
+	<config>
+		<acceptDataLoss>true</acceptDataLoss>                      
+  </config>
+	<expected-actions>
+		<action name = "CONVERT"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<length>3</length>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "VARCHAR 1333 not-null default=123"/>
+	</properties>
+	<expected-actions>
+		<action name = "ALTER"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<length>1333</length>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<origin>true</origin>
+	<properties>
+		<description description = "*NEW ORIGIN* CLOB nullable no default"/>
+	</properties>
+	<expected-actions>
+		<action name = "CONVERT"/>
+		<action name = "ALTER" dbs-name = "Mss"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<java-sql-type>CLOB</java-sql-type>
+			<length>0</length>
+			<is-not-null>false</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "VARCHAR 10 nullable no-default"/>
+	</properties>
+	<expected-actions>
+		<action name = "REFUSE"/>
+	</expected-actions>
+	<columns>
+		<column name = "F1">
+			<java-sql-type>VARCHAR</java-sql-type>
+			<length>10</length>
+			<is-not-null>false</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns> 
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "VARCHAR 10 nullable no-default"/>
+	</properties>
+	<expected-actions>
+		<action name = "CONVERT"/>
+	</expected-actions>
+	<config>
+		<acceptDataLoss>true</acceptDataLoss>                      
+  </config>
+	<columns>
+		<column name = "F1">
+			<java-sql-type>VARCHAR</java-sql-type>
+			<length>10</length>
+			<is-not-null>false</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns> 
+</Dbtable>
+
+
+
+
+
+
+
+
+   
+</veritables>
+

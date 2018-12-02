@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LogicalPorts Name='DefaultService' InterfaceName='com.sap.engine.services.webservices.jaxr.impl.uddi_v2.DefaultService'>
+  <LogicalPort Name='Inquire' Endpoint='' BindingName='InquireSoap' BindingImplementation='SOAP 1.1 HTTP Binding with Attachments' StubName='com.sap.engine.services.webservices.jaxr.impl.uddi_v2.InquireSoapStub' Default='true' InterfaceName='com.sap.engine.services.webservices.jaxr.impl.uddi_v2.Inquire' Original='false' Valid='true'/>
+  <LogicalPort Name='Publish' Endpoint='' BindingName='PublishSoap' BindingImplementation='SOAP 1.1 HTTP Binding with Attachments' StubName='com.sap.engine.services.webservices.jaxr.impl.uddi_v2.PublishSoapStub' Default='false' InterfaceName='com.sap.engine.services.webservices.jaxr.impl.uddi_v2.Publish' Original='false' Valid='true'/>
+</LogicalPorts>

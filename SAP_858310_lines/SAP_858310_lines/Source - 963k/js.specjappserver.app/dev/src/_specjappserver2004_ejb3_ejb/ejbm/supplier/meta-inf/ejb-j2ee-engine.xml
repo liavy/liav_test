@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-j2ee-engine SYSTEM "ejb-j2ee-engine.dtd">
+<ejb-j2ee-engine>
+	<enterprise-beans>
+		<enterprise-bean>
+			<ejb-name>BuyerMDB</ejb-name>
+            <jndi-name>BuyerMDB</jndi-name>
+			<message-props>
+				<destination-name>jms/BuyerQueue</destination-name>
+				<connection-factory-name>jms/QueueConnectionFactory</connection-factory-name>
+          <property>
+            <property-name>parallelConsumers</property-name>
+            <property-value>30</property-value>
+          </property>
+			</message-props>
+		</enterprise-bean>
+	</enterprise-beans>
+</ejb-j2ee-engine>

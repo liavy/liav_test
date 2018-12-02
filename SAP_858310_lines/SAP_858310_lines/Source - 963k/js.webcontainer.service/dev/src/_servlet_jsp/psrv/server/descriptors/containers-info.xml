@@ -1,0 +1,13 @@
+﻿<containers>
+	<containerInfo name="servlet_jsp">
+        <isJ2EEContainer>true</isJ2EEContainer>
+		<priority>75</priority>
+		<fileExtensions>
+			<name>.war</name>
+		</fileExtensions>
+		<hasModuleDetector>true</hasModuleDetector>
+		<supportsSingleFileUpdate>true</supportsSingleFileUpdate>
+		<supportsLazyStart>true</supportsLazyStart>
+		<supportingParallelism>true</supportingParallelism>
+	</containerInfo>
+</containers>

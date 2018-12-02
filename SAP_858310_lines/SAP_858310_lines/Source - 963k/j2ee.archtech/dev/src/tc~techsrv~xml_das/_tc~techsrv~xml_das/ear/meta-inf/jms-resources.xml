@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<jms-resources>
+  <connection-factory>
+    <name>DAserviceQueueFactory</name>
+		<sap-local-factory-type>
+			<type>javax.jms.QueueConnectionFactory</type>
+			<virtual-provider></virtual-provider>
+		</sap-local-factory-type>
+  </connection-factory>
+  <destination>
+    <name>DAserviceQueue</name>
+    <type>javax.jms.Queue</type>
+		<sap-local-destination-type>
+			<virtual-provider></virtual-provider>
+		</sap-local-destination-type>
+  </destination>
+</jms-resources>

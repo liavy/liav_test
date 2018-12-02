@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+ <!DOCTYPE persistent-ejb-map SYSTEM 'persistent.dtd'>
+<persistent-ejb-map>
+  <locking type="Local"/>
+  <db-properties>
+    <data-source-name>UtilDataSource</data-source-name>
+  </db-properties>
+  <entity-beans>
+    <entity-bean>
+      <ejb-name>SequenceEnt</ejb-name>
+      <table-name>U_SEQUENCES</table-name>
+      <select-for-update/>
+      <field-map key-type="PrimaryKey">
+        <field-name>id</field-name>
+        <column>
+          <column-name>S_ID</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>nextNumber</field-name>
+        <column>
+          <column-name>S_NEXTNUM</column-name>
+        </column>
+      </field-map>
+      <field-map key-type="NoKey">
+        <field-name>blockSize</field-name>
+        <column>
+          <column-name>S_BLOCKSIZE</column-name>
+        </column>
+      </field-map>
+      <finder-descriptor>
+        <method-name>findAll</method-name>
+        <method-params/>
+        <switch-off-storing/>
+        <load-selected-objects/>
+      </finder-descriptor>
+      <finder-descriptor>
+        <method-name>findByPrimaryKey</method-name>
+	   <method-params>
+	       <method-param>java.lang.String</method-param>
+	   </method-params>
+           <switch-off-storing/>
+	   <load-selected-objects/>
+      </finder-descriptor>
+    </entity-bean>
+  </entity-beans>
+  <relationships/>
+</persistent-ejb-map>

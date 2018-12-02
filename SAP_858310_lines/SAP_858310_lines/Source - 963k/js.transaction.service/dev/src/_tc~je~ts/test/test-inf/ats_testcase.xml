@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test-cases>
+	<test-case>
+		<tests 
+			type="junit">
+			<test 
+				class-name="com.sap.tests.ContainerRegistryTest" 
+				container="stand-alone" 
+				path="."/>
+			<test 
+				class-name="com.sap.tests.tlog.*" 
+				container="stand-alone" 
+				path="."/>
+		</tests>
+		<ats-server>
+			<sharedVM>false</sharedVM>
+			<classpath/>
+			<jvm-system-classpath/>
+			<jvm-properties/>
+			<tests-properties/>
+		</ats-server>
+	</test-case>
+</test-cases>

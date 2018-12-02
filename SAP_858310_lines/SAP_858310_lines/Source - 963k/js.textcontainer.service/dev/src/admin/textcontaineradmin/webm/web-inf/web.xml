@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" version="2.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<servlet>
+		<description>Text Container Admin MBean Servlet</description>
+		<display-name>Text Container Admin MBean Servlet</display-name>
+		<servlet-name>TextContainerAdminMBeanServlet</servlet-name>
+		<servlet-class>com.sap.engine.services.textcontainer.admin.TextContainerAdminMBeanServlet</servlet-class>
+		<run-as>
+			<role-name>TextContainerAdminMBeanCreator</role-name>
+		</run-as>
+	</servlet>
+
+	<security-role>
+		<description>Creator of Text Container Admin MBean</description>
+		<role-name>TextContainerAdminMBeanCreator</role-name>
+	</security-role>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

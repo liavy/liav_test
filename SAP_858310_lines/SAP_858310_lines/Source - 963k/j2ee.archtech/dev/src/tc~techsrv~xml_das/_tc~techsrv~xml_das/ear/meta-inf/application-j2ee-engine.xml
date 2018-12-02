@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application-j2ee-engine SYSTEM "application-j2ee-engine.dtd">
+<application-j2ee-engine>
+	<reference 
+		reference-type="hard">
+		<reference-target 
+			target-type="service">configuration</reference-target>
+	</reference>
+	<reference 
+		reference-type="hard">
+		<reference-target 
+			provider-name="sap.com" 
+			target-type="library">
+			tc.httpclient
+		</reference-target>
+	</reference>
+	<reference 
+		reference-type="hard">
+		<reference-target 
+			provider-name="sap.com" 
+			target-type="service">applocking</reference-target>
+	</reference>
+	<reference 
+		reference-type="hard">
+		<reference-target 
+			provider-name="sap.com" 
+			target-type="library">com.sap.exception</reference-target>
+	</reference>
+	<reference 
+		reference-type="hard">
+		<reference-target 
+			provider-name="sap.com" 
+			target-type="library">tc/TechSrv/XML_DAS_Connector</reference-target>
+	</reference>
+	<reference 
+		reference-type="hard">
+		<reference-target 
+			provider-name="sap.com" 
+			target-type="interface">tc/sec/destinations/interface</reference-target>
+	</reference>
+	<reference 
+		reference-type="hard">
+		<reference-target 
+			provider-name="sap.com" 
+			target-type="library">security.class</reference-target>
+	</reference>
+	<reference 
+		reference-type="hard">
+		<reference-target 
+			provider-name="sap.com" 
+			target-type="service">tc/sec/destinations/service</reference-target>
+	</reference>
+	<reference 
+		reference-type="hard">
+		<reference-target 
+			provider-name="sap.com" 
+			target-type="library">jdbdictionary</reference-target>
+	</reference>
+        <reference reference-type="hard">
+	        <reference-target provider-name="sap.com" target-type="library">
+		        tc~sld~sldclient_sda
+	        </reference-target>
+        </reference>
+        <reference reference-type="hard">
+  	        <reference-target provider-name="sap.com" target-type="service">
+		        sld
+	        </reference-target>
+        </reference>
+        <reference reference-type="hard">
+                <reference-target provider-name="sap.com" target-type="interface">
+                        tc/sec/vsi/interface
+                </reference-target>
+        </reference> 
+	<provider-name>sap.com</provider-name>
+	<fail-over-enable 
+		mode="disable"/>		
+</application-j2ee-engine>

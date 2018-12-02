@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ns1:ConfigurationRoot xmlns:ns1='http://www.sap.com/webas/710/ws/configuration-descriptor'>
+  <DTConfig>
+    <InterfaceDefinition id='51b4e98e:10b5ca17e32:-7ff7_{urn:SAPControl}SAPControlPortType' interface-mapping-id='51b4e98e:10b5ca17e32:-7ff2' name='SAPControlPortType' type='0'>
+      <Variant Name='SAPControlPortType'>
+        <InterfaceData namespace='urn:SAPControl' name='SAPControlPortType'>
+          <PropertyList>
+            <Property namespace='http://www.sap.com/webas/630/soap/features/session/' name='enableSession'>false</Property>
+          </PropertyList>
+          <Operation name='Start'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='Stop'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='Shutdown'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ParameterValue'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetProcessList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetStartProfile'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetTraceFile'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetAlertTree'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetAlerts'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='RestartService'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='StopService'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetEnvironment'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ListDeveloperTraces'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ReadDeveloperTrace'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='RestartInstance'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='SendSignal'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetVersionInfo'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetQueueStatistic'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetInstanceProperties'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='OSExecute'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ReadLogFile'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ListLogFiles'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetAccessPointList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ABAPReadSyslog'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ABAPReadRawSyslog'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ABAPGetWPTable'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ABAPAcknowledgeAlerts'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetProcessList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEControlProcess'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetThreadList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetSessionList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetWebSessionList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetCacheStatistic'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetCacheStatistic2'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetApplicationAliasList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetVMGCHistory'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetVMGCHistory2'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetVMHeapInfo'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetEJBSessionList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetRemoteObjectList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetClusterMsgList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetSharedTableInfo'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+        </InterfaceData>
+      </Variant>
+    </InterfaceDefinition>
+  </DTConfig>
+  <RTConfig>
+    <Service name='SAPControl' service-mapping-id='51b4e98e:10b5ca17e32:-7ff1'>
+      <ServiceData contextRoot='' namespace='urn:SAPControl' name='SAPControl'>
+        <BindingData name='SAPControl' url='http://localhost:50013/SAPControl.cgi' active='true' binding-name='SAPControl' binding-namespace='urn:SAPControl' variant-name='SAPControlPortType' interface-mapping-id='51b4e98e:10b5ca17e32:-7ff2' editable='true' interface-id='51b4e98e:10b5ca17e32:-7ff7_{urn:SAPControl}SAPControlPortType'>
+          <PropertyList>
+          </PropertyList>
+          <Operation name='Start'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='Stop'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='Shutdown'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ParameterValue'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetProcessList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetStartProfile'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetTraceFile'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetAlertTree'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetAlerts'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='RestartService'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='StopService'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetEnvironment'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ListDeveloperTraces'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ReadDeveloperTrace'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='RestartInstance'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='SendSignal'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetVersionInfo'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetQueueStatistic'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetInstanceProperties'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='OSExecute'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ReadLogFile'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ListLogFiles'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='GetAccessPointList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ABAPReadSyslog'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ABAPReadRawSyslog'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ABAPGetWPTable'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='ABAPAcknowledgeAlerts'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetProcessList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEControlProcess'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetThreadList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetSessionList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetWebSessionList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetCacheStatistic'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetCacheStatistic2'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetApplicationAliasList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetVMGCHistory'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetVMGCHistory2'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetVMHeapInfo'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetEJBSessionList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetRemoteObjectList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetClusterMsgList'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+          <Operation name='J2EEGetSharedTableInfo'>
+            <PropertyList>
+            </PropertyList>
+          </Operation>
+        </BindingData>
+      </ServiceData>
+    </Service>
+  </RTConfig>
+</ns1:ConfigurationRoot>

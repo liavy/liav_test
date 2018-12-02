@@ -1,0 +1,32 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE web-app PUBLIC '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN' 'http://java.sun.com/dtd/web-app_2_3.dtd'>
+<web-app>
+  <display-name>Delivery</display-name>
+  <description>Delivery Servlet</description>
+  <servlet>
+    <servlet-name>Delivery</servlet-name>
+    <display-name>Delivery</display-name>
+    <description>Servlet to receive delivery docs</description>
+    <servlet-class>org.spec.jappserver.supplier.web.SupplierDomainServlet</servlet-class>
+    <load-on-startup>-1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Delivery</servlet-name>
+    <url-pattern>/DeliveryServlet</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <env-entry>
+    <env-entry-name>debuglevel</env-entry-name>
+    <env-entry-value>0</env-entry-value>
+    <env-entry-type>java.lang.Integer</env-entry-type>
+  </env-entry>
+  <ejb-ref>
+    <ejb-ref-name>ejb/ReceiverSes</ejb-ref-name>
+    <ejb-ref-type>Session</ejb-ref-type>
+    <home>org.spec.jappserver.supplier.receiverses.ejb.ReceiverSesHome</home>
+    <remote>org.spec.jappserver.supplier.receiverses.ejb.ReceiverSes</remote>
+    <ejb-link>ReceiverSes</ejb-link>
+  </ejb-ref>
+</web-app>

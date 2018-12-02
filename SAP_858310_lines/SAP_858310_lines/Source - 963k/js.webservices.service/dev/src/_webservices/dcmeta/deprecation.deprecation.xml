@@ -1,0 +1,16 @@
+﻿<reason>This DC is deprecated, use tc/je/webservices/api</reason>
+<since>2007-12-01 7.10.01</since>
+<alternatives>
+   <alternative>
+      <dependency>
+         <dc-ref>
+            <name>tc/je/webservices/api</name>
+            <vendor>sap.com</vendor>
+         </dc-ref>
+         <at-build-time/>
+         <at-deploy-time/>
+         <at-runtime/>
+      </dependency>
+      <description>This DC tc/je/webservices/api completely replaces the old DC webservices</description>
+   </alternative>
+</alternatives>

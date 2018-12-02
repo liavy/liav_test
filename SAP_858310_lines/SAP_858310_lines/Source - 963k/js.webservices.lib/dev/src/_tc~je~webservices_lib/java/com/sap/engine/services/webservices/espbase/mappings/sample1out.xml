@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ns1:mappings xmlns:ns1='http://www.sap.com/webas/710/ws/ws-mapping-descriptor'>
+  <interface>
+    <property name='PortTypeQName'>{www.sap.com}localName</property>
+    <property name='String'>String</property>
+    <operation>
+      <property name='A'>String</property>
+      <property name='B'>String</property>
+      <parameter>
+        <property name='A'>String</property>
+        <property name='B'>String</property>
+      </parameter>
+      <parameter>
+        <property name='A'>String</property>
+        <property name='B'>String</property>
+      </parameter>
+    </operation>
+    <operation>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+      <parameter>
+        <property name='A'>String</property>
+        <property name='B'>String</property>
+      </parameter>
+      <parameter>
+        <property name='A'>String</property>
+        <property name='B'>String</property>
+      </parameter>
+    </operation>
+    <implementation-link>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+    </implementation-link>
+  </interface>
+  <interface>
+    <property name='AA'>String</property>
+    <property name='BB'>String</property>
+    <operation>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+      <parameter>
+        <property name='A'>String</property>
+        <property name='B'>String</property>
+      </parameter>
+      <parameter>
+        <property name='A'>String</property>
+        <property name='B'>String</property>
+      </parameter>
+    </operation>
+    <operation>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+      <parameter>
+        <property name='A'>String</property>
+        <property name='B'>String</property>
+      </parameter>
+      <parameter>
+        <property name='A'>String</property>
+        <property name='B'>String</property>
+      </parameter>
+    </operation>
+    <implementation-link>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+    </implementation-link>
+  </interface>
+  <service>
+    <property name='AA'>String</property>
+    <property name='BB'>String</property>
+    <endpoint>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+    </endpoint>
+    <endpoint>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+    </endpoint>
+    <implementation-link>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+    </implementation-link>
+  </service>
+  <service>
+    <property name='AA'>String</property>
+    <property name='BB'>String</property>
+    <endpoint>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+    </endpoint>
+    <endpoint>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+    </endpoint>
+    <implementation-link>
+      <property name='YY'>String</property>
+      <property name='XX'>String</property>
+    </implementation-link>
+  </service>
+</ns1:mappings>

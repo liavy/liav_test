@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<web-j2ee-engine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="web-j2ee-engine.xsd">
+  <spec-version>2.3</spec-version>
+  <server-component-ref>
+    <name>textcontainer_api</name>
+    <type>SERVICE</type>
+    <jndi-name>textcontainer_api</jndi-name>
+  </server-component-ref>
+</web-j2ee-engine>

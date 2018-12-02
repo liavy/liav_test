@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<jms-resources>
+	<connection-factory>
+		<name>jms/QueueConnectionFactory</name>
+		<sap-local-factory-type>
+			<type>javax.jms.XAQueueConnectionFactory</type>
+			<virtual-provider>specj</virtual-provider>
+			<property>
+				<description>runningMode</description>
+				<config-property-name>runningMode</config-property-name>
+				<config-property-value>OPTIMIZED</config-property-value>
+			</property>
+		</sap-local-factory-type>
+	</connection-factory>
+
+   <destination>
+      <name>jms/LargeOrderQueue</name>
+		<type>javax.jms.Queue</type>
+		<sap-local-destination-type>
+			<virtual-provider>specj</virtual-provider>
+		</sap-local-destination-type>
+   </destination>
+   <destination>
+      <name>jms/FulfillOrderQueue</name>
+		<type>javax.jms.Queue</type>
+		<sap-local-destination-type>
+			<virtual-provider>specj</virtual-provider>
+		</sap-local-destination-type>
+   </destination>
+   <destination>
+      <name>jms/BuyerQueue</name>
+		<type>javax.jms.Queue</type>
+		<sap-local-destination-type>
+			<virtual-provider>specj</virtual-provider>
+		</sap-local-destination-type>
+   </destination>
+   <destination>
+      <name>jms/ReceiveQueue</name>
+		<type>javax.jms.Queue</type>
+		<sap-local-destination-type>
+			<virtual-provider>specj</virtual-provider>
+		</sap-local-destination-type>
+   </destination>
+
+   <virtual-provider-properties>
+   <name>specj</name> 
+   <property>
+		<description>runningMode</description>
+		<config-property-name>runningMode</config-property-name>
+		<config-property-value>LOCAL</config-property-value>
+   </property>
+	<property>
+		<description>SPECj</description>
+		<config-property-name>dataSourceName</config-property-name>
+		<config-property-value>SpecDataSource</config-property-value>
+	</property>
+   </virtual-provider-properties>
+</jms-resources>

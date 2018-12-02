@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<data-source-aliases>
+ <aliases>
+    <data-source-name>
+       ${com.sap.datasource.default}
+    </data-source-name>
+    <alias>
+       SAP/BC_XMLA
+    </alias>
+ </aliases>
+</data-source-aliases>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+   <web-app>
+      <display-name>EmulatorWAR</display-name>
+      <description>External Supplier Emulator</description>
+      <servlet>
+         <servlet-name>Emulator</servlet-name>
+         <display-name>Emulator</display-name>
+         <description>External Supplier Emulator</description>
+         <servlet-class>org.spec.jappserver.supplier.emulator.EmulatorServlet</servlet-class>
+         <init-param>
+            <param-name>debuglevel</param-name>
+            <param-value>0</param-value>
+         </init-param>
+         <init-param>
+            <!-- host of SPECjAppServer -->
+            <param-name>supplier.host</param-name>
+            <param-value>localhost</param-value>
+         </init-param>
+         <init-param>
+            <!-- port of SPECjAppServer -->
+            <param-name>supplier.port</param-name>
+            <param-value>50000</param-value>
+         </init-param>
+         <init-param>
+            <param-name>supplier.servlet</param-name>
+            <param-value>/Supplier/DeliveryServlet</param-value>
+         </init-param>
+         <init-param>
+	    <!-- url on the server where emulator runs -->
+            <param-name>deliveryDTD.location</param-name>
+            <param-value>http://localhost:50000/Emulator/dtd/delivery.dtd</param-value>
+         </init-param>
+      </servlet>
+      <servlet-mapping>
+         <servlet-name>Emulator</servlet-name>
+         <url-pattern>/EmulatorServlet</url-pattern>
+      </servlet-mapping>
+      <session-config>
+         <session-timeout>30</session-timeout>
+      </session-config>
+   </web-app>

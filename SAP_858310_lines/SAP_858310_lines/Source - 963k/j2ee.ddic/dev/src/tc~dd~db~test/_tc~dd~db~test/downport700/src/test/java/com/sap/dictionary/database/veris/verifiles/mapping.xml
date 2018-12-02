@@ -1,0 +1,342 @@
+﻿<?xml version="1.0"?>
+<mapping-check>
+<maps-for-jdbc-type>
+	<jdbc-type>VARCHAR</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<max-length>4000</max-length>
+		<db-type>VARCHAR(?) UNICODE</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<max-length>4000</max-length>
+		<db-type>NVARCHAR(?)</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<max-length>1333</max-length>
+		<db-type>NVARCHAR2(?)</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<max-length>5431</max-length>
+		<length-factor>3</length-factor>
+		<db-type>VARCHAR(?)</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<max-length>16000</max-length>
+		<db-type>VARGRAPHIC(?) CCSID 13488</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<max-length>16352</max-length>
+		<db-type>VARGRAPHIC(?)</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>CLOB</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>LONG UNICODE</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<db-type>NTEXT</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<db-type>NCLOB</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<db-type>CLOB(1073741824) LOGGED</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<db-type>DBCLOB(1073741823) CCSID 13488</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<db-type>DBCLOB (500M)</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>BINARY</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<max-length>8000</max-length>
+		<db-type>CHAR(?) BYTE</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<max-length>8000</max-length>
+		<db-type>BINARY(?)</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<max-length>255</max-length>
+		<db-type>RAW(?)</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<max-length>16293</max-length>
+		<db-type>VARCHAR(?) FOR BIT DATA</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<max-length>32000</max-length>
+		<db-type>CHAR(?) FOR BIT DATA</db-type>
+	</map>
+	<map dbs="Db2" version = "DSN08015">
+		<max-length>32696</max-length>
+		<db-type>CHAR(?) FOR BIT DATA</db-type>
+	</map>
+	<map dbs="Db2" version = "DSN09015">
+		<max-length>32696</max-length>
+		<db-type>BINARY(?)</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>LONGVARBINARY</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>LONG BYTE</db-type>
+		<exclusions>
+			<exclusion>
+				<table-name>J2EE_CONFIG_ENTRY</table-name>
+				<db-type>BINARY(?)</db-type>
+			</exclusion>
+		</exclusions>
+	</map>
+	<map dbs="Mss" version = "*">
+		<max-length>8000</max-length>
+		<db-type>VARBINARY(?)</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<max-length>2000</max-length>
+		<db-type>RAW(?)</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<max-length>16293</max-length>
+		<db-type>VARCHAR(?) FOR BIT DATA</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<max-length>32000</max-length>
+		<db-type>VARCHAR(?) FOR BIT DATA</db-type>
+	</map>
+	<map dbs="Db2" version = "DSN08015">
+		<max-length>32696</max-length>
+		<db-type>VARCHAR(?) FOR BIT DATA</db-type>
+	</map>
+	<map dbs="Db2" version = "DSN09015">
+		<max-length>32696</max-length>
+		<db-type>VARBINARY(?)</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>BLOB</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>LONG BYTE</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<db-type>IMAGE</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<db-type>BLOB</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<db-type>BLOB(1073741824) LOGGED</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<db-type>BLOB(2147483647)</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<db-type>BLOB (1G)</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>BIGINT</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>FIXED(19)</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<db-type>BIGINT</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<db-type>NUMBER(19)</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<db-type>BIGINT</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<db-type>BIGINT</db-type>
+	</map>
+	<map dbs="Db2" version = "DSN08015">
+		<db-type>DECIMAL(19,0)</db-type>
+	</map>
+	<map dbs="Db2" version = "DSN09015">
+		<db-type>BIGINT</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>INTEGER</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>INTEGER</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<db-type>INTEGER</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<db-type>NUMBER(10)</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<db-type>INTEGER</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<db-type>INTEGER</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<db-type>INTEGER</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>SMALLINT</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>SMALLINT</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<db-type>SMALLINT</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<db-type>NUMBER(5)</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<db-type>SMALLINT</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<db-type>SMALLINT</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<db-type>SMALLINT</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>REAL</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>FLOAT(16)</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<db-type>REAL</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<db-type>REAL</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<db-type>REAL</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<db-type>REAL</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<db-type>DOUBLE</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>DOUBLE</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>FLOAT(38)</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<db-type>FLOAT</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<db-type>FLOAT</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<db-type>DOUBLE</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<db-type>DOUBLE</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<db-type>DOUBLE</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>DECIMAL</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<max-length>38</max-length>
+		<db-type>FIXED(?,0)</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<max-length>38</max-length>
+		<db-type>DECIMAL(?,0)</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<max-length>38</max-length>
+		<db-type>DECIMAL(?,0)</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<max-length>31</max-length>
+		<db-type>DECIMAL(?,0)</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<max-length>31</max-length>
+		<db-type>DECIMAL(?,0)</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<max-length>31</max-length>
+		<db-type>DECIMAL(?,0)</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>DATE</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>DATE</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<db-type>DATETIME</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<db-type>DATE</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<db-type>DATE</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<db-type>DATE</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<db-type>DATE</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>TIME</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>TIME</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<db-type>DATETIME</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<db-type>DATE</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<db-type>TIME</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<db-type>TIME</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<db-type>TIME</db-type>
+	</map>
+</maps-for-jdbc-type>
+<maps-for-jdbc-type>
+	<jdbc-type>TIMESTAMP</jdbc-type>
+	<map dbs="Sap" version = "*">
+		<db-type>TIMESTAMP</db-type>
+	</map>
+	<map dbs="Mss" version = "*">
+		<db-type>DATETIME</db-type>
+	</map>
+	<map dbs="Ora" version = "*">
+		<db-type>TIMESTAMP</db-type>
+	</map>
+	<map dbs="Db6" version = "*">
+		<db-type>TIMESTAMP</db-type>
+	</map>
+	<map dbs="Db4" version = "*">
+		<db-type>TIMESTAMP</db-type>
+	</map>
+	<map dbs="Db2" version = "*">
+		<db-type>TIMESTAMP</db-type>
+	</map>
+</maps-for-jdbc-type>
+	
+
+</mapping-check>
+
+

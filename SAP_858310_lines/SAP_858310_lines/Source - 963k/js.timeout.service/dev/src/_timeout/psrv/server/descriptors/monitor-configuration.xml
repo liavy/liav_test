@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE monitor-configuration SYSTEM "monitor-configuration.dtd">
+<monitor-configuration>
+<monitor-semantics>
+	<simple-configuration-group name="TIMEOUT.TimeoutService">
+		<description ID="TIMEOUT.TimeServ"></description>
+	</simple-configuration-group>	
+	<integer-configuration-group name="TIMEOUT.EstFreqPerMin">
+		<description ID="TIMEOUT.TimeSrv.EstFreqPerMin">Count of the timeout events per minute</description>
+		<data-collection react-on-failure="IGNORE" >
+			<polled-by-monitor period="1" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="600" yellow-to-red="1200" red-to-yellow="1200" yellow-to-green="600"/>
+	</integer-configuration-group>
+</monitor-semantics>
+<monitor-tree>	
+	<services>
+		<object name="Timeout" configuration-group="TIMEOUT.TimeoutService">
+			<integer-monitor name="EstimatedFrequencyPerMinute" configuration-group="TIMEOUT.EstFreqPerMin">
+				<monitored-resource name="timeout" type="SERVICE"/>
+				<integer-attribute-mapping>
+					<integer-attribute>
+						<observed-resource-attribute name="EstimatedFrequencyPerMinute"/>
+					</integer-attribute>
+				</integer-attribute-mapping>
+			</integer-monitor>	
+		</object>
+	</services>
+</monitor-tree>
+</monitor-configuration>

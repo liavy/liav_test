@@ -1,0 +1,88 @@
+﻿<?xml version="1.0"?>
+<veri>
+<veritables>
+<Dbtable name="VERI">
+	<properties>
+		<description description = "origin DATE"/>
+	</properties>
+	<columns>
+		<column name = "F1">
+			<position>1</position>
+			<java-sql-type>DATE</java-sql-type>
+			<length>0</length>
+			<decimals>0</decimals>
+			<is-not-null>true</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns>
+	<data-lines>
+		<data-line>01.02.1987</data-line>
+		<data-line>30.01.2008</data-line> 
+		<data-line>25.08.2005</data-line>  
+	</data-lines>      
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "Date with convert force"/>
+	</properties>
+	<predefined-action>CONVERT</predefined-action>
+</Dbtable>  
+</veritables>
+<veritables>
+<Dbtable name="VERI">
+	<properties>
+		<description description = "origin TIME"/>
+	</properties>
+	<columns>
+		<column name = "F1">
+			<position>1</position>
+			<java-sql-type>TIME</java-sql-type>
+			<length>0</length>
+			<decimals>0</decimals>
+			<is-not-null>true</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns>
+	<data-lines>
+		<data-line>10:11:12</data-line>
+		<data-line>15:27:36</data-line> 
+		<data-line>20:37:49</data-line>  
+	</data-lines>      
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "Time with convert force"/>
+	</properties>
+	<predefined-action>CONVERT</predefined-action>
+</Dbtable>  
+</veritables>
+<veritables>
+<Dbtable name="VERI">
+	<properties>
+		<description description = "origin TIMESTAMP"/>
+	</properties>
+	<columns>
+		<column name = "F1">
+			<position>1</position>
+			<java-sql-type>TIMESTAMP</java-sql-type>
+			<length>0</length>
+			<decimals>0</decimals>
+			<is-not-null>true</is-not-null>
+			<default-value></default-value>
+		</column>
+	</columns>
+	<data-lines>
+		<data-line>01.02.1987 10:25:17.010</data-line>
+		<data-line>30.01.2008 15:28:36.020</data-line> 
+		<data-line>25.08.2005 23:52:11.300</data-line>  
+	</data-lines>      
+</Dbtable>
+<Dbtable>
+	<properties>
+		<description description = "Timestamp with convert force"/>
+	</properties>
+	<predefined-action>CONVERT</predefined-action>
+</Dbtable>  
+</veritables>
+</veri>
+

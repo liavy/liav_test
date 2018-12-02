@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE monitor-configuration SYSTEM "monitor-configuration.dtd">
+<monitor-configuration>
+<monitor-semantics>
+	<simple-configuration-group name="TS.TransactionService">
+		<description ID="TS.TransServ" ></description>
+	</simple-configuration-group>	
+	<integer-configuration-group name="TS.OpenTransCount">
+		<description ID="TS.TransSrv.OpenTransCnt">Count of JTA transactions that are currently open</description>
+		<data-collection react-on-failure="IGNORE" >
+			<polled-by-monitor period="10" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="500" yellow-to-red="2147483647" red-to-yellow="2147483647" yellow-to-green="500"/>
+	</integer-configuration-group>		
+	<integer-configuration-group name="TS.SuspendedTransCount">
+		<description ID="TS.TransServ.SusTransCnt">Count of currently suspended transactions</description>
+		<data-collection react-on-failure="IGNORE" >
+			<polled-by-monitor period="10" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="500" yellow-to-red="2147483647" red-to-yellow="2147483647" yellow-to-green="500"/>
+	</integer-configuration-group>	
+	<long-configuration-group name="TS.RolledBackTransCount">
+		<description ID="TS.TransSrv.RollBackTransCnt">The aggregated number of transactions that have been rolled back</description>
+		<data-collection react-on-failure="IGNORE" >
+			<polled-by-monitor period="10" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="2147483646" yellow-to-red="2147483647" red-to-yellow="2147483647" yellow-to-green="2147483646"/>
+	</long-configuration-group>	
+	<long-configuration-group name="TS.CommittedTransCount">
+		<description ID="TS.TransSrv.CommTransCnt">The aggregated number of transactions that have been committed</description>
+		<data-collection react-on-failure="IGNORE" >
+			<polled-by-monitor period="10" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="2147483646" yellow-to-red="2147483647" red-to-yellow="2147483647" yellow-to-green="2147483646"/>
+	</long-configuration-group>	
+	<long-configuration-group name="TS.TimedOutTransCount">
+		<description ID="TS.TransSrv.TimedOutTransCnt">The aggregated number of transactions that have timed out</description>
+		<data-collection react-on-failure="IGNORE" >
+			<polled-by-monitor period="10" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="1" yellow-to-red="2147483647" red-to-yellow="2147483647" yellow-to-green="1"/>
+	</long-configuration-group>
+	<integer-configuration-group name="TS.TransSuccessRate" unit="%">
+		<description ID="TS.TransSrv.TransSuccRate">The ratio in % between committed and completed transactions</description>
+		<data-collection react-on-failure="IGNORE" >
+			<polled-by-monitor period="10" unit="MINUTE"/>
+		</data-collection>		
+		<thresholds green-to-yellow="100" yellow-to-red="101" red-to-yellow="101" yellow-to-green="100"/>
+	</integer-configuration-group>
+</monitor-semantics>	
+<monitor-tree>
+	<services>	
+		<object name="Transaction" configuration-group="TS.TransactionService">
+			<integer-monitor name="OpenTransactionsCount" configuration-group="TS.OpenTransCount">
+				<monitored-resource name="ts" type="SERVICE"/>
+				<integer-attribute-mapping>
+					<integer-attribute>
+						<observed-resource-attribute name="OpenTransactionsCount"/>
+					</integer-attribute>
+				</integer-attribute-mapping>
+			</integer-monitor>				
+			<integer-monitor name="SuspendedTransactionsCount" configuration-group="TS.SuspendedTransCount">
+				<monitored-resource name="ts" type="SERVICE"/>
+				<integer-attribute-mapping>
+					<integer-attribute>
+						<observed-resource-attribute name="SuspendedTransactionsCount"/>
+					</integer-attribute>
+				</integer-attribute-mapping>
+			</integer-monitor>			
+			<long-monitor name="RolledBackTransactionsCount" configuration-group="TS.RolledBackTransCount">
+				<monitored-resource name="ts" type="SERVICE"/>
+				<long-attribute-mapping>
+					<long-attribute>
+						<observed-resource-attribute name="RolledBackTransactionsCount"/>
+					</long-attribute>
+				</long-attribute-mapping>
+			</long-monitor>			
+			<long-monitor name="CommittedTransactionsCount" configuration-group="TS.CommittedTransCount">
+				<monitored-resource name="ts" type="SERVICE"/>
+				<long-attribute-mapping>
+					<long-attribute>
+						<observed-resource-attribute name="CommittedTransactionsCount"/>
+					</long-attribute>
+				</long-attribute-mapping>
+			</long-monitor>			
+			<long-monitor name="TimedOutTransactionsCount" configuration-group="TS.TimedOutTransCount">
+				<monitored-resource name="ts" type="SERVICE"/>
+				<long-attribute-mapping>
+					<long-attribute>
+						<observed-resource-attribute name="TimedOutTransactionsCount"/>
+					</long-attribute>
+				</long-attribute-mapping>
+			</long-monitor>
+			<integer-monitor name="TransactionsSuccessRate" configuration-group="TS.TransSuccessRate">
+				<monitored-resource name="ts" type="SERVICE"/>
+				<integer-attribute-mapping>
+					<integer-attribute>
+						<observed-resource-attribute name="TransactionsSuccessRate"/>
+					</integer-attribute>
+				</integer-attribute-mapping>
+			</integer-monitor>	
+		</object>				
+	</services>
+	</monitor-tree>
+</monitor-configuration>

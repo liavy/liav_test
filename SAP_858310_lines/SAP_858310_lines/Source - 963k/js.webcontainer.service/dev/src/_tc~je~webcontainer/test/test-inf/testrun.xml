@@ -1,0 +1,6 @@
+﻿<test> 
+  <run type="junit">
+    <include>com.sap.engine.services.servlets_jsp.**</include>
+	<code-coverage>com.sap.engine.services.servlets_jsp.*</code-coverage>
+  </run>
+</test>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data-source-aliases SYSTEM "data-source-aliases.dtd">
+<data-source-aliases>
+	<aliases>
+		<data-source-name>${com.sap.datasource.default}</data-source-name>
+		<alias>SAP/BC_TRANSACTION_LOG</alias>
+	</aliases>
+</data-source-aliases>

@@ -1,0 +1,48 @@
+﻿package com.sap.archtech.daservice;
+
+interface IDASMethods {
+	final static int CHECK = 1;
+	final static int DELETE = 2;
+	final static int FREEZE = 3;
+	final static int GET = 4;
+	final static int HEAD = 5;
+	final static int INDEXCREATE = 6;
+	final static int INDEXDELETE = 7;
+	final static int INDEXDROP = 8;
+	final static int INDEXGET = 9;
+	final static int INDEXINSERT = 10;
+	final static int INFO = 11;
+	final static int LIST = 12;
+	final static int MKCOL = 13;
+	final static int PACK = 14;
+	final static int PICK = 15;
+	final static int PUT = 16;
+	final static int SELECT = 17;
+	final static int _SYNC_HOME_PATH = 18;
+	final static int UNPACK = 19;
+	final static int INDEXDESCRIBE = 20;
+	final static int PACKSTATUS = 21;
+	final static int MODIFYPATH = 22;
+	final static int DELETIONMARK = 23;
+	final static int _RESET_DELSTAT = 24;
+	final static int _DEFINE_ARCHIVE_STORES = 25;
+	final static int _ASSIGN_ARCHIVE_STORES = 26;
+	final static int _LIST_ARCHIVE_PATHS = 27;
+	final static int VERIFY_INTEGRITY = 28;
+	final static int INDEXEXISTS = 29;
+	final static int PROPERTYSET = 30;
+	final static int PROPERTYGET = 31;
+	final static int LEGALHOLDADD = 32;
+	final static int LEGALHOLDGET = 33;
+	final static int LEGALHOLDREMOVE = 34;
+	final static int GETSTREAM = 35;
+	final static int _LIST_ARCHIVE_STORES = 36;
+	final static int _LIST_ASSIGNED_ARCHIVE_PATHS = 37;
+	final static int COLSEARCH = 38;
+	final static int GET_WEBDAV_STORE_META_DATA = 39;
+	final static int ORIGINSEARCH = 40;
+	final static int ORIGINLIST = 41;
+	final static int INVALIDURIGET = 42;
+	final static int INVALIDURISET = 43;
+	final static int SESSIONINVALIDATE = 44;
+}

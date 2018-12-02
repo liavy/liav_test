@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" "http://java.sun.com/dtd/ejb-jar_2_0.dtd">
+<ejb-jar>
+	<description>EJB JAR description</description>
+	<display-name>EJB JAR</display-name>
+	<enterprise-beans>
+		<message-driven>
+			<ejb-name>PackMDBean</ejb-name>
+			<ejb-class>com.sap.archtech.daservice.ejb.PackMDBean</ejb-class>
+			<transaction-type>Container</transaction-type>
+                  <message-selector>method = 'PACK'</message-selector>
+			<message-driven-destination>
+				<destination-type>javax.jms.Queue</destination-type>
+			</message-driven-destination>
+			<ejb-local-ref>
+				<description>AXML Pack Algorithm</description>
+				<ejb-ref-name>ejb/PackStatusDBBean</ejb-ref-name>
+				<ejb-ref-type>Entity</ejb-ref-type>
+				<local-home>com.sap.archtech.daservice.ejb.PackStatusDBLocalHome</local-home>
+				<local>com.sap.archtech.daservice.ejb.PackStatusDBLocal</local>
+				<ejb-link>XML_DAS.jar#PackStatusDBBean</ejb-link>
+			</ejb-local-ref>
+			<resource-ref>
+				<res-ref-name>SAP/BC_XMLA</res-ref-name>
+				<res-type>javax.sql.DataSource</res-type>
+				<res-auth>Application</res-auth>
+				<res-sharing-scope>Unshareable</res-sharing-scope>
+			</resource-ref>
+		</message-driven>
+		<message-driven>
+			<ejb-name>UnpackMDBean</ejb-name>
+			<ejb-class>com.sap.archtech.daservice.ejb.UnpackMDBean</ejb-class>
+			<transaction-type>Container</transaction-type>
+                  <message-selector>method = 'UNPACK'</message-selector>
+			<message-driven-destination>
+				<destination-type>javax.jms.Queue</destination-type>
+			</message-driven-destination>
+			<ejb-local-ref>
+				<description>AXML Unpack Algorithm</description>
+				<ejb-ref-name>ejb/PackStatusDBBean</ejb-ref-name>
+				<ejb-ref-type>Entity</ejb-ref-type>
+				<local-home>com.sap.archtech.daservice.ejb.PackStatusDBLocalHome</local-home>
+				<local>com.sap.archtech.daservice.ejb.PackStatusDBLocal</local>
+				<ejb-link>XML_DAS.jar#PackStatusDBBean</ejb-link>
+			</ejb-local-ref>
+			<resource-ref>
+				<res-ref-name>SAP/BC_XMLA</res-ref-name>
+				<res-type>javax.sql.DataSource</res-type>
+				<res-auth>Application</res-auth>
+				<res-sharing-scope>Unshareable</res-sharing-scope>
+			</resource-ref>
+		</message-driven>
+		<message-driven>
+			<ejb-name>VerifyMDBean</ejb-name>
+			<ejb-class>com.sap.archtech.daservice.ejb.VerifyMDBean</ejb-class>
+			<transaction-type>Container</transaction-type>
+                  <message-selector>method = 'VERIFY'</message-selector>
+			<message-driven-destination>
+				<destination-type>javax.jms.Queue</destination-type>
+			</message-driven-destination>
+			<resource-ref>
+				<res-ref-name>SAP/BC_XMLA</res-ref-name>
+				<res-type>javax.sql.DataSource</res-type>
+				<res-auth>Application</res-auth>
+				<res-sharing-scope>Unshareable</res-sharing-scope>
+			</resource-ref>
+		</message-driven>		
+		<entity>
+			<ejb-name>ArchStoreConfigBean</ejb-name>
+			<home>com.sap.archtech.daservice.ejb.ArchStoreConfigHome</home>
+			<remote>com.sap.archtech.daservice.ejb.ArchStoreConfig</remote>
+			<local-home>com.sap.archtech.daservice.ejb.ArchStoreConfigLocalHome</local-home>
+			<local>com.sap.archtech.daservice.ejb.ArchStoreConfigLocal</local>
+			<ejb-class>com.sap.archtech.daservice.ejb.ArchStoreConfigBean</ejb-class>
+			<persistence-type>Container</persistence-type>
+			<prim-key-class>java.lang.Long</prim-key-class>
+			<reentrant>False</reentrant>
+			<cmp-version>2.x</cmp-version>
+			<abstract-schema-name>ArchStoreConfigBean</abstract-schema-name>
+			<cmp-field>
+				<description>Archive Store ID</description>
+				<field-name>primKey</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>Archive Store</description>
+				<field-name>archivestore</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>Storage System</description>
+				<field-name>storagesystem</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>Store Type</description>
+				<field-name>storetype</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>Windows Root Path</description>
+				<field-name>winroot</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>Unix Root Path</description>
+				<field-name>unixroot</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>HTTP Destination</description>
+				<field-name>destination</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>Proxy Host</description>
+				<field-name>proxyhost</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>Proxy Port</description>
+				<field-name>proxyport</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>ILM Conformance</description>
+				<field-name>ilmconform</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>Default Archive Store</description>
+				<field-name>isdefault</field-name>
+			</cmp-field>
+			<primkey-field>primKey</primkey-field>
+			<query>
+				<description>Find method for getting all Archive Stores</description>
+				<query-method>
+					<method-name> findAll </method-name>
+					<method-params/>
+				</query-method>
+				<ejb-ql> select object(t) from ArchStoreConfigBean t </ejb-ql>
+			</query>
+			<query>
+				<description>Find method for getting one Archive Store</description>
+				<query-method>
+					<method-name> findByArchiveStore </method-name>
+					<method-params>
+						<method-param> java.lang.String </method-param>
+					</method-params>
+				</query-method>
+				<ejb-ql> select object(t) from ArchStoreConfigBean t where t.archivestore = ?1 </ejb-ql>
+			</query>
+		</entity>
+        <entity>
+            <ejb-name>PackStatusDBBean</ejb-name>
+            <home>com.sap.archtech.daservice.ejb.PackStatusDBHome</home>
+            <remote>com.sap.archtech.daservice.ejb.PackStatusDB</remote>
+            <local-home>com.sap.archtech.daservice.ejb.PackStatusDBLocalHome</local-home>
+            <local>com.sap.archtech.daservice.ejb.PackStatusDBLocal</local>
+            <ejb-class>com.sap.archtech.daservice.ejb.PackStatusDBBean</ejb-class>
+            <persistence-type>Container</persistence-type>
+            <prim-key-class>java.lang.Long</prim-key-class>
+            <reentrant>False</reentrant>
+            <cmp-version>2.x</cmp-version>
+            <abstract-schema-name>PackStatusDBBean</abstract-schema-name>
+            <cmp-field>
+                <field-name>starttime</field-name>
+            </cmp-field>
+            <cmp-field>
+                <field-name>colid</field-name>
+            </cmp-field>
+            <cmp-field>
+                <field-name>packres</field-name>
+            </cmp-field>
+            <cmp-field>
+                <field-name>lastupdate</field-name>
+            </cmp-field>
+            <cmp-field>
+                <field-name>message</field-name>
+            </cmp-field>
+            <cmp-field>
+                <field-name>packedres</field-name>
+            </cmp-field>
+            <primkey-field>colid</primkey-field>
+        </entity>
+        <session>
+            <ejb-name>CommandBean</ejb-name>
+			<local-home>com.sap.archtech.daservice.beanfacade.CommandBeanLocalHome</local-home>
+			<local>com.sap.archtech.daservice.beanfacade.CommandBeanLocal</local>
+			<ejb-class>com.sap.archtech.daservice.beanfacade.CommandBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Bean</transaction-type>
+			<ejb-local-ref>
+				<ejb-ref-name>ArchStoreConfigBean</ejb-ref-name>
+				<ejb-ref-type>Entity</ejb-ref-type>
+				<local-home>com.sap.archtech.daservice.ejb.ArchStoreConfigLocalHome</local-home>
+				<local>com.sap.archtech.daservice.ejb.ArchStoreConfigLocal</local>
+				<ejb-link>ArchStoreConfigBean</ejb-link>
+			</ejb-local-ref>
+			<ejb-local-ref>
+				<description>PackStatusDBBean</description>
+				<ejb-ref-name>PackStatusDBBean</ejb-ref-name>
+				<ejb-ref-type>Entity</ejb-ref-type>
+				<local-home>com.sap.archtech.daservice.ejb.PackStatusDBLocalHome</local-home>
+				<local>com.sap.archtech.daservice.ejb.PackStatusDBLocal</local>
+				<ejb-link>PackStatusDBBean</ejb-link>
+			</ejb-local-ref>
+			<resource-ref>
+				<res-ref-name>SAP/BC_XMLA</res-ref-name>
+				<res-type>javax.sql.DataSource</res-type>
+				<res-auth>Application</res-auth>
+			</resource-ref>
+		</session>
+	</enterprise-beans>
+	<assembly-descriptor>
+		<container-transaction>
+			<description>container-transaction</description>
+			<method>
+				<ejb-name>ArchStoreConfigBean</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<method>
+				<ejb-name>PackStatusDBBean</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+	</assembly-descriptor>	
+</ejb-jar>

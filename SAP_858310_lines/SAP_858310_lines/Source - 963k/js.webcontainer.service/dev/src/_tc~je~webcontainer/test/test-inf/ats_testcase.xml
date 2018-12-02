@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<test-cases>
+	<test-case>
+		<tests 
+			type="junit">
+			<test 
+				class-name="com.sap.engine.services.servlets_jsp.**" 
+				path="." 
+				container="stand-alone"/>
+		</tests>
+		<ats-server>
+			<sharedVM>true</sharedVM>
+		</ats-server>
+	</test-case>
+</test-cases>

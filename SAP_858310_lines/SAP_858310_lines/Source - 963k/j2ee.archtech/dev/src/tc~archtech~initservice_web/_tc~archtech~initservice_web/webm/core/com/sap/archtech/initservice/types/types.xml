@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<typeMappingRegistry>
+  <defaultTypeMapping>
+    <xmlMapping typeName="unsignedByte" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,byte"/>
+    </xmlMapping>
+    <xmlMapping typeName="gYear" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://www.w3.org/2001/XMLSchema,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="boolean" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.BooleanSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.BooleanSD" initParams="http://www.w3.org/2001/XMLSchema,boolean"/>
+    </xmlMapping>
+    <xmlMapping typeName="AssignedActionEntry" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.archtech.initservice.types.AssignedActionEntry" deserializer="com.sap.archtech.initservice.types.AssignedActionEntry"/>
+    </xmlMapping>
+    <xmlMapping typeName="gMonth" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="normalizedString" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="string" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="negativeInteger" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" initParams="http://www.w3.org/2001/XMLSchema,integer"/>
+    </xmlMapping>
+    <xmlMapping typeName="NOTATION" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="gYear" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="normalizedString" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="ENTITIES" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="nonNegativeInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,integer"/>
+    </xmlMapping>
+    <xmlMapping typeName="anyType" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD" initParams="http://www.w3.org/2001/XMLSchema,anyType"/>
+      <custom javaType="com.sap.archtech.initservice.types.AssignedActionEntry" serializer="com.sap.archtech.initservice.types.AssignedActionEntry" deserializer="com.sap.archtech.initservice.types.AssignedActionEntry"/>
+      <custom javaType="com.sap.archtech.initservice.types.RoleEntry" serializer="com.sap.archtech.initservice.types.RoleEntry" deserializer="com.sap.archtech.initservice.types.RoleEntry"/>
+      <custom javaType="com.sap.archtech.initservice.types.BusinessserviceEntry" serializer="com.sap.archtech.initservice.types.BusinessserviceEntry" deserializer="com.sap.archtech.initservice.types.BusinessserviceEntry"/>
+      <custom javaType="com.sap.archtech.initservice.types.DescriptionEntry" serializer="com.sap.archtech.initservice.types.DescriptionEntry" deserializer="com.sap.archtech.initservice.types.DescriptionEntry"/>
+      <custom javaType="com.sap.archtech.initservice.types.ActionEntry" serializer="com.sap.archtech.initservice.types.ActionEntry" deserializer="com.sap.archtech.initservice.types.ActionEntry"/>
+      <custom javaType="com.sap.archtech.initservice.types.PermissionEntry" serializer="com.sap.archtech.initservice.types.PermissionEntry" deserializer="com.sap.archtech.initservice.types.PermissionEntry"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedInt" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,int"/>
+    </xmlMapping>
+    <xmlMapping typeName="date" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateSD" initParams="http://www.w3.org/2001/XMLSchema,date"/>
+    </xmlMapping>
+    <xmlMapping typeName="long" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" initParams="http://www.w3.org/2001/XMLSchema,long"/>
+    </xmlMapping>
+    <xmlMapping typeName="dateTime" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedByte" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" initParams="http://www.w3.org/2001/XMLSchema,byte"/>
+    </xmlMapping>
+    <xmlMapping typeName="gDay" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://www.w3.org/2001/XMLSchema,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="positiveInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,integer"/>
+    </xmlMapping>
+    <xmlMapping typeName="ID" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="language" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="NMTOKENS" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="anySimpleType" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,anyType"/>
+    </xmlMapping>
+    <xmlMapping typeName="ID" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="token" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="LinkedList" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="LinkedList"/>
+    </xmlMapping>
+    <xmlMapping typeName="double" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DoubleSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DoubleSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,double"/>
+    </xmlMapping>
+    <xmlMapping typeName="NMTOKEN" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="nonNegativeInteger" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" initParams="http://www.w3.org/2001/XMLSchema,integer"/>
+    </xmlMapping>
+    <xmlMapping typeName="nonPositiveInteger" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" initParams="http://www.w3.org/2001/XMLSchema,integer"/>
+    </xmlMapping>
+    <xmlMapping typeName="IDREF" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="Name" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="integer" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" initParams="http://www.w3.org/2001/XMLSchema,integer"/>
+    </xmlMapping>
+    <xmlMapping typeName="duration" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://www.w3.org/2001/XMLSchema,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="Stack" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="Stack"/>
+    </xmlMapping>
+    <xmlMapping typeName="gMonthDay" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="ArrayList" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="ArrayList"/>
+    </xmlMapping>
+    <xmlMapping typeName="anyURI" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="time" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.TimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.TimeSD" initParams="http://www.w3.org/2001/XMLSchema,time"/>
+    </xmlMapping>
+    <xmlMapping typeName="hexBinary" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.HexBinarySD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.HexBinarySD" initParams="http://schemas.xmlsoap.org/soap/encoding/,hexBinary"/>
+    </xmlMapping>
+    <xmlMapping typeName="int" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,int"/>
+    </xmlMapping>
+    <xmlMapping typeName="date" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,date"/>
+    </xmlMapping>
+    <xmlMapping typeName="NCName" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="duration" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="anyURI" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="IDREFS" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="Vector" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="Vector"/>
+    </xmlMapping>
+    <xmlMapping typeName="anyType" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,anyType"/>
+    </xmlMapping>
+    <xmlMapping typeName="List" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="List"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedShort" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" initParams="http://www.w3.org/2001/XMLSchema,short"/>
+    </xmlMapping>
+    <xmlMapping typeName="short" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" initParams="http://www.w3.org/2001/XMLSchema,short"/>
+    </xmlMapping>
+    <xmlMapping typeName="string" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="QName" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,QName"/>
+    </xmlMapping>
+    <xmlMapping typeName="HashSet" typeNamespace="java:sap/standard">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ArrayStruct" initParams="HashSet"/>
+    </xmlMapping>
+    <xmlMapping typeName="ENTITIES" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="base64Binary" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.Base64BinarySD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.Base64BinarySD" initParams="http://schemas.xmlsoap.org/soap/encoding/,base64Binary"/>
+    </xmlMapping>
+    <xmlMapping typeName="NCName" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="int" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" initParams="http://www.w3.org/2001/XMLSchema,int"/>
+    </xmlMapping>
+    <xmlMapping typeName="base64Binary" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.Base64BinarySD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.Base64BinarySD" initParams="http://www.w3.org/2001/XMLSchema,base64Binary"/>
+    </xmlMapping>
+    <xmlMapping typeName="float" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.FloatSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.FloatSD" initParams="http://www.w3.org/2001/XMLSchema,float"/>
+    </xmlMapping>
+    <xmlMapping typeName="token" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="DescriptionEntry" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.archtech.initservice.types.DescriptionEntry" deserializer="com.sap.archtech.initservice.types.DescriptionEntry"/>
+    </xmlMapping>
+    <xmlMapping typeName="nonPositiveInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,integer"/>
+    </xmlMapping>
+    <xmlMapping typeName="gMonth" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://www.w3.org/2001/XMLSchema,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="anySimpleType" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.AnyTypeSD" initParams="http://www.w3.org/2001/XMLSchema,anyType"/>
+    </xmlMapping>
+    <xmlMapping typeName="gMonthDay" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://www.w3.org/2001/XMLSchema,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedShort" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,short"/>
+    </xmlMapping>
+    <xmlMapping typeName="language" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="time" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.TimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.TimeSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,time"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedLong" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,long"/>
+    </xmlMapping>
+    <xmlMapping typeName="NMTOKEN" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="ENTITY" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="gYearMonth" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://www.w3.org/2001/XMLSchema,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="RoleEntry" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.archtech.initservice.types.RoleEntry" deserializer="com.sap.archtech.initservice.types.RoleEntry"/>
+    </xmlMapping>
+    <xmlMapping typeName="gDay" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="negativeInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,integer"/>
+    </xmlMapping>
+    <xmlMapping typeName="ActionEntry" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.archtech.initservice.types.ActionEntry" deserializer="com.sap.archtech.initservice.types.ActionEntry"/>
+    </xmlMapping>
+    <xmlMapping typeName="IDREFS" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="positiveInteger" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" initParams="http://www.w3.org/2001/XMLSchema,integer"/>
+    </xmlMapping>
+    <xmlMapping typeName="hexBinary" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.HexBinarySD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.HexBinarySD" initParams="http://www.w3.org/2001/XMLSchema,hexBinary"/>
+    </xmlMapping>
+    <xmlMapping typeName="dateTime" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://www.w3.org/2001/XMLSchema,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="PermissionEntry" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.archtech.initservice.types.PermissionEntry" deserializer="com.sap.archtech.initservice.types.PermissionEntry"/>
+    </xmlMapping>
+    <xmlMapping typeName="boolean" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.BooleanSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.BooleanSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,boolean"/>
+    </xmlMapping>
+    <xmlMapping typeName="integer" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntegerSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,integer"/>
+    </xmlMapping>
+    <xmlMapping typeName="NOTATION" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="byte" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" initParams="http://www.w3.org/2001/XMLSchema,byte"/>
+    </xmlMapping>
+    <xmlMapping typeName="double" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DoubleSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DoubleSD" initParams="http://www.w3.org/2001/XMLSchema,double"/>
+    </xmlMapping>
+    <xmlMapping typeName="decimal" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DecimalSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DecimalSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,decimal"/>
+    </xmlMapping>
+    <xmlMapping typeName="NMTOKENS" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="byte" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ByteSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,byte"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedInt" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.IntSD" initParams="http://www.w3.org/2001/XMLSchema,int"/>
+    </xmlMapping>
+    <xmlMapping typeName="short" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.ShortSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,short"/>
+    </xmlMapping>
+    <xmlMapping typeName="float" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.FloatSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.FloatSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,float"/>
+    </xmlMapping>
+    <xmlMapping typeName="unsignedLong" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" initParams="http://www.w3.org/2001/XMLSchema,long"/>
+    </xmlMapping>
+    <xmlMapping typeName="long" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.LongSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,long"/>
+    </xmlMapping>
+    <xmlMapping typeName="IDREF" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="/xsd:schema/xsd:complexType[4]/xsd:attribute[1]/xsd:simpleType">
+      <default serializer="com.sap.archtech.initservice.types.LOCALE" deserializer="com.sap.archtech.initservice.types.LOCALE"/>
+    </xmlMapping>
+    <xmlMapping typeName="decimal" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DecimalSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DecimalSD" initParams="http://www.w3.org/2001/XMLSchema,decimal"/>
+    </xmlMapping>
+    <xmlMapping typeName="Name" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="gYearMonth" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.DateTimeSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,dateTime"/>
+    </xmlMapping>
+    <xmlMapping typeName="BusinessserviceEntry" parentType="anyType" parentNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.archtech.initservice.types.BusinessserviceEntry" deserializer="com.sap.archtech.initservice.types.BusinessserviceEntry"/>
+    </xmlMapping>
+    <xmlMapping typeName="ENTITY" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://schemas.xmlsoap.org/soap/encoding/,string"/>
+    </xmlMapping>
+    <xmlMapping typeName="QName" typeNamespace="http://www.w3.org/2001/XMLSchema">
+      <default serializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" deserializer="com.sap.engine.services.webservices.jaxrpc.encoding.primitive.StringSD" initParams="http://www.w3.org/2001/XMLSchema,QName"/>
+    </xmlMapping>
+    <elementMapping>
+      <elementDeclaration Name="BUSINESSSERVICE" Uri=""/>
+      <elementType Name="BusinessserviceEntry" Uri=""/>
+    </elementMapping>
+    <schemaToJavaMapping typeName="unsignedByte" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="byte"/>
+    <schemaToJavaMapping typeName="boolean" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Boolean"/>
+    <schemaToJavaMapping typeName="gYear" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="AssignedActionEntry" typeNamespace="" javaType="com.sap.archtech.initservice.types.AssignedActionEntry"/>
+    <schemaToJavaMapping typeName="gMonth" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="normalizedString" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="string" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="negativeInteger" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="NOTATION" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="normalizedString" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="gYear" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="ENTITIES" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="nonNegativeInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="anyType" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Object"/>
+    <schemaToJavaMapping typeName="unsignedInt" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="int"/>
+    <schemaToJavaMapping typeName="date" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="long" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Long"/>
+    <schemaToJavaMapping typeName="dateTime" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="unsignedByte" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Byte"/>
+    <schemaToJavaMapping typeName="positiveInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="ID" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="gDay" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="language" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="NMTOKENS" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="anySimpleType" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.Object"/>
+    <schemaToJavaMapping typeName="ID" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="token" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="double" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="double"/>
+    <schemaToJavaMapping typeName="NMTOKEN" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="nonNegativeInteger" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="nonPositiveInteger" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="IDREF" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="Name" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="integer" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="duration" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="gMonthDay" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="anyURI" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="time" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="hexBinary" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="byte[]"/>
+    <schemaToJavaMapping typeName="int" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="int"/>
+    <schemaToJavaMapping typeName="date" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="NCName" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="duration" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="anyURI" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="IDREFS" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="anyType" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.Object"/>
+    <schemaToJavaMapping typeName="unsignedShort" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Short"/>
+    <schemaToJavaMapping typeName="short" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Short"/>
+    <schemaToJavaMapping typeName="string" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="QName" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="ENTITIES" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="base64Binary" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="byte[]"/>
+    <schemaToJavaMapping typeName="NCName" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="int" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Integer"/>
+    <schemaToJavaMapping typeName="base64Binary" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="byte[]"/>
+    <schemaToJavaMapping typeName="float" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Float"/>
+    <schemaToJavaMapping typeName="token" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="DescriptionEntry" typeNamespace="" javaType="com.sap.archtech.initservice.types.DescriptionEntry"/>
+    <schemaToJavaMapping typeName="nonPositiveInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="gMonth" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="anySimpleType" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Object"/>
+    <schemaToJavaMapping typeName="gMonthDay" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="unsignedShort" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="short"/>
+    <schemaToJavaMapping typeName="language" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="time" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="unsignedLong" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="long"/>
+    <schemaToJavaMapping typeName="NMTOKEN" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="ENTITY" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="gYearMonth" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="RoleEntry" typeNamespace="" javaType="com.sap.archtech.initservice.types.RoleEntry"/>
+    <schemaToJavaMapping typeName="gDay" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="negativeInteger" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="ActionEntry" typeNamespace="" javaType="com.sap.archtech.initservice.types.ActionEntry"/>
+    <schemaToJavaMapping typeName="positiveInteger" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="IDREFS" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="hexBinary" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="byte[]"/>
+    <schemaToJavaMapping typeName="dateTime" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="PermissionEntry" typeNamespace="" javaType="com.sap.archtech.initservice.types.PermissionEntry"/>
+    <schemaToJavaMapping typeName="boolean" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="boolean"/>
+    <schemaToJavaMapping typeName="integer" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigInteger"/>
+    <schemaToJavaMapping typeName="NOTATION" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="byte" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Byte"/>
+    <schemaToJavaMapping typeName="double" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Double"/>
+    <schemaToJavaMapping typeName="decimal" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.math.BigDecimal"/>
+    <schemaToJavaMapping typeName="NMTOKENS" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="byte" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="byte"/>
+    <schemaToJavaMapping typeName="unsignedInt" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Integer"/>
+    <schemaToJavaMapping typeName="short" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="short"/>
+    <schemaToJavaMapping typeName="float" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="float"/>
+    <schemaToJavaMapping typeName="unsignedLong" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.Long"/>
+    <schemaToJavaMapping typeName="long" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="long"/>
+    <schemaToJavaMapping typeName="IDREF" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="/xsd:schema/xsd:complexType[4]/xsd:attribute[1]/xsd:simpleType" typeNamespace="" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="decimal" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.math.BigDecimal"/>
+    <schemaToJavaMapping typeName="Name" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="gYearMonth" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.util.Calendar"/>
+    <schemaToJavaMapping typeName="BusinessserviceEntry" typeNamespace="" javaType="com.sap.archtech.initservice.types.BusinessserviceEntry"/>
+    <schemaToJavaMapping typeName="ENTITY" typeNamespace="http://schemas.xmlsoap.org/soap/encoding/" javaType="java.lang.String"/>
+    <schemaToJavaMapping typeName="QName" typeNamespace="http://www.w3.org/2001/XMLSchema" javaType="java.lang.String"/>
+    <javaToSchemaMapping javaType="com.sap.archtech.initservice.types.AssignedActionEntry" typeName="AssignedActionEntry" typeNamespace=""/>
+    <javaToSchemaMapping javaType="int" typeName="int" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="short" typeName="short" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.archtech.initservice.types.RoleEntry" typeName="RoleEntry" typeNamespace=""/>
+    <javaToSchemaMapping javaType="java.lang.Long" typeName="long" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="java.lang.Boolean" typeName="boolean" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.archtech.initservice.types.DescriptionEntry" typeName="DescriptionEntry" typeNamespace=""/>
+    <javaToSchemaMapping javaType="java.util.Calendar" typeName="dateTime" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="java.lang.Byte" typeName="byte" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.archtech.initservice.types.PermissionEntry" typeName="PermissionEntry" typeNamespace=""/>
+    <javaToSchemaMapping javaType="java.lang.Float" typeName="float" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.archtech.initservice.types.ActionEntry" typeName="ActionEntry" typeNamespace=""/>
+    <javaToSchemaMapping javaType="long" typeName="long" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="byte[]" typeName="base64Binary" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="java.lang.Integer" typeName="int" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="byte" typeName="byte" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="java.lang.Short" typeName="short" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="boolean" typeName="boolean" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="java.lang.Double" typeName="double" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="java.lang.String" typeName="string" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="double" typeName="double" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="float" typeName="float" typeNamespace="http://www.w3.org/2001/XMLSchema"/>
+    <javaToSchemaMapping javaType="com.sap.archtech.initservice.types.BusinessserviceEntry" typeName="BusinessserviceEntry" typeNamespace=""/>
+  </defaultTypeMapping>
+</typeMappingRegistry>

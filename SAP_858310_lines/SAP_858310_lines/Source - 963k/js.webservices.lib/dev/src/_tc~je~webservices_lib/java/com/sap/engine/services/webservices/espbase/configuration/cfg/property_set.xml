@@ -1,0 +1,1436 @@
+﻿<feat:PropertySet xmlns:feat="http://xml.sap.com/2006/11/esi/conf/feat/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Definition of all supported properties">
+	<feat:subject name="Security">
+		<feat:displayName>Security</feat:displayName>
+		<feat:description>Topic "Web Service Security"</feat:description>
+		<feat:feature name="http://www.sap.com/webas/630/soap/features/authentication/">
+			<feat:displayName>Authentication</feat:displayName>
+			<feat:description>Authentication</feat:description>
+		  <feat:property name="AuthenticationMethod.SAML.IncludeToken">
+				<feat:displayName>AuthenticationMethod.SAML.IncludeToken</feat:displayName>
+				<feat:description>AuthenticationMethod.SAML.IncludeToken</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+		  <feat:property name="AuthenticationMethod.Basic.IncludeToken">
+				<feat:displayName>AuthenticationMethod.Basic.IncludeToken</feat:displayName>
+				<feat:description>AuthenticationMethod.Basic.IncludeToken</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>			
+			<feat:property name="AuthenticationLevel">
+				<feat:displayName>Authentication Level</feat:displayName>
+				<feat:description>Minimum Authentication Level</feat:description>
+				<feat:defaultValue>None</feat:defaultValue>
+				<feat:scope>IF</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>1..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>None</feat:value>
+					<feat:displayValue>None</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>Basic</feat:value>
+					<feat:displayValue>Basic (e.g. Password-Based)</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>Strong</feat:value>
+					<feat:displayValue>Strong (Certificate-Based)</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="AuthenticationMethod">
+				<feat:displayName>Authentication Method</feat:displayName>
+				<feat:description>Authentication Method</feat:description>
+				<feat:defaultValue>sapsp:None</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>1..N</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>sapsp:None</feat:value>
+					<feat:displayValue>None</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:HTTPBasic</feat:value>
+					<feat:displayValue>User Name/Password (Basic)</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:HTTPX509</feat:value>
+					<feat:displayValue>X.509 Client Certificate</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:HTTPSSO2</feat:value>
+					<feat:displayValue>SAP Logon Ticket</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>wsse:UsernameToken</feat:value>
+					<feat:displayValue>User Name/Password Doc.Auth.</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>wsse:SAMLAssertion</feat:value>
+					<feat:displayValue>SAML Assertion</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>wsse:X509v3</feat:value>
+					<feat:displayValue>X.509 Certificate Doc.Auth.</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue visible="false">
+					<feat:value>sapsp:SAMLAssertionPrincipalPropagation</feat:value>
+					<feat:displayValue>XI Principal Propagation</feat:displayValue>
+				</feat:pValue>
+				<!-- value is still not supported in JAVA 7.20 -->
+				<!-- feat:pValue>
+					<feat:value>sapsp:STS</feat:value>
+					<feat:displayValue>Single Sign-On using STS-issued symmetric SAML</feat:displayValue>
+				</feat:pValue -->				
+			</feat:property>
+			<!--feat:property name="AuthenticationMethod.SAML.SubjectConfirmationMethod">
+				<feat:displayName>Subject Confirmation Method</feat:displayName>
+				<feat:description>Method to confirm the trustworthiness of the subject to authenticate</feat:description>
+				<feat:defaultValue>sapsp:SenderVouchesWithXMLSignature</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>sapsp:SenderVouchesWithXMLSignature</feat:value>
+					<feat:displayValue>Sender vouches with XML Signa-ture</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>urn:oasis:names:tc:SAML:1.0:cm:holder-of-ke</feat:value>
+					<feat:displayValue>Holder of key vouches</feat:displayValue>
+				</feat:pValue>
+			</feat:property-->
+	
+			<!--feat:property name="AuthenticationMethod.SAML.Issuer">
+				<feat:displayName>Issuer Name</feat:displayName>
+				<feat:description>Issuer of Assertion</feat:description>
+				<feat:defaultValue></feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>				
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property-->
+	
+			<!--feat:property name="AuthenticationMethod.SAML.SenderVouches.AttesterName">
+				<feat:displayName>Attester Name</feat:displayName>
+				<feat:description>Attester Name that can do the subject confirmation</feat:description>
+				<feat:defaultValue>saml_default_attester</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+			</feat:property-->
+		
+			<!--feat:property name="AuthenticationMethod.SAML.SenderVouchesOverSSL.Keystore.View">
+				<feat:displayName>SSL Client Certificate Keystore View</feat:displayName>
+				<feat:description>SSL Client Certificate keystore view for SSL connection containing SSL client certificate for Subject Confirmation Method Sender vouches over SSL</feat:description>
+				<feat:defaultValue>WebServiceSecurity</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+			</feat:property-->			
+			
+			<!--feat:property name="AuthenticationMethod.SAML.SenderVouchesOverSSL.Keystore.Alias">
+				<feat:displayName>SSL Client Certificate</feat:displayName>
+				<feat:description>SSL Client Certificate used for subject confirmation</feat:description>
+				<feat:defaultValue>System-key</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+			</feat:property-->
+			
+			<!--feat:property name="AuthenticationMethod.SAML.HolderOfKey.AttesterSystemDestination">
+				<feat:displayName>Destination to Attesting System</feat:displayName>
+				<feat:description>Destination to Attesting System which contains attester that can do the subject confirmation</feat:description>
+				<feat:defaultValue>WS_SAML_attester_default</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property-->
+
+			<!--feat:property name="AuthenticationMethod.SAML.HolderOfKey.AttesterName">
+				<feat:displayName>Attester Name</feat:displayName>
+				<feat:description>Attester Name that can do the subject confirmation</feat:description>
+				<feat:defaultValue>saml_default_attester</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property-->
+			
+			<feat:property name="AuthenticationMethod.Basic.Username">
+			  <feat:displayName>Username</feat:displayName>
+				<feat:description>Username</feat:description>
+				<feat:defaultValue></feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="AuthenticationMethod.Basic.Password">
+				<feat:displayName>Password</feat:displayName>
+				<feat:description>Password for authentication</feat:description>
+				<feat:defaultValue></feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:encrypted>true</feat:encrypted>
+			</feat:property>
+			<feat:property name="SingleSignOn">
+				<feat:displayName>Use Single Sign On</feat:displayName>
+				<feat:description>Use a Single Sign, overrides value for authentication method</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>false</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>true</feat:value>
+					<feat:displayValue>Use Single Sign On</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>false</feat:value>
+					<feat:displayValue>Do not use Single Sign On</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			
+			<feat:property name="AuthenticationMethod.X509.Keystore.View">
+				<feat:displayName>Keystore</feat:displayName>
+				<feat:description>Keystore/PSE for X.509 certificate used for authentication</feat:description>
+				<feat:defaultValue>WebServiceSecurity</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+		
+			<feat:property name="AuthenticationMethod.X509.Keystore.Alias">
+				<feat:displayName>X.509 Client Certificate</feat:displayName>
+				<feat:description>X.509 certificate used for authentication</feat:description>
+				<feat:defaultValue>System-key</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+			</feat:property>
+			
+			<feat:property name="AuthenticationMethod.SAML.AssertionValidity">
+				<feat:displayName>Validity of SAML Assertion</feat:displayName>
+				<feat:description>Validity Period of SAML Assertion</feat:description>
+				<feat:defaultValue>180</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value/>
+					<feat:displayValue>Any</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<!--feat:property name="AuthenticationMethod.SAML.DoNotCacheCondition">
+				<feat:displayName>Caching of SAML Assertions</feat:displayName>
+				<feat:description>Prevent Caching of SAML Assertions</feat:description>
+				<feat:defaultValue>true</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property-->
+		</feat:feature>
+		<feat:feature name="http://www.sap.com/webas/630/soap/features/transportguarantee/">
+			<feat:displayName>Transport Security</feat:displayName>
+			<feat:description>Data transport security</feat:description>
+			<feat:property name="IncludeTimestamp">
+				<feat:displayName>Use Timestamps</feat:displayName>
+				<feat:description>Timestamps are used for incoming (required) and outgoing messages</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="AlgorithmSuite">
+				<feat:displayName>Used Algorithm Suite</feat:displayName>
+				<feat:description>Algorithm suite that is used for cryptographic operations</feat:description>
+				<feat:defaultValue>Basic128Rsa15</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="IncomingEncryption.IncludeToken">
+				<feat:displayName>IncomingEncryption.IncludeToken</feat:displayName>
+				<feat:description>IncomingEncryption.IncludeToken</feat:description>
+				<feat:defaultValue/>				
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="OutgoingEncryption.IncludeToken">
+				<feat:displayName>OutgoingEncryption.IncludeToken</feat:displayName>
+				<feat:description>OutgoingEncryption.IncludeToken</feat:description>
+				<feat:defaultValue/>				
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="IncomingSignature.IncludeToken">
+				<feat:displayName>IncomingSignature.IncludeToken</feat:displayName>
+				<feat:description>IncomingSignature.IncludeToken</feat:description>
+				<feat:defaultValue/>				
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="OutgoingSignature.IncludeToken">
+				<feat:displayName>OutgoingSignature.IncludeToken</feat:displayName>
+				<feat:description>OutgoingSignature.IncludeToken</feat:description>
+				<feat:defaultValue/>				
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>									
+			<feat:property name="SecurityTokenService.URL">
+				<feat:displayName>SecurityTokenService.URL</feat:displayName>
+				<feat:description>SecurityTokenService.URL</feat:description>				
+				<feat:defaultValue/>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>			
+		  <feat:property name="TransportGuaranteeMethod">
+				<feat:displayName>Communication Security</feat:displayName>
+				<feat:description>Communication Security Method</feat:description>
+				<feat:defaultValue>None</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>None</feat:value>
+					<feat:displayValue>None</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>SSL</feat:value>
+					<feat:displayValue>SSL over HTTP</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>SymmSigEnc</feat:value>
+					<feat:displayValue>Sym. Message Protection</feat:displayValue>
+				</feat:pValue>		
+				<feat:pValue>
+					<feat:value>AsymmSigEnc</feat:value>
+					<feat:displayValue>Asym. Message Protection</feat:displayValue>
+				</feat:pValue>							
+			</feat:property>			
+			<feat:property name="OutgoingSignature.SigningKey.Keystore.Alias">
+				<feat:displayName>Private Key</feat:displayName>
+				<feat:description>Signature private key</feat:description>
+				<feat:defaultValue>System-key</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="SecurityMechanism">
+				<feat:displayName>Security Mechanism</feat:displayName>
+				<feat:description>Security Mechanism (Document Security or HTTP Security)</feat:description>
+				<feat:defaultValue>sapsp:HTTP</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>sapsp:WSSE</feat:value>
+					<feat:displayValue>Document Security</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:HTTP</feat:value>
+					<feat:displayValue>Transport Security</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="Level">
+				<feat:displayName>Transport Security Level</feat:displayName>
+				<feat:description>Minimum transport security level</feat:description>
+				<feat:defaultValue>None</feat:defaultValue>
+				<feat:scope>IF</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>1..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>None</feat:value>
+					<feat:displayValue>No Minimum Level</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>Both</feat:value>
+					<feat:displayValue>Integrity &amp; Confidentiality</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="TLSType">
+				<feat:displayName>Transport Protocol</feat:displayName>
+				<feat:description>Protocol for Data Transport (e.g. HTTP)</feat:description>
+				<feat:defaultValue>sapsp:HTTP</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>1..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>sapsp:HTTP</feat:value>
+					<feat:displayValue>HTTP</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:HTTPS</feat:value>
+					<feat:displayValue>HTTPS</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="IncomingSignature">
+				<feat:displayName>Signature Expected</feat:displayName>
+				<feat:description>Indicates whether signature is expected</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>1..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="IncomingSignature.Trustanchor.Keystore.View">
+				<feat:displayName>Trustworthy Certificate PSE</feat:displayName>
+				<feat:description>Trusted Certificates Keystore View</feat:description>
+				<feat:defaultValue>WebServiceSecurity</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="IncomingSignature.Trustanchor.CertificatePattern">
+				<feat:displayName>Pattern for Certificates</feat:displayName>
+				<feat:description>Pattern for Trustworthy Certificates</feat:description>
+				<feat:defaultValue>Subject=*;Issuer=*;SerialNumber=*</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..N</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="IncomingSignature.ExpectedSignedElement.MessagePart">
+				<feat:displayName>Signed Message Elements</feat:displayName>
+				<feat:description>Expected Signed Message Elements</feat:description>
+				<feat:defaultValue>wssp:Body()</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..N</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>wssp:Body()</feat:value>
+					<feat:displayValue>Body Signed</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>wssp:Header(*)</feat:value>
+					<feat:displayValue>Header Signed</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="IncomingEncryption">
+				<feat:displayName>Encryption Expected</feat:displayName>
+				<feat:description>Indicates whether encryption is expected</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>1..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="IncomingEncryption.ExpectedEncryptedElement.MessagePart">
+				<feat:displayName>Encrypted Message Elements</feat:displayName>
+				<feat:description>Encrypted Message Elements</feat:description>
+				<feat:defaultValue>wssp:Body()</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..N</feat:cardinality>
+				<feat:visible>false</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>wssp:Body()</feat:value>
+					<feat:displayValue>Body Encrypted</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>wssp:Header(*)</feat:value>
+					<feat:displayValue>Header Encrypted</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="OutgoingSignature">
+				<feat:displayName>Add Signature</feat:displayName>
+				<feat:description>Indicates whether message needs to be signed</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>1..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="OutgoingSignature.SigningKey.Keystore.View">
+				<feat:displayName>Keystore View of Signature Key</feat:displayName>
+				<feat:description>Keystore View of Signature Key</feat:description>
+				<feat:defaultValue>WSSKEY</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="OutgoingEncryption.EncryptingKey.Origin">
+				<feat:displayName>Private Key</feat:displayName>
+				<feat:description>Origin of Key</feat:description>
+				<feat:defaultValue>sapsp:UseSignatureCertificate</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>SERVER</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>sapsp:UserAssignedCertificate</feat:value>
+					<feat:displayValue>Certificate of User</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:UseSignatureCertificate</feat:value>
+					<feat:displayValue>Signature Certificate</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="OutgoingSignature.SignedElement.MessagePart">
+				<feat:displayName>Signed Message Elements</feat:displayName>
+				<feat:description>Message elements to be signed</feat:description>
+				<feat:defaultValue>wssp:Body()</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..N</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>wssp:Body()</feat:value>
+					<feat:displayValue>Sign Body</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>wssp:Header(*)</feat:value>
+					<feat:displayValue>Sign Header</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>wssp:Header(wsse:Security/wsu:Timestamp)</feat:value>
+					<feat:displayValue>Timestamp signieren</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="OutgoingEncryption">
+				<feat:displayName>Encryption</feat:displayName>
+				<feat:description>Indicates whether the message is to be encrypted</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>1..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="OutgoingEncryption.EncryptingKey.Keystore.View">
+				<feat:displayName>Encryption Key Keystore View</feat:displayName>
+				<feat:description>Encryption Key Keystore View</feat:description>
+				<feat:defaultValue>WebServiceSecurity_Certs</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="OutgoingEncryption.EncryptingKey.Keystore.Alias">
+				<feat:displayName>Distinguished Name X.500</feat:displayName>
+				<feat:description>Distinguished Name X.500 Key</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="OutgoingEncryption.EncryptedElement.MessagePart">
+				<feat:displayName>Encrypted Message Elements</feat:displayName>
+				<feat:description>Message Elements to Be Encrypted</feat:description>
+				<feat:defaultValue>wssp:Body()</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..N</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>wssp:Body()</feat:value>
+					<feat:displayValue>Encrypt Body</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>wssp:Header(*)</feat:value>
+					<feat:displayValue>Encrypt Header</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="IncomingMessageAge">
+				<feat:displayName>Message Age Expected</feat:displayName>
+				<feat:description>Message Age Expected</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="IncomingMessageAge.Age">
+				<feat:displayName>Maximum Message Age</feat:displayName>
+				<feat:description>Maximum age of messages that are still processed</feat:description>
+				<feat:defaultValue>180</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="SOAPErrorBehavior.ApplySecuritySettingsFor">
+				<feat:displayName>SOAP Fault Security</feat:displayName>
+				<feat:description>Security configuration used for SOAP faults</feat:description>
+				<feat:defaultValue>sapsp:NoSOAPFaults</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>SERVER</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>sapsp:AllSOAPFaults</feat:value>
+					<feat:displayValue>All SOAP Faults</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:NoSOAPFaults</feat:value>
+					<feat:displayValue>No SOAP Faults</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:TechSOAPFaults</feat:value>
+					<feat:displayValue>For Technical SOAP Faults</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:AppSOAPFaults</feat:value>
+					<feat:displayValue>For Application SOAP Faults</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="SecureConversation">
+				<feat:displayName>Secure Conversation</feat:displayName>
+				<feat:description>A protocol providing Signature and Encryption using dynamically generated keys negotiated by the involved systems</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			
+			<feat:property name="SecureCommunicationOnly">
+				<feat:displayName>Allow Only Secure Communication</feat:displayName>
+				<feat:description>Allows transport protocol only https or secure conversation over http</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>			
+			
+		</feat:feature>
+</feat:subject>
+
+	<!--feat:subject name="Transaction Handling">
+		<feat:displayName>Transaction Handling</feat:displayName>
+		<feat:description>Topic "Transaction Handling for Web Service Messaging"</feat:description>
+		<feat:feature name="http://www.sap.com/NW05/soap/features/transaction/">
+			<feat:displayName>Transaction Handling</feat:displayName>
+			<feat:description>Transaction Handling</feat:description>
+			<feat:property name="required">
+				<feat:displayName>Enable</feat:displayName>
+				<feat:description>Enable Transaction Handling</feat:description>
+				<feat:defaultValue>no</feat:defaultValue>
+				<feat:scope>OP</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>no</feat:value>
+					<feat:displayValue>Disable</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>yes</feat:value>
+					<feat:displayValue>Enable</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+		</feat:feature>
+		<feat:feature name="http://www.sap.com/NW05/soap/features/commit/">
+			<feat:displayName>Commit Handling</feat:displayName>
+			<feat:description>Framework is responsible for handling transactions (Commit or Rollback)</feat:description>
+			<feat:property name="enableCommit">
+				<feat:displayName>Switch On</feat:displayName>
+				<feat:description>Enable Commit Handling</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>OP</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+			</feat:property>
+		</feat:feature>
+	</feat:subject-->
+	<feat:subject name="Session Handling">
+		<feat:displayName>State Management</feat:displayName>
+		<feat:description>Topic "State Management for Messaging"</feat:description>
+		<feat:feature name="http://www.sap.com/webas/630/soap/features/session/">
+			<feat:displayName>Stateful Communication</feat:displayName>
+			<feat:description>Characteristic includes stateful communication properties</feat:description>
+			<feat:property name="SessionMethod">
+				<feat:displayName>Session Method</feat:displayName>
+				<feat:description>Mechanism for realization of stateful sessions</feat:description>
+				<feat:defaultValue>httpCookies</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>httpCookies</feat:value>
+					<feat:displayValue>HTTP Cookies</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="enableSession">
+				<feat:displayName>Enable stateful communication</feat:displayName>
+				<feat:description>This property defines, if a stateful communication for a Web Service call is performed, i.e. if the inner status on the provider side is kept over multiple calls.</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>IF</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+		</feat:feature>
+	</feat:subject>
+	<feat:subject name="Reliable Messaging">
+		<feat:displayName>Messaging</feat:displayName>
+		<feat:description>Topic "Web Service Messaging"</feat:description>
+		<!--feat:feature name="http://www.sap.com/webas/640/soap/features/messageId/">
+			<feat:displayName>Message Identifier</feat:displayName>
+			<feat:description>Message identifier</feat:description>
+			<feat:property name="enableMessageId">
+				<feat:displayName>Send Message ID</feat:displayName>
+				<feat:description>Send message ID</feat:description>
+				<feat:defaultValue>true</feat:defaultValue>
+				<feat:scope>IF</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+			</feat:property>
+		</feat:feature-->
+		<feat:feature name="http://www.sap.com/710/soap/features/reliableMessaging/">
+			<feat:displayName>Reliable Messaging</feat:displayName>
+			<feat:description>Reliable Messaging</feat:description>
+			<feat:property name="RMprotocol">
+				<feat:displayName>RM Protocol</feat:displayName>
+				<feat:description>Reliable Messaging Protocol</feat:description>
+				<feat:defaultValue>http://schemas.xmlsoap.org/ws/2005/02/rm</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>http://schemas.xmlsoap.org/ws/2005/02/rm</feat:value>
+					<feat:displayValue>WS-RM 2005/02</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="AckInterval">
+				<feat:displayName>Confirmation Interval</feat:displayName>
+				<feat:description>Specifies a time interval for sending separate receipt confirmations</feat:description>
+				<feat:defaultValue>600</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>SERVER</feat:location>
+				<feat:type>INTEGER</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			
+			<feat:property name="ExponentialBackoff">
+				<feat:displayName>Exponential Backoff</feat:displayName>
+				<feat:description>Exponential backoff mechanism configuration for retransmission of the messages</feat:description>
+				<feat:defaultValue>true</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+			</feat:property>
+			
+			<!--feat:property name="TransportPattern">
+				<feat:displayName>TransportPattern</feat:displayName>
+				<feat:description>Defines the WS-RM SOAP processing mode. Depending on the WSDL binding type one one-way or request-response operation can be processed in synchronous or asynchronous manner. In case of request-response and asynchronous transport pattern the responses have to be sent to a specified by the client callback endpoint</feat:description>
+				<feat:defaultValue>Async</feat:defaultValue>
+				<feat:scope>BO</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>Async</feat:value>
+					<feat:displayValue>Asynchrounous WS-RM SOAP processing mode </feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>Sync</feat:value>
+					<feat:displayValue>Synchrounous WS-RM SOAP processing mode</feat:displayValue>
+				</feat:pValue>
+				<feat:defaultValue-client>Sync</feat:defaultValue-client>
+		 </feat:property-->
+		 
+  		<!--feat:property name="CreateSequenceHandshake">
+				<feat:displayName>CreateSequenceHandshake</feat:displayName>
+				<feat:description>Specifies that the CreateSequence/CreateSequenceResponse (CS/CSR) handshake must be made in duplex mode, where an WS-RM offer have to applied and an inbound reliable sequence must be created</feat:description>
+				<feat:defaultValue>Simplex</feat:defaultValue>
+				<feat:scope>BO</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>Simplex</feat:value>
+					<feat:displayValue>Reliable inbound sequence is not required</feat:displayValue>
+				</feat:pValue>
+		 </feat:property-->
+  	 <feat:property name="RetransmissionInterval">
+				<feat:displayName>Retransmission interval in milliseconds</feat:displayName>
+				<feat:description>Specifies the interval for retransmission of a message in milliseconds</feat:description>
+				<feat:defaultValue>600</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>INTEGER</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+		 </feat:property>		
+  		<feat:property name="InactivityTimeout">
+				<feat:displayName>Inactivity Timeout in milliseconds</feat:displayName>
+				<feat:description>Specifies some time interval within the termination of a sequence will not be performed</feat:description>
+				<feat:defaultValue>0</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>INTEGER</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+		 </feat:property>		
+  		<feat:property name="SequenceLifetime">
+				<feat:displayName>Lifetime in milliseconds of a sequence</feat:displayName>
+				<feat:description>Describes the lifetime of a message sequence</feat:description>
+				<feat:defaultValue>0</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>INTEGER</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+		 </feat:property>		
+
+		 </feat:feature>
+		<feat:feature name="http://www.sap.com/NW05/soap/features/wsrm/">
+			<feat:displayName>Reliable Messaging</feat:displayName>
+			<feat:description>Use reliable messaging</feat:description>
+			<feat:property name="enableWSRM">
+				<feat:displayName>RM enabled</feat:displayName>
+				<feat:description>Enabling of Reliable Messaging</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>OP</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+		</feat:feature>
+		<feat:feature name="http://www.sap.com/webas/710/service/metering/">
+			<feat:displayName>Metering of Service Calls</feat:displayName>
+			<feat:description>Controlling the transfer of caller information for metering of service calls on provider side.</feat:description>
+			<feat:property name="Level">
+				<feat:displayName>Data transfer scope</feat:displayName>
+				<feat:description>Determines the extent of data to be transferred to the service provisioning side for logging the service calls.</feat:description>
+				<feat:defaultValue>0</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>0</feat:value>
+					<feat:displayValue>Minimal Data Transfer</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>1</feat:value>
+					<feat:displayValue>Basic Data Transfer</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>2</feat:value>
+					<feat:displayValue>Enhanced Data Transfer</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="Protocol">
+				<feat:displayName>Transfer Protocol</feat:displayName>
+				<feat:description>Transfer protocol for service consumer data to provider.</feat:description>
+				<feat:defaultValue>HTTPHeader</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>HTTPHeader</feat:value>
+					<feat:displayValue>Transfer via HTTP header</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>SOAPHeader</feat:value>
+					<feat:displayValue>Transfer via SOAP header</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+		</feat:feature>
+	</feat:subject>
+	<feat:subject name="Web Service Addressing">
+		<feat:displayName>Web Service Addressing</feat:displayName>
+		<feat:description>Topic "Web Service Addressing"</feat:description>
+		<feat:feature name="http://www.sap.com/710/soap/features/WSAddressing/">
+			<feat:displayName>WS Addressing</feat:displayName>
+			<feat:description>Send Web service address in SOAP header</feat:description>
+			<feat:property name="enabled">
+				<feat:displayName>Send WS Address</feat:displayName>
+				<feat:description>Send WS address</feat:description>
+				<feat:defaultValue>true</feat:defaultValue>
+				<feat:scope>IF</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="WSAProtocol">
+				<feat:displayName>WS Protocol</feat:displayName>
+				<feat:description>Protocol for WS addressing</feat:description>
+				<feat:defaultValue>http://www.w3.org/2005/03/addressing</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>http://www.w3.org/2005/03/addressing</feat:value>
+					<feat:displayValue>WS-Addressing '2004/08'</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+		<!--	<feat:property name="InputAction">
+				<feat:displayName>Inbound Message Action</feat:displayName>
+				<feat:description>Action String for Inbound SOAP Message</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>OP</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="OutputAction">
+				<feat:displayName>Outbound Message Action</feat:displayName>
+				<feat:description>Action string for outbound SOAP message</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>OP</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="FaultAction">
+				<feat:displayName>Error Message Action</feat:displayName>
+				<feat:description>Action string for SOAP error message</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>OP</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..N</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="ReferenceParameter">
+				<feat:displayName>Reference Parameter</feat:displayName>
+				<feat:description>String specified by server and sent as reference parameter in SOAP header</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..N</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>  -->
+		</feat:feature>
+	</feat:subject>
+			
+<feat:subject name="Central Administration">
+  <feat:displayName>Central Administration</feat:displayName>
+	<feat:description>Topic "Central Administration"</feat:description>		
+		<feat:feature name="http://www.sap.com/webas/710/soap/features/massconfig/setup">
+			<feat:displayName>Mass Config Setup</feat:displayName>
+			<feat:description>When a service provider is convigured via the mass configuration framework, several bindings are created, each of them is preconfigured with the several setup properties before it is passed through the DTRT Mapping rules. According to different setup properties in the binding, different runtime properties are going to be added in the binding during the DTRT Mapping process.</feat:description>			
+			
+			<feat:property name="TransportSecurity">
+				<feat:displayName>Setup Transport Security</feat:displayName>
+				<feat:description>Setup parameter for Transport Security</feat:description>
+				<feat:defaultValue>sapsp:HTTP</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>sapsp:HTTP</feat:value>
+					<feat:displayValue>HTTP</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:HTTPS</feat:value>
+					<feat:displayValue>HTTPS</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			
+			<feat:property name="SecurityMechanism">
+				<feat:displayName>Security Mechanism</feat:displayName>
+				<feat:description>Setup Parameter for document or transport security mechanism</feat:description>
+				<feat:defaultValue>sapsp:HTTP</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>sapsp:WSSE</feat:value>
+					<feat:displayValue>Document Level Security</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>sapsp:HTTP</feat:value>
+					<feat:displayValue>Transport Level Security</feat:displayValue>
+				</feat:pValue>
+			</feat:property>			
+			
+			<feat:property name="EnableSecureConversation">
+				<feat:displayName>Enable Secure Conversation</feat:displayName>
+				<feat:description>Setup Parameter to enable secure conversation</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property> 
+			
+			<feat:property name="EnableSignature">
+				<feat:displayName>Enable Signature</feat:displayName>
+				<feat:description>Enable Signature</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property> 
+			
+		</feat:feature>
+	</feat:subject>
+	
+	<feat:subject name="Transport Binding">
+		<feat:displayName>Transport Settings</feat:displayName>
+		<feat:description>Topic "Transport Settings"</feat:description>
+			<feat:feature name="http://www.sap.com/webas/710/soap/features/transportbinding/">
+			<feat:displayName>Transport Binding</feat:displayName>
+			<feat:description>Technical Configuration for HTTP Message Exchange</feat:description>
+			<feat:property name="keepAliveStatus">
+				<feat:displayName>Use 'Connection: KeepAlive' http header</feat:displayName>
+				<feat:description>Sets in the request Connection:keepAlive http header in order one and same connection to be used by multiple request-response cycles</feat:description>
+				<feat:defaultValue>true</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="compressResponse">
+				<feat:displayName>Support gzip responses</feat:displayName>
+				<feat:description>By including Accept-Encoding: gzip http request header the client notifies the server that it could handle gzip-compressed responses</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="socketTimeout">
+				<feat:displayName>Max wait-time for http response (in milliseconds)</feat:displayName>
+				<feat:description>Once the client has committed the request to the server it starts waiting for server’s response. This property determines for how long the client should wait for the response before throwing an error.</feat:description>
+				<feat:defaultValue>60000</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>INTEGER</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+		  <feat:property name="URLProtocol">
+				<feat:displayName>Optional protocol information for access URL</feat:displayName>
+				<feat:description>Specifies the protocol to be used for accessing a Web Service</feat:description>
+				<feat:defaultValue>http</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>http</feat:value>
+					<feat:displayValue>HTTP</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>https</feat:value>
+					<feat:displayValue>HTTPS</feat:displayValue>
+				</feat:pValue>				
+			</feat:property>
+			<feat:property name="ProxyHost">
+				<feat:displayName>Name of proxy host</feat:displayName>
+				<feat:description>If a proxy gets used for the HTTP connections on client side, then its host name is specifed here.</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			
+			<feat:property name="ProxyPort">
+				<feat:displayName>Port number of proxy host</feat:displayName>
+				<feat:description>If a proxy gets used for the HTTP connections on client side, then the port number of the proxy process is specifed here.</feat:description>
+				<feat:defaultValue>80</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>INTEGER</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			
+			<feat:property name="ProxyUser">
+				<feat:displayName>User name for proxy access</feat:displayName>
+				<feat:description>If a proxy gets used for the HTTP connections on client side, then the user name needed for the proxy access is specifed here.</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			
+			<feat:property name="ProxyPassword">
+				<feat:displayName>Password of user for proxy access</feat:displayName>
+				<feat:description>If a proxy gets used for the HTTP connections on client side, then the user’s password needed for the proxy access is specifed here.</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:encrypted>true</feat:encrypted>				
+			</feat:property>
+		  
+			
+			<feat:property name="chunkedRequest">
+				<feat:displayName>Issue chunked requests</feat:displayName>
+				<feat:description>: Issue chunked http requests against the server</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="altHost">
+				<feat:displayName>Alternative Host Name</feat:displayName>
+				<feat:description>Specifies the host name used on the WS side for WSDL document generation</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>BN</feat:scope>
+				<feat:location>SERVER</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="altPort">
+				<feat:displayName>Alternative Port Number</feat:displayName>
+				<feat:description>Specifies the port number used on the WS side for WSDL document generation</feat:description>
+				<feat:defaultValue/>
+				<feat:scope>BN</feat:scope>
+				<feat:location>SERVER</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="LocalCall">
+				<feat:displayName>Local transport</feat:displayName>
+				<feat:description>Local transport</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			
+			<!-- property is used in the communication profile; it enables configuration of LocalCalls in mass configuration -->
+			<feat:property name="Transport">
+				<feat:displayName>Transport</feat:displayName>
+				<feat:description>Transport</feat:description>
+				<feat:defaultValue>http</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>BOTH</feat:location>
+				<feat:type>ENUM</feat:type>
+				<feat:cardinality>1..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>local</feat:value>
+					<feat:displayValue>local</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>http</feat:value>
+					<feat:displayValue>http</feat:displayValue>
+				</feat:pValue>
+				<feat:pValue>
+					<feat:value>local_http</feat:value>
+					<feat:displayValue>local or http</feat:displayValue>
+				</feat:pValue>						
+			</feat:property>		
+			<!--feat:property name="ServiceSessionTimeout">
+				<feat:displayName>Session inactivity timeout (in seconds)</feat:displayName>
+				<feat:description>A time interval into which if the session is not in use, it will be closed by the web container.</feat:description>
+				<feat:defaultValue>0</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>SERVER</feat:location>
+				<feat:type>INTEGER</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value/>
+					<feat:displayValue>Inactivity timeout</feat:displayValue>
+				</feat:pValue>
+			</feat:property--> 
+		</feat:feature>
+	</feat:subject>
+	<feat:subject name="Idempotency">
+		<feat:displayName>Idempotency</feat:displayName>
+		<feat:description>Topic "Idempotency Settings"</feat:description>
+		<feat:feature name="http://www.sap.com/710/soap/features/idempotency/">
+			<feat:displayName>Idempotency Configuration</feat:displayName>
+			<feat:description>Idempotency Configuration Settings</feat:description>
+			<feat:property name="IdempotencyIdLocation">
+				<feat:displayName>Idempotency ID location</feat:displayName>
+				<feat:description>Idempotency ID location</feat:description>
+				<feat:defaultValue>None</feat:defaultValue>
+				<feat:scope>OP</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>STRING</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+			<feat:property name="Idempotency.Active.RT">
+				<feat:displayName>Enable idempotency</feat:displayName>
+				<feat:description>Enables idempotency for all operations</feat:description>
+				<feat:defaultValue>true</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>true</feat:value>
+					<feat:displayValue>Enable idempotency</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="Idempotency.Retries.Count.RT">
+				<feat:displayName>Retries count</feat:displayName>
+				<feat:description>Defines the number of retries</feat:description>
+				<feat:defaultValue>5</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>INTEGER</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>5</feat:value>
+					<feat:displayValue>Retries count</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+			<feat:property name="Idempotency.Retry.Sleep.RT">
+				<feat:displayName>Retry interval (in milliseconds)</feat:displayName>
+				<feat:description>Defines the period after which retry is triggered</feat:description>
+				<feat:defaultValue>30000</feat:defaultValue>
+				<feat:scope>BN</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>INTEGER</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>false</feat:wsdlRelevant>
+				<feat:pValue>
+					<feat:value>30000</feat:value>
+					<feat:displayValue>Retry interval</feat:displayValue>
+				</feat:pValue>
+			</feat:property>
+		</feat:feature>
+	</feat:subject>
+	
+	<feat:subject name="XI Integration Management">
+		<feat:displayName>XI Integration Management</feat:displayName>
+		<feat:description>Topic "XI Messaging Configuration"</feat:description>
+		<feat:feature name="http://www.sap.com/xi/integration/">
+			<feat:displayName>XI Messaging Configuration</feat:displayName>
+			<feat:description>XI Messaging Configuration</feat:description>
+			<feat:property name="XI.XITransportIsPossible.DT">
+				<feat:displayName>XI messaging transport is permitted</feat:displayName>
+				<feat:description>This property defines, if a XI messaging transport is possible.</feat:description>
+				<feat:defaultValue>false</feat:defaultValue>
+				<feat:scope>IF</feat:scope>
+				<feat:location>CLIENT</feat:location>
+				<feat:type>Boolean</feat:type>
+				<feat:cardinality>0..1</feat:cardinality>
+				<feat:visible>true</feat:visible>
+				<feat:wsdlRelevant>true</feat:wsdlRelevant>
+			</feat:property>
+		</feat:feature>
+	</feat:subject>
+</feat:PropertySet>
